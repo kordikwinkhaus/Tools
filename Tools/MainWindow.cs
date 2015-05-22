@@ -46,7 +46,6 @@ namespace Tools
             {
                 lstTools.Items.Add(plugin);
             }
-            lstTools.Items.Add("test");
         }
 
         private void cmdClose_Click(object sender, EventArgs e)

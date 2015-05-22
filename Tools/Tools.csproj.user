@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartArguments>"Application Name=Okna_Shared%3bProvider=SQLNCLI11%3bDataTypeCompatibility=80%3bMARS Connection=True%3bServer=.\SQL2008%3bDatabase=wh_kobla%3bTrusted_Connection=yes%3bAuto Translate=False"</StartArguments>
+  </PropertyGroup>
+</Project>
