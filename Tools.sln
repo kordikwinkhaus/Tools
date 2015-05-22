@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools", "Tools\Tools.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfferCustomTexts", "OfferCustomTexts\OfferCustomTexts.csproj", "{AF0BEC82-7426-4EB1-9A3B-EA86C1B1F133}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Winkhaus.RtfEditor", "Winkhaus.RtfEditor\Winkhaus.RtfEditor.csproj", "{E6C52593-D1E6-4C66-9FCE-627AC3EA6451}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{AF0BEC82-7426-4EB1-9A3B-EA86C1B1F133}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF0BEC82-7426-4EB1-9A3B-EA86C1B1F133}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF0BEC82-7426-4EB1-9A3B-EA86C1B1F133}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6C52593-D1E6-4C66-9FCE-627AC3EA6451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6C52593-D1E6-4C66-9FCE-627AC3EA6451}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6C52593-D1E6-4C66-9FCE-627AC3EA6451}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6C52593-D1E6-4C66-9FCE-627AC3EA6451}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -9,12 +9,12 @@ namespace OfferCustomTexts
     {
         public string Name
         {
-            get { return "TEST"; }
+            get { return "Reporty - vlastní úvodní a závěrečné texty"; }
         }
 
         public Form CreateWindow(string connString)
         {
-            return new MainForm();
+            return new MainForm(connString);
         }
     }
 }
