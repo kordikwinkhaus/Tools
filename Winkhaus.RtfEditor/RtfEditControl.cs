@@ -48,6 +48,18 @@ namespace Winkhaus.RtfEditor
 
         public bool RtfTextChanged { get; private set; }
 
+        private bool _showSettingsControls;
+        public bool ShowSettingsControls
+        {
+            get { return _showSettingsControls; }
+            set
+            {
+                _showSettingsControls = value;
+                tbSaveDefaults.Visible = value;
+                tbRestoreDefaults.Visible = value;
+            }
+        }
+
         protected void SetModify(bool state = true)
         {
             this.RtfTextChanged = state;
@@ -55,7 +67,7 @@ namespace Winkhaus.RtfEditor
 
         private void SetToolbarFontDefaults()
         {
-            if (!TryRestoreSavedSettings())
+            if (!TryRestoreFontSettings(null))
             {
                 _fontSelector.TrySelectFontFamily(_fontSelector.GetDefaultFontFamily());
                 _colorSelector.TrySelectColor(_colorSelector.GetDefaultColor());
@@ -307,35 +319,33 @@ namespace Winkhaus.RtfEditor
             return sb.ToString();
         }
 
-        private bool TryRestoreSavedSettings()
+        private bool TryRestoreFontSettings(string settings)
         {
-            //string settings = Nastaveni.Instance().DefaultFont;
-            //if (string.IsNullOrEmpty(settings)) return false;
+            if (string.IsNullOrEmpty(settings)) return false;
 
-            //string[] parts = settings.Split('|');
+            string[] parts = settings.Split('|');
 
-            //try
-            //{
-            //    _fontSelector.TrySelectFontFamily(parts[0]);
-            //    _sizeSelector.TrySelectSize(Convert.ToInt32(parts[1]));
-            //    _colorSelector.TrySelectColor(Color.FromName(parts[2]));
+            try
+            {
+                _fontSelector.TrySelectFontFamily(parts[0]);
+                _sizeSelector.TrySelectSize(Convert.ToInt32(parts[1]));
+                _colorSelector.TrySelectColor(Color.FromName(parts[2]));
 
-            //    tbBold.Checked = parts[3].Contains("B");
-            //    tbItalic.Checked = parts[3].Contains("I");
-            //    tbUnderline.Checked = parts[3].Contains("U");
-            //    tbStrikeout.Checked = parts[3].Contains("S");
+                tbBold.Checked = parts[3].Contains("B");
+                tbItalic.Checked = parts[3].Contains("I");
+                tbUnderline.Checked = parts[3].Contains("U");
+                tbStrikeout.Checked = parts[3].Contains("S");
 
-            //    if (parts[4] == "L") { SetButtonAlignmentState(HorizontalAlignment.Left); }
-            //    else if (parts[4] == "C") { SetButtonAlignmentState(HorizontalAlignment.Center); }
-            //    else if (parts[4] == "R") { SetButtonAlignmentState(HorizontalAlignment.Right); }
+                if (parts[4] == "L") { SetButtonAlignmentState(HorizontalAlignment.Left); }
+                else if (parts[4] == "C") { SetButtonAlignmentState(HorizontalAlignment.Center); }
+                else if (parts[4] == "R") { SetButtonAlignmentState(HorizontalAlignment.Right); }
 
-            //    return true;
-            //}
-            //catch
-            //{
-            //    return false;
-            //}
-            return false;
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         #endregion
@@ -444,6 +454,7 @@ namespace Winkhaus.RtfEditor
         {
             if (CanSerializeFontSettings())
             {
+                // TODO: externí poskytovatel konfigurace nebo notifikace pomocí události
                 //var nastaveni = Nastaveni.Instance();
                 //nastaveni.DefaultFont = SerializeFontSettings();
                 //nastaveni.Save();
@@ -452,7 +463,9 @@ namespace Winkhaus.RtfEditor
 
         private void tbRestoreDefaults_Click(object sender, EventArgs e)
         {
-            if (TryRestoreSavedSettings())
+            //string settings = Nastaveni.Instance().DefaultFont;
+            // TODO: externí poskytovatel konfigurace nebo notifikace pomocí události
+            if (TryRestoreFontSettings(null))
             {
                 SetSelectionByToolbar();
             }

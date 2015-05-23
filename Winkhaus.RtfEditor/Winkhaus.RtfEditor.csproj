@@ -79,6 +79,9 @@
     <Content Include="ikony\Undo.png" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="RtfEditControl.cs.resx">
+      <DependentUpon>RtfEditControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RtfEditControl.resx">
       <DependentUpon>RtfEditControl.cs</DependentUpon>
     </EmbeddedResource>
