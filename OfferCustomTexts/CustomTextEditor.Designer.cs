@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rtfCustomText = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbTypProfilu = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,20 +40,10 @@
             this.rbUvodniText = new System.Windows.Forms.RadioButton();
             this.cmdOK = new System.Windows.Forms.Button();
             this.cmdStorno = new System.Windows.Forms.Button();
+            this.rtfCustomText = new Winkhaus.RtfEditor.RtfEditControl();
             ((System.ComponentModel.ISupportInitialize)(this.nudPoradi)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // rtfCustomText
-            // 
-            this.rtfCustomText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.rtfCustomText.Location = new System.Drawing.Point(15, 137);
-            this.rtfCustomText.Name = "rtfCustomText";
-            this.rtfCustomText.Size = new System.Drawing.Size(775, 285);
-            this.rtfCustomText.TabIndex = 20;
-            this.rtfCustomText.Text = "";
             // 
             // label1
             // 
@@ -170,12 +159,20 @@
             this.cmdStorno.Text = "&Storno";
             this.cmdStorno.UseVisualStyleBackColor = true;
             // 
+            // rtfCustomText
+            // 
+            this.rtfCustomText.Location = new System.Drawing.Point(12, 115);
+            this.rtfCustomText.Name = "rtfCustomText";
+            this.rtfCustomText.Size = new System.Drawing.Size(774, 307);
+            this.rtfCustomText.TabIndex = 23;
+            // 
             // CustomTextEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cmdStorno;
             this.ClientSize = new System.Drawing.Size(798, 459);
+            this.Controls.Add(this.rtfCustomText);
             this.Controls.Add(this.cmdStorno);
             this.Controls.Add(this.cmdOK);
             this.Controls.Add(this.groupBox1);
@@ -186,7 +183,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbTypProfilu);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.rtfCustomText);
             this.Name = "CustomTextEditor";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -201,7 +197,6 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox rtfCustomText;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbTypProfilu;
         private System.Windows.Forms.Label label2;
@@ -214,5 +209,6 @@
         private System.Windows.Forms.RadioButton rbUvodniText;
         private System.Windows.Forms.Button cmdOK;
         private System.Windows.Forms.Button cmdStorno;
+        private Winkhaus.RtfEditor.RtfEditControl rtfCustomText;
     }
 }

@@ -68,6 +68,10 @@
       <Project>{87fec1d7-09c7-422b-b1fe-77b63a42f3b2}</Project>
       <Name>Tools</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Winkhaus.RtfEditor\Winkhaus.RtfEditor.csproj">
+      <Project>{e6c52593-d1e6-4c66-9fce-627ac3ea6451}</Project>
+      <Name>Winkhaus.RtfEditor</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="CustomTextEditor.resx">
@@ -80,7 +84,9 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>COPY /Y $(TargetPath) "$(SolutionDir)Tools\bin\$(ConfigurationName)\ToolsPlugins\"
-COPY /Y $(TargetDir)\WinkhausCR.Data.dll "$(SolutionDir)Tools\bin\$(ConfigurationName)\ToolsPlugins\"</PostBuildEvent>
+COPY /Y $(TargetDir)\WinkhausCR.Data.dll "$(SolutionDir)Tools\bin\$(ConfigurationName)\ToolsPlugins\"
+COPY /Y $(TargetDir)\Winkhaus.RtfEditor.dll "$(SolutionDir)Tools\bin\$(ConfigurationName)\ToolsPlugins\"
+COPY /Y $(TargetDir)\cs\Winkhaus.RtfEditor.resources.dll "$(SolutionDir)Tools\bin\$(ConfigurationName)\ToolsPlugins\cs\"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
