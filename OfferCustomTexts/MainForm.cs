@@ -50,12 +50,16 @@ namespace OfferCustomTexts
         private void BindAllTexts()
         {
             SimpleSortableBindingList<CustomTextViewModel> sortableList = new SimpleSortableBindingList<CustomTextViewModel>(_textsVM);
-            dgvTexts.DataSource = sortableList;
+            bsTexts.DataSource = sortableList;
         }
 
         private void cmdClearFilter_Click(object sender, EventArgs e)
         {
+            var sortInfo = GetSortInfo(dgvTexts);
+
             BindAllTexts();
+
+            TrySetSortInfo(dgvTexts, sortInfo);
         }
 
         private void cmdNew_Click(object sender, EventArgs e)
@@ -70,6 +74,8 @@ namespace OfferCustomTexts
 
         private void cmdApplyFilter_Click(object sender, EventArgs e)
         {
+            var sortInfo = GetSortInfo(dgvTexts);
+
             IEnumerable<CustomTextViewModel> texts = _textsVM;
 
             if (cmbProfileType.SelectedIndex > 0)
@@ -91,7 +97,33 @@ namespace OfferCustomTexts
             }
 
             SimpleSortableBindingList<CustomTextViewModel> sortableList = new SimpleSortableBindingList<CustomTextViewModel>(texts);
-            dgvTexts.DataSource = sortableList;
+            bsTexts.DataSource = sortableList;
+
+            TrySetSortInfo(dgvTexts, sortInfo);
+        }
+
+        private SortInfo GetSortInfo(DataGridView grid)
+        {
+            return new SortInfo
+            {
+                Column = grid.SortedColumn,
+                Order = grid.SortOrder
+            };
+        }
+
+        private void TrySetSortInfo(DataGridView grid, SortInfo sortInfo)
+        {
+            if (sortInfo != null && sortInfo.Column != null && sortInfo.Order != SortOrder.None)
+            {
+                grid.Sort(dgvTexts.Columns[sortInfo.Column.Index],
+                    (sortInfo.Order == SortOrder.Ascending) ? ListSortDirection.Ascending : ListSortDirection.Descending);
+            }
+        }
+
+        private class SortInfo
+        {
+            internal DataGridViewColumn Column;
+            internal SortOrder Order;
         }
     }
 }

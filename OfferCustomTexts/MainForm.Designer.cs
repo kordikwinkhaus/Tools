@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmdNew = new System.Windows.Forms.Button();
             this.cmdEdit = new System.Windows.Forms.Button();
             this.cmdClose = new System.Windows.Forms.Button();
@@ -51,9 +52,11 @@
             this.colLangID = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.colIsHeader = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.colCustomText = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bsTexts = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTexts)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsTexts)).BeginInit();
             this.SuspendLayout();
             // 
             // cmdNew
@@ -104,6 +107,7 @@
             this.dgvTexts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvTexts.AutoGenerateColumns = false;
             this.dgvTexts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTexts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colProfileType,
@@ -111,6 +115,7 @@
             this.colLangID,
             this.colIsHeader,
             this.colCustomText});
+            this.dgvTexts.DataSource = this.bsTexts;
             this.dgvTexts.Location = new System.Drawing.Point(176, 28);
             this.dgvTexts.MultiSelect = false;
             this.dgvTexts.Name = "dgvTexts";
@@ -265,8 +270,8 @@
             // colTextOrder
             // 
             this.colTextOrder.DataPropertyName = "TextOrder";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.colTextOrder.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.colTextOrder.DefaultCellStyle = dataGridViewCellStyle1;
             this.colTextOrder.HeaderText = "Order";
             this.colTextOrder.MinimumWidth = 40;
             this.colTextOrder.Name = "colTextOrder";
@@ -322,6 +327,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsTexts)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -351,5 +357,6 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn colLangID;
         private System.Windows.Forms.DataGridViewCheckBoxColumn colIsHeader;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCustomText;
+        private System.Windows.Forms.BindingSource bsTexts;
     }
 }
