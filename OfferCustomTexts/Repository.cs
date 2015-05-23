@@ -15,10 +15,10 @@ namespace OfferCustomTexts
 
             _conn = new SqlConnection(connString);
 
-            CreateTableIfNotExists();
+            CreateTablesIfNotExists();
         }
 
-        private void CreateTableIfNotExists()
+        private void CreateTablesIfNotExists()
         {
             string sql = @"IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[OfferCustomTexts]') AND type in (N'U'))
 CREATE TABLE dbo.OfferCustomTexts
@@ -30,9 +30,19 @@ CREATE TABLE dbo.OfferCustomTexts
   custom_text NVARCHAR(MAX) NOT NULL,
   is_header BIT NOT NULL
 )";
+            string sql2 = @"IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[UserCustomData]') AND type in (N'U'))
+CREATE TABLE dbo.UserCustomData
+(
+  Uzivatel NVARCHAR(100) NOT NULL PRIMARY KEY,
+  Jmeno NVARCHAR(100) NULL,
+  Telefon NVARCHAR(50) NULL,
+  Email NVARCHAR(50) NULL
+);";
 
             using (SqlCommand cmd = GetCmd(sql))
             {
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = sql2;
                 cmd.ExecuteNonQuery();
             }
         }
@@ -148,6 +158,30 @@ WHERE c.TABLE_SCHEMA='dbo' AND c.TABLE_NAME='UserCustomData'";
                 while (dr.Read())
                 {
                     result.Add(dr.GetString(0));
+                }
+            }
+
+            return result;
+        }
+
+        internal IList<Language> GetLanguages()
+        {
+            List<Language> result = new List<Language>();
+
+            using (SqlCommand cmd = GetCmd("sp_helplanguage"))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                using (SqlDataReader dr = cmd.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        int langID = Convert.ToInt32(dr["langid"]);
+                        string name = dr["name"].ToString();
+                        string alias = dr["alias"].ToString();
+
+                        result.Add(new Language(langID, name, alias));
+                    }
                 }
             }
 
