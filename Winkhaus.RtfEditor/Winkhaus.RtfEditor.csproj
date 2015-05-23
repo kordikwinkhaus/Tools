@@ -41,8 +41,55 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseSelector.cs" />
+    <Compile Include="ColorSelector.cs" />
+    <Compile Include="DialogFactory.cs" />
+    <Compile Include="FontSelector.cs" />
+    <Compile Include="ModifiedDelegate.cs" />
+    <Compile Include="Pad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pad.Designer.cs">
+      <DependentUpon>Pad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RECT.cs" />
+    <Compile Include="SizeSelector.cs" />
+    <Compile Include="_DPad.cs" />
+    <Compile Include="_DPadEvents.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ikony\Copy.png" />
+    <Content Include="ikony\Documents.png" />
+    <Content Include="ikony\Export.png" />
+    <Content Include="ikony\Folder Open.png" />
+    <Content Include="ikony\Import.png" />
+    <Content Include="ikony\Paste.png" />
+    <Content Include="ikony\Save.png" />
+    <Content Include="ikony\Scissors.png" />
+    <Content Include="ikony\StrikeOut.png" />
+    <Content Include="ikony\Text Italic.png" />
+    <Content Include="ikony\Text-Bold.png" />
+    <Content Include="ikony\Text-Center-Align.png" />
+    <Content Include="ikony\Text-Left-Align.png" />
+    <Content Include="ikony\Text-Right-Align.png" />
+    <Content Include="ikony\UnderLine.png" />
+    <Content Include="ikony\Undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pad.resx">
+      <DependentUpon>Pad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
