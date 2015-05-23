@@ -60,8 +60,6 @@
     </Compile>
     <Compile Include="RECT.cs" />
     <Compile Include="SizeSelector.cs" />
-    <Compile Include="_DPad.cs" />
-    <Compile Include="_DPadEvents.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>

@@ -72,7 +72,6 @@
             this.rtfBox.Text = "";
             this.rtfBox.SelectionChanged += new System.EventHandler(this.rtfBox_SelectionChanged);
             this.rtfBox.Click += new System.EventHandler(this.rtfBox_Click);
-            this.rtfBox.TextChanged += new System.EventHandler(this.rtfBox_TextChanged);
             this.rtfBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.rtfBox_KeyDown);
             // 
             // toolbar

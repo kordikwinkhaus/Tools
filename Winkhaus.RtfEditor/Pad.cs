@@ -7,8 +7,7 @@ using System.Windows.Forms;
 
 namespace Winkhaus.Whokna.OutputManager.RTFControl
 {
-    [ClassInterface(ClassInterfaceType.None), ComSourceInterfaces(typeof(_DPadEvents)), Guid("D3409E2C-F40B-11D1-AEA5-0000E8D88491")]
-    public partial class Pad : UserControl, _DPad, _DPadEvents
+    public partial class Pad : UserControl
 	{
         private FontSelector _fontSelector;
         private ColorSelector _colorSelector;
@@ -31,6 +30,13 @@ namespace Winkhaus.Whokna.OutputManager.RTFControl
             SetToolbarFontDefaults();
 		}
 
+        public bool TextChanged { get; private set; }
+
+        protected void SetModify(bool state = true)
+        {
+            this.TextChanged = state;
+        }
+
         private void SetToolbarFontDefaults()
         {
             if (!TryRestoreSavedSettings())
@@ -49,103 +55,6 @@ namespace Winkhaus.Whokna.OutputManager.RTFControl
             rtfBox.Font = new Font(_fontSelector.GetSelectedFontFamily(), _sizeSelector.GetSelectedSize(), GetCurrentFontStyle());
             rtfBox.ForeColor = _colorSelector.GetSelectedColor();
         }
-
-        #region interface members _DPad + _DPadEvents
-
-        [DispId(1)]
-        long _DPad.Height
-        {
-            get 
-            {
-                //Log("getHeight");
-                return this.Height;
-            }
-            set 
-            {
-                //Log("setHeight(" + value + ")");
-                this.Height = (int)value; 
-            }
-        }
-        [DispId(2)]
-        long _DPad.MaxWidth
-        {
-            get
-            {
-                //Log("getMaxWidth");
-                return 600L;
-            }
-            set
-            {
-                //Log("setMaxWidth(" + value + ")");
-                //this.MaximumSize = this.GetPreferredSize(new Size(620, 300));
-            }
-        }
-        [DispId(3)]
-        long _DPad.MaxHeight
-        {
-            get
-            {
-                //Log("getMaxHeight");
-                if (base.Height < 250)
-                {
-                    return 250L;
-                }
-                return (long)base.Height;
-            }
-            set
-            {
-                //Log("setMaxHeight(" + value + ")");
-                //this.MaximumSize = this.GetPreferredSize(new Size(620, 300));
-            }
-        }
-        [DispId(4)]
-        bool _DPad.Modified
-        {
-            get;
-            set;
-        }
-        [DispId(5)]
-        void _DPad.AppendText(object text)
-        {
-            this.rtfBox.Rtf.Insert(this.rtfBox.Rtf.Length, (string)text);
-        }
-        [DispId(6)]
-        void _DPad.SelectAll(bool bSel)
-        {
-            if (bSel)
-            {
-                this.rtfBox.SelectAll();
-                return;
-            }
-            this.rtfBox.SelectedText = null;
-        }
-        [DispId(7)]
-        void _DPad.SetData(object data)
-        {
-            this.SetText((byte[])data);
-        }
-        [DispId(8)]
-        object _DPad.GetData()
-        {
-            return this.GetText();
-        }
-        [DispId(9)]
-        long _DPad.DrawToMetaFile(long pDC, bool draw)
-        {
-            return 0L;
-        }
-        [DispId(1)]
-        void _DPadEvents.Modified()
-        {
-            this.GetText();
-        }
-
-        private void SetModify(bool state = true)
-        {
-            ((_DPad)this).Modified = state;
-        }
-
-        #endregion
 
         #region kompatibilita s původní implementací?
 
@@ -172,6 +81,7 @@ namespace Winkhaus.Whokna.OutputManager.RTFControl
 
         #endregion
 
+        #region Odstranit?
         public void SetText(byte[] binaryData)
         {
             if (binaryData == null || binaryData.Length <= 1)
@@ -193,7 +103,7 @@ namespace Winkhaus.Whokna.OutputManager.RTFControl
             }
             catch (ArgumentException)
             {
-                MessageBox.Show("Nastala chyba při načítání textu poznámky.");
+                MessageBox.Show("Nastala chyba při načítání RTF textu.");
             }
         }
 
@@ -216,20 +126,7 @@ namespace Winkhaus.Whokna.OutputManager.RTFControl
             return BitConverter.GetBytes(this.rtfBox.Rtf.Length);
         }
 
-        private void rtfBox_TextChanged(object sender, EventArgs e)
-        {
-            if (((_DPad)this).Modified)
-            {
-                try
-                {
-                    ((_DPadEvents)this).Modified();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-        }
+        #endregion
 
         private void rtfBox_KeyDown(object sender, KeyEventArgs e)
         {
