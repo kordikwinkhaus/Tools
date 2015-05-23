@@ -2,7 +2,7 @@
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace Winkhaus.Whokna.OutputManager.RTFControl
+namespace Winkhaus.RtfEditor
 {
 	internal class BaseSelector
 	{

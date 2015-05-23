@@ -1,6 +1,6 @@
-﻿namespace Winkhaus.Whokna.OutputManager.RTFControl
+﻿namespace Winkhaus.RtfEditor
 {
-	partial class Pad
+	partial class RtfEditControl
 	{
 		/// <summary> 
 		/// Required designer variable.
@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pad));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RtfEditControl));
             this.rtfBox = new System.Windows.Forms.RichTextBox();
             this.toolbar = new System.Windows.Forms.ToolStrip();
             this.tbOpen = new System.Windows.Forms.ToolStripButton();

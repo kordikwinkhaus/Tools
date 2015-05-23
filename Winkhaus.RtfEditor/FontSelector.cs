@@ -3,7 +3,7 @@ using System.Drawing.Text;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Winkhaus.Whokna.OutputManager.RTFControl
+namespace Winkhaus.RtfEditor
 {
 	internal class FontSelector : BaseSelector
 	{

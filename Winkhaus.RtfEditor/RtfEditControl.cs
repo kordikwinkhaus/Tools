@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Drawing;
-using System.IO;
-using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Winkhaus.Whokna.OutputManager.RTFControl
+namespace Winkhaus.RtfEditor
 {
-    public partial class Pad : UserControl
+    public partial class RtfEditControl : UserControl
 	{
         private FontSelector _fontSelector;
         private ColorSelector _colorSelector;
         private SizeSelector _sizeSelector;
         private bool _rtfBoxHadFocus;
 
-		public Pad()
+		public RtfEditControl()
 		{
 			InitializeComponent();
 
@@ -30,11 +28,29 @@ namespace Winkhaus.Whokna.OutputManager.RTFControl
             SetToolbarFontDefaults();
 		}
 
-        public bool TextChanged { get; private set; }
+        public string Rtf
+        {
+            get { return rtfBox.Rtf; }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    SetToolbarFontDefaults();
+                    SetSelectionByToolbar();
+                }
+                else
+                {
+                    rtfBox.Rtf = value;
+                    SetToolbarBySelection();
+                }
+            }
+        }
+
+        public bool RtfTextChanged { get; private set; }
 
         protected void SetModify(bool state = true)
         {
-            this.TextChanged = state;
+            this.RtfTextChanged = state;
         }
 
         private void SetToolbarFontDefaults()
@@ -55,78 +71,6 @@ namespace Winkhaus.Whokna.OutputManager.RTFControl
             rtfBox.Font = new Font(_fontSelector.GetSelectedFontFamily(), _sizeSelector.GetSelectedSize(), GetCurrentFontStyle());
             rtfBox.ForeColor = _colorSelector.GetSelectedColor();
         }
-
-        #region kompatibilita s původní implementací?
-
-        public string defaultFontFamily
-        {
-            get;
-            set;
-        }
-        public float defaultFontSize
-        {
-            get;
-            set;
-        }
-        public int defaultLineHeight
-        {
-            get;
-            set;
-        }
-        public Color defaultFontColor
-        {
-            get;
-            set;
-        }
-
-        #endregion
-
-        #region Odstranit?
-        public void SetText(byte[] binaryData)
-        {
-            if (binaryData == null || binaryData.Length <= 1)
-            {
-                this.rtfBox.Clear();
-                SetToolbarFontDefaults();
-                SetSelectionByToolbar();
-                return;
-            }
-            
-            try
-            {
-                using (MemoryStream stream = new MemoryStream(binaryData))
-                using (StreamReader streamReader = new StreamReader(stream, Encoding.ASCII))
-                {
-                    this.rtfBox.Rtf = streamReader.ReadToEnd();
-                    SetToolbarBySelection();
-                }
-            }
-            catch (ArgumentException)
-            {
-                MessageBox.Show("Nastala chyba při načítání RTF textu.");
-            }
-        }
-
-        public byte[] GetText()
-        {
-            ASCIIEncoding encoding = new ASCIIEncoding();
-            string s = this.rtfBox.Rtf + "\0";
-            return encoding.GetBytes(s);
-        }
-
-        public byte[] GetTextAndClearPad()
-        {
-            byte[] text = this.GetText();
-            this.rtfBox.Clear();
-            return text;
-        }
-
-        public byte[] GetRtfLength()
-        {
-            return BitConverter.GetBytes(this.rtfBox.Rtf.Length);
-        }
-
-        #endregion
 
         private void rtfBox_KeyDown(object sender, KeyEventArgs e)
         {

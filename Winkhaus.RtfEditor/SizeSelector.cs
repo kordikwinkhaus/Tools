@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace Winkhaus.Whokna.OutputManager.RTFControl
+namespace Winkhaus.RtfEditor
 {
 	internal class SizeSelector : BaseSelector
 	{
