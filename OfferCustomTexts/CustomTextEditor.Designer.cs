@@ -56,6 +56,7 @@
             // 
             // cmbTypProfilu
             // 
+            this.cmbTypProfilu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTypProfilu.FormattingEnabled = true;
             this.cmbTypProfilu.Location = new System.Drawing.Point(104, 12);
             this.cmbTypProfilu.Name = "cmbTypProfilu";
@@ -74,6 +75,16 @@
             // nudPoradi
             // 
             this.nudPoradi.Location = new System.Drawing.Point(104, 39);
+            this.nudPoradi.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nudPoradi.Minimum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            -2147483648});
             this.nudPoradi.Name = "nudPoradi";
             this.nudPoradi.Size = new System.Drawing.Size(75, 20);
             this.nudPoradi.TabIndex = 4;
@@ -89,6 +100,7 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(104, 65);
             this.comboBox2.Name = "comboBox2";
@@ -163,6 +175,9 @@
             // 
             this.rtfCustomText.Location = new System.Drawing.Point(12, 115);
             this.rtfCustomText.Name = "rtfCustomText";
+            this.rtfCustomText.Rtf = "{\\rtf1\\ansi\\ansicpg1250\\deff0\\deflang1029{\\fonttbl{\\f0\\fnil\\fcharset238{\\*\\fname " +
+    "Arial;}Arial CE;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20\\par\r\n}\r\n";
+            this.rtfCustomText.ShowSettingsControls = false;
             this.rtfCustomText.Size = new System.Drawing.Size(774, 307);
             this.rtfCustomText.TabIndex = 23;
             // 

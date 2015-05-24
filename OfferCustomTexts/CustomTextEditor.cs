@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Windows.Forms;
+using OfferCustomTexts.Properties;
 
 namespace OfferCustomTexts
 {
     public partial class CustomTextEditor : Form
     {
         private readonly Repository _repository;
-        private static string DEFAULT = "(Pro všechny)";
+        private static string DEFAULT = Resources.ForAllProfiles;
 
         public CustomTextEditor(Repository repository)
         {
@@ -40,7 +41,7 @@ namespace OfferCustomTexts
             }
             else
             {
-                cmbTypProfilu.SelectedValue = customText.typ_prof;
+                cmbTypProfilu.SelectedItem = customText.typ_prof;
             }
 
             rtfCustomText.Rtf = customText.custom_text;

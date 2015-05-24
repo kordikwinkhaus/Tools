@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmdNew = new System.Windows.Forms.Button();
             this.cmdEdit = new System.Windows.Forms.Button();
             this.cmdClose = new System.Windows.Forms.Button();
@@ -62,7 +62,7 @@
             // cmdNew
             // 
             this.cmdNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmdNew.Location = new System.Drawing.Point(783, 25);
+            this.cmdNew.Location = new System.Drawing.Point(783, 28);
             this.cmdNew.Name = "cmdNew";
             this.cmdNew.Size = new System.Drawing.Size(75, 23);
             this.cmdNew.TabIndex = 2;
@@ -73,12 +73,13 @@
             // cmdEdit
             // 
             this.cmdEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmdEdit.Location = new System.Drawing.Point(783, 54);
+            this.cmdEdit.Location = new System.Drawing.Point(783, 57);
             this.cmdEdit.Name = "cmdEdit";
             this.cmdEdit.Size = new System.Drawing.Size(75, 23);
             this.cmdEdit.TabIndex = 3;
             this.cmdEdit.Text = "Edit...";
             this.cmdEdit.UseVisualStyleBackColor = true;
+            this.cmdEdit.Click += new System.EventHandler(this.cmdEdit_Click);
             // 
             // cmdClose
             // 
@@ -94,12 +95,13 @@
             // cmdDelete
             // 
             this.cmdDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmdDelete.Location = new System.Drawing.Point(783, 83);
+            this.cmdDelete.Location = new System.Drawing.Point(783, 86);
             this.cmdDelete.Name = "cmdDelete";
             this.cmdDelete.Size = new System.Drawing.Size(75, 23);
             this.cmdDelete.TabIndex = 5;
             this.cmdDelete.Text = "Delete";
             this.cmdDelete.UseVisualStyleBackColor = true;
+            this.cmdDelete.Click += new System.EventHandler(this.cmdDelete_Click);
             // 
             // dgvTexts
             // 
@@ -270,8 +272,8 @@
             // colTextOrder
             // 
             this.colTextOrder.DataPropertyName = "TextOrder";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.colTextOrder.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.colTextOrder.DefaultCellStyle = dataGridViewCellStyle4;
             this.colTextOrder.HeaderText = "Order";
             this.colTextOrder.MinimumWidth = 40;
             this.colTextOrder.Name = "colTextOrder";

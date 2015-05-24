@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows.Forms;
+using OfferCustomTexts.Properties;
 
 namespace OfferCustomTexts
 {
@@ -47,6 +48,8 @@ namespace OfferCustomTexts
             BindAllTexts();
         }
 
+        #region Filtering
+
         private void BindAllTexts()
         {
             SimpleSortableBindingList<CustomTextViewModel> sortableList = new SimpleSortableBindingList<CustomTextViewModel>(_textsVM);
@@ -60,16 +63,6 @@ namespace OfferCustomTexts
             BindAllTexts();
 
             TrySetSortInfo(dgvTexts, sortInfo);
-        }
-
-        private void cmdNew_Click(object sender, EventArgs e)
-        {
-            var frm = new CustomTextEditor(_repository);
-            frm.CustomText = new CustomText { is_header = true };
-            if (frm.ShowDialog() == DialogResult.OK)
-            {
-                _repository.CreateCustomText(frm.CustomText);
-            }
         }
 
         private void cmdApplyFilter_Click(object sender, EventArgs e)
@@ -125,5 +118,51 @@ namespace OfferCustomTexts
             internal DataGridViewColumn Column;
             internal SortOrder Order;
         }
+
+        #endregion
+
+        #region Editing custom texts
+
+        private void cmdNew_Click(object sender, EventArgs e)
+        {
+            var frm = new CustomTextEditor(_repository);
+            frm.CustomText = new CustomText { is_header = true };
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                _repository.CreateCustomText(frm.CustomText);
+            }
+        }
+
+        private void cmdEdit_Click(object sender, EventArgs e)
+        {
+            if (dgvTexts.SelectedRows.Count == 0) return;
+
+            int index = dgvTexts.SelectedRows[0].Index;
+            CustomTextViewModel vm = (CustomTextViewModel)bsTexts[index];
+            
+            var frm = new CustomTextEditor(_repository);
+            frm.CustomText = vm.Model;
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                _repository.UpdateCustomText(frm.CustomText);
+                bsTexts.ResetBindings(false);
+            }
+        }
+
+        private void cmdDelete_Click(object sender, EventArgs e)
+        {
+            if (dgvTexts.SelectedRows.Count == 0) return;
+
+            if (MessageBox.Show(Resources.ReallyDeleteText, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                int index = dgvTexts.SelectedRows[0].Index;
+                CustomTextViewModel vm = (CustomTextViewModel)bsTexts[index];
+                _repository.DeleteCustomText(vm.Model);
+                bsTexts.RemoveAt(index);
+                bsTexts.ResetBindings(false);
+            }
+        }
+
+        #endregion
     }
 }

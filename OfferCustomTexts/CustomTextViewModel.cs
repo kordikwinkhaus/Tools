@@ -10,6 +10,11 @@ namespace OfferCustomTexts
             _model = model;
         }
 
+        public CustomText Model
+        {
+            get { return _model; }
+        }
+
         public string TypProf 
         {
             get { return _model.typ_prof; }
