@@ -123,4 +123,7 @@
   <data name="ReallyDeleteText" xml:space="preserve">
     <value>Do you really want to delete selected custom text?</value>
   </data>
+  <data name="ReportsCustomTexts" xml:space="preserve">
+    <value>Reports - custom header and footer texts</value>
+  </data>
 </root>

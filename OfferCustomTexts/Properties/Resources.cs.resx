@@ -123,4 +123,7 @@
   <data name="ReallyDeleteText" xml:space="preserve">
     <value>Opravdu chcete odstranit vybraný uživatelský text?</value>
   </data>
+  <data name="ReportsCustomTexts" xml:space="preserve">
+    <value>Reporty - vlastní úvodní a závěrečné texty</value>
+  </data>
 </root>

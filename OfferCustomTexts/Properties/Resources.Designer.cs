@@ -77,5 +77,14 @@ namespace OfferCustomTexts.Properties {
                 return ResourceManager.GetString("ReallyDeleteText", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reports - custom header and footer texts.
+        /// </summary>
+        internal static string ReportsCustomTexts {
+            get {
+                return ResourceManager.GetString("ReportsCustomTexts", resourceCulture);
+            }
+        }
     }
 }

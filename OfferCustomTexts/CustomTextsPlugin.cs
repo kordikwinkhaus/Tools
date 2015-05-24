@@ -1,15 +1,16 @@
 ﻿using System.ComponentModel.Composition;
 using System.Windows.Forms;
+using OfferCustomTexts.Properties;
 using Tools;
 
 namespace OfferCustomTexts
 {
     [Export(typeof(IToolsPlugin))]
-    public class PluginHelper : IToolsPlugin
+    public class CustomTextsPlugin : IToolsPlugin
     {
         public string Name
         {
-            get { return "Reporty - vlastní úvodní a závěrečné texty"; }
+            get { return Resources.ReportsCustomTexts; }
         }
 
         public Form CreateWindow(string connString)
