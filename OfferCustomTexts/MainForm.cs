@@ -32,7 +32,7 @@ namespace OfferCustomTexts
             langs.Insert(0, Language.NullLanguage);
             cmbLanguage.DataSource = langs;
 
-            colLangID.DataSource = langs;
+            colLangID.DataSource = _repository.GetLanguages();
             colLangID.DisplayMember = "Name";
             colLangID.ValueMember = "LangID";
 
@@ -129,7 +129,14 @@ namespace OfferCustomTexts
             frm.CustomText = new CustomText { is_header = true };
             if (frm.ShowDialog() == DialogResult.OK)
             {
+                var sorting = GetSortInfo(dgvTexts);
+
                 _repository.CreateCustomText(frm.CustomText);
+                var vm = new CustomTextViewModel(frm.CustomText);
+                bsTexts.Add(vm);
+                bsTexts.ResetBindings(false);
+
+                TrySetSortInfo(dgvTexts, sorting);
             }
         }
 
@@ -144,8 +151,12 @@ namespace OfferCustomTexts
             frm.CustomText = vm.Model;
             if (frm.ShowDialog() == DialogResult.OK)
             {
+                var sorting = GetSortInfo(dgvTexts);
+
                 _repository.UpdateCustomText(frm.CustomText);
                 bsTexts.ResetBindings(false);
+
+                TrySetSortInfo(dgvTexts, sorting);
             }
         }
 
@@ -155,11 +166,18 @@ namespace OfferCustomTexts
 
             if (MessageBox.Show(Resources.ReallyDeleteText, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                var sorting = GetSortInfo(dgvTexts);
+
                 int index = dgvTexts.SelectedRows[0].Index;
                 CustomTextViewModel vm = (CustomTextViewModel)bsTexts[index];
+
                 _repository.DeleteCustomText(vm.Model);
+
+                _textsVM.Remove(vm);
                 bsTexts.RemoveAt(index);
                 bsTexts.ResetBindings(false);
+
+                TrySetSortInfo(dgvTexts, sorting);
             }
         }
 

@@ -33,7 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.nudPoradi = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbLanguages = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbKoncovyText = new System.Windows.Forms.RadioButton();
@@ -98,14 +98,14 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Jazyk";
             // 
-            // comboBox2
+            // cmbLanguages
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(104, 65);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(153, 21);
-            this.comboBox2.TabIndex = 6;
+            this.cmbLanguages.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLanguages.FormattingEnabled = true;
+            this.cmbLanguages.Location = new System.Drawing.Point(104, 65);
+            this.cmbLanguages.Name = "cmbLanguages";
+            this.cmbLanguages.Size = new System.Drawing.Size(153, 21);
+            this.cmbLanguages.TabIndex = 6;
             // 
             // label4
             // 
@@ -192,7 +192,7 @@
             this.Controls.Add(this.cmdOK);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cmbLanguages);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.nudPoradi);
             this.Controls.Add(this.label2);
@@ -217,7 +217,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown nudPoradi;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbLanguages;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rbKoncovyText;
