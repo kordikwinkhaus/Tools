@@ -61,6 +61,15 @@ namespace OfferCustomTexts.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Column name is not valid..
+        /// </summary>
+        internal static string ColumnNameIsNotValid {
+            get {
+                return ResourceManager.GetString("ColumnNameIsNotValid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to (For all).
         /// </summary>
         internal static string ForAllProfiles {
@@ -84,6 +93,15 @@ namespace OfferCustomTexts.Properties {
         internal static string ReportsCustomTexts {
             get {
                 return ResourceManager.GetString("ReportsCustomTexts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reports - user data.
+        /// </summary>
+        internal static string ReportsUserData {
+            get {
+                return ResourceManager.GetString("ReportsUserData", resourceCulture);
             }
         }
     }

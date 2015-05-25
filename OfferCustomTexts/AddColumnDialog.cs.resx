@@ -117,19 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ColumnNameIsNotValid" xml:space="preserve">
-    <value>Column name is not valid.</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 13</value>
   </data>
-  <data name="ForAllProfiles" xml:space="preserve">
-    <value>(For all)</value>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Název sloupce</value>
   </data>
-  <data name="ReallyDeleteText" xml:space="preserve">
-    <value>Do you really want to delete selected custom text?</value>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 13</value>
   </data>
-  <data name="ReportsCustomTexts" xml:space="preserve">
-    <value>Reports - custom header and footer texts</value>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Maximální délka ve znacích</value>
   </data>
-  <data name="ReportsUserData" xml:space="preserve">
-    <value>Reports - user data</value>
+  <data name="cmdCancel.Text" xml:space="preserve">
+    <value>&amp;Storno</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Přidat sloupec</value>
   </data>
 </root>

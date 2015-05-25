@@ -187,5 +187,29 @@ WHERE c.TABLE_SCHEMA='dbo' AND c.TABLE_NAME='UserCustomData'";
 
             return result;
         }
+
+        internal UserDataTable GetUserData()
+        {
+            string sql = "SELECT * FROM dbo.UserCustomData";
+
+            DataTable dt = new DataTable();
+
+            using (SqlCommand cmd = GetCmd(sql))
+            {
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                return new UserDataTable(da, dt);
+            }
+        }
+
+        internal void AddUserDataColumn(string columName, int maxLength)
+        {
+            string sql = "ALTER TABLE dbo.UserCustomData ADD [" + columName + "] NVARCHAR(" + maxLength + ")";
+
+            using (SqlCommand cmd = GetCmd(sql))
+            {
+                cmd.ExecuteNonQuery();
+            }
+        }
     }
 }

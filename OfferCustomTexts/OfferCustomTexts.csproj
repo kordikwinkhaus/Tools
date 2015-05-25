@@ -49,6 +49,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddColumnDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddColumnDialog.Designer.cs">
+      <DependentUpon>AddColumnDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomText.cs" />
     <Compile Include="CustomTextEditor.cs">
       <SubType>Form</SubType>
@@ -78,6 +84,14 @@
     </Compile>
     <Compile Include="Repository.cs" />
     <Compile Include="RichTextStripper.cs" />
+    <Compile Include="UserDataEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserDataEditor.Designer.cs">
+      <DependentUpon>UserDataEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserDataPlugin.cs" />
+    <Compile Include="UserDataTable.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +105,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddColumnDialog.cs.resx">
+      <DependentUpon>AddColumnDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddColumnDialog.resx">
+      <DependentUpon>AddColumnDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomTextEditor.cs.resx">
       <DependentUpon>CustomTextEditor.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,8 +131,15 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserDataEditor.cs.resx">
+      <DependentUpon>UserDataEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserDataEditor.resx">
+      <DependentUpon>UserDataEditor.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="users.ico" />
     <Content Include="document-text.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
