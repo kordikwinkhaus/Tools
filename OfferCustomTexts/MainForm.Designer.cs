@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmdNew = new System.Windows.Forms.Button();
             this.cmdEdit = new System.Windows.Forms.Button();
             this.cmdClose = new System.Windows.Forms.Button();
@@ -116,8 +116,8 @@
             // colTextOrder
             // 
             this.colTextOrder.DataPropertyName = "TextOrder";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.colTextOrder.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.colTextOrder.DefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(this.colTextOrder, "colTextOrder");
             this.colTextOrder.Name = "colTextOrder";
             this.colTextOrder.ReadOnly = true;
