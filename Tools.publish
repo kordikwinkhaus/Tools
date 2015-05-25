@@ -1,0 +1,7 @@
+main:   Tools\bin\Release\Tools.exe
+depend: Tools\bin\Release\cs
+depend: Tools\bin\Release\ToolsPlugins
+depend: Tools\bin\Release\WinkhausCR.Winforms.dll
+
+zipto: D:\publish\WHOknaTools\
+
