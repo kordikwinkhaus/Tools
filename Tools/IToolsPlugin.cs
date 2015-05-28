@@ -6,6 +6,6 @@ namespace Tools
     {
         string Name { get; }
 
-        Form CreateWindow(string connString);
+        void Run(string connString);
     }
 }

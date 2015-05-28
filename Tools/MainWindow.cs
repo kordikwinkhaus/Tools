@@ -107,8 +107,14 @@ ISNULL(IS_SRVROLEMEMBER('sysadmin'), 0) AS SysAdmin";
             IToolsPlugin plugin = lstTools.SelectedItem as IToolsPlugin;
             if (plugin != null)
             {
-                var window = plugin.CreateWindow(_connString);
-                window.ShowDialog(this);
+                try
+                {
+                    plugin.Run(_connString);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

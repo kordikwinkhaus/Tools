@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.Composition;
-using System.Windows.Forms;
 using OfferCustomTexts.Properties;
 using Tools;
 
@@ -13,9 +12,10 @@ namespace OfferCustomTexts
             get { return Resources.ReportsUserData; }
         }
 
-        public Form CreateWindow(string connString)
+        public void Run(string connString)
         {
-            return new UserDataEditor(connString);
+            var form = new UserDataEditor(connString);
+            form.ShowDialog();
         }
     }
 }

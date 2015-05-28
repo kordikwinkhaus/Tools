@@ -13,9 +13,10 @@ namespace OfferCustomTexts
             get { return Resources.ReportsCustomTexts; }
         }
 
-        public Form CreateWindow(string connString)
+        public void Run(string connString)
         {
-            return new MainForm(connString);
+            var form = new MainForm(connString);
+            form.ShowDialog();
         }
     }
 }
