@@ -136,11 +136,23 @@
   <data name="label3.Text" xml:space="preserve">
     <value>Jazyk</value>
   </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>332, 13</value>
+  <data name="label3.ToolTip" xml:space="preserve">
+    <value>Jazyk ponechte jak je, pokud nemáte vícejazykovou databázi.</value>
   </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Pokud nemáte vícejazykovou databázi, ponechte jazyk beze změny.</value>
+  <data name="cmbLanguages.ToolTip" xml:space="preserve">
+    <value>Jazyk ponechte jak je, pokud nemáte vícejazykovou databázi.</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Typ textu</value>
+  </data>
+  <data name="chkLastFooter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 17</value>
+  </data>
+  <data name="chkLastFooter.Text" xml:space="preserve">
+    <value>Poslední závěrečný text</value>
+  </data>
+  <data name="chkLastFooter.ToolTip" xml:space="preserve">
+    <value>Poznámka zápatí bude zobrazena před tímto textem.</value>
   </data>
   <data name="rbKoncovyText.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 17</value>
@@ -154,11 +166,23 @@
   <data name="rbUvodniText.Text" xml:space="preserve">
     <value>Úvodní text</value>
   </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>Typ textu</value>
-  </data>
   <data name="cmdStorno.Text" xml:space="preserve">
     <value>&amp;Storno</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Možnosti</value>
+  </data>
+  <data name="chkPageBreak.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 17</value>
+  </data>
+  <data name="chkPageBreak.Text" xml:space="preserve">
+    <value>Stránkový zlom po tomto textu</value>
+  </data>
+  <data name="chkKeepTogether.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 17</value>
+  </data>
+  <data name="chkKeepTogether.Text" xml:space="preserve">
+    <value>Nerozdělovat text na více stránek</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Editor uživatelských textů</value>

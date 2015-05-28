@@ -215,6 +215,9 @@
   <data name="&gt;&gt;nudPoradi.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -229,6 +232,9 @@
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>Language</value>
+  </data>
+  <data name="label3.ToolTip" xml:space="preserve">
+    <value>Language leave as is, if you don't have multilanguage database.</value>
   </data>
   <data name="&gt;&gt;label3.Name" xml:space="preserve">
     <value>label3</value>
@@ -251,6 +257,9 @@
   <data name="cmbLanguages.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
+  <data name="cmbLanguages.ToolTip" xml:space="preserve">
+    <value>Language leave as is, if you don't have multilanguage database.</value>
+  </data>
   <data name="&gt;&gt;cmbLanguages.Name" xml:space="preserve">
     <value>cmbLanguages</value>
   </data>
@@ -263,32 +272,35 @@
   <data name="&gt;&gt;cmbLanguages.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+  <data name="chkLastFooter.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 89</value>
+  <data name="chkLastFooter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 47</value>
   </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>310, 13</value>
+  <data name="chkLastFooter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 17</value>
   </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="chkLastFooter.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Language leave as is, if you don't have multilanguage database.</value>
+  <data name="chkLastFooter.Text" xml:space="preserve">
+    <value>Last footer text</value>
   </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
+  <data name="chkLastFooter.ToolTip" xml:space="preserve">
+    <value>The footer note is shown before this footer text.</value>
   </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;chkLastFooter.Name" xml:space="preserve">
+    <value>chkLastFooter</value>
   </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;chkLastFooter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;chkLastFooter.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;chkLastFooter.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="rbKoncovyText.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -315,7 +327,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;rbKoncovyText.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="rbUvodniText.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -342,13 +354,13 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;rbUvodniText.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>263, 12</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 74</value>
+    <value>277, 74</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -366,14 +378,14 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="cmdOK.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
   <data name="cmdOK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>634, 428</value>
+    <value>620, 428</value>
   </data>
   <data name="cmdOK.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -394,13 +406,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cmdOK.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="cmdStorno.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
   <data name="cmdStorno.Location" type="System.Drawing.Point, System.Drawing">
-    <value>715, 428</value>
+    <value>701, 428</value>
   </data>
   <data name="cmdStorno.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -421,16 +433,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cmdStorno.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="rtfCustomText.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="rtfCustomText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 115</value>
+    <value>12, 97</value>
   </data>
   <data name="rtfCustomText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>774, 307</value>
+    <value>760, 323</value>
   </data>
   <data name="rtfCustomText.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -445,7 +457,112 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;rtfCustomText.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="&gt;&gt;chkPageBreak.Name" xml:space="preserve">
+    <value>chkPageBreak</value>
+  </data>
+  <data name="&gt;&gt;chkPageBreak.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkPageBreak.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;chkPageBreak.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="&gt;&gt;chkKeepTogether.Name" xml:space="preserve">
+    <value>chkKeepTogether</value>
+  </data>
+  <data name="&gt;&gt;chkKeepTogether.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkKeepTogether.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;chkKeepTogether.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>546, 12</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 74</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="chkPageBreak.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkPageBreak.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 47</value>
+  </data>
+  <data name="chkPageBreak.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 17</value>
+  </data>
+  <data name="chkPageBreak.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="chkPageBreak.Text" xml:space="preserve">
+    <value>Page break after</value>
+  </data>
+  <data name="&gt;&gt;chkPageBreak.Name" xml:space="preserve">
+    <value>chkPageBreak</value>
+  </data>
+  <data name="&gt;&gt;chkPageBreak.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkPageBreak.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;chkPageBreak.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="chkKeepTogether.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkKeepTogether.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 23</value>
+  </data>
+  <data name="chkKeepTogether.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 17</value>
+  </data>
+  <data name="chkKeepTogether.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="chkKeepTogether.Text" xml:space="preserve">
+    <value>Keep together</value>
+  </data>
+  <data name="&gt;&gt;chkKeepTogether.Name" xml:space="preserve">
+    <value>chkKeepTogether</value>
+  </data>
+  <data name="&gt;&gt;chkKeepTogether.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkKeepTogether.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;chkKeepTogether.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -454,13 +571,22 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>798, 459</value>
+    <value>784, 459</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 400</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Custom text editor</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
+    <value>toolTip1</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>CustomTextEditor</value>

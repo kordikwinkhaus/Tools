@@ -28,7 +28,10 @@ CREATE TABLE dbo.OfferCustomTexts
   text_order INT NOT NULL,
   lang_ID INT NOT NULL,
   custom_text NVARCHAR(MAX) NOT NULL,
-  is_header BIT NOT NULL
+  is_header BIT NOT NULL, 
+  keep_together BIT NOT NULL,
+  pg_break BIT NOT NULL,
+  last_footer BIT NOT NULL
 )";
             string sql2 = @"IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[UserCustomData]') AND type in (N'U'))
 CREATE TABLE dbo.UserCustomData
@@ -94,8 +97,8 @@ ORDER BY typ_prof";
 
         internal void CreateCustomText(CustomText customText)
         {
-            string sql = @"INSERT INTO dbo.OfferCustomTexts (typ_prof, text_order, lang_ID, custom_text, is_header) 
-VALUES (@typ_prof, @text_order, @lang_ID, @custom_text, @is_header); 
+            string sql = @"INSERT INTO dbo.OfferCustomTexts (typ_prof, text_order, lang_ID, custom_text, is_header, keep_together, pg_break, last_footer) 
+VALUES (@typ_prof, @text_order, @lang_ID, @custom_text, @is_header, @keep_together, @pg_break, @last_footer); 
 SELECT @@IDENTITY";
 
             using (SqlCommand cmd = GetCmd(sql))
@@ -115,12 +118,15 @@ SELECT @@IDENTITY";
             cmd.AddParameterWithValue("@lang_ID", customText.lang_ID);
             cmd.AddParameterWithValue("@custom_text", customText.custom_text);
             cmd.AddParameterWithValue("@is_header", customText.is_header);
+            cmd.AddParameterWithValue("@keep_together", customText.keep_together);
+            cmd.AddParameterWithValue("@pg_break", customText.pg_break);
+            cmd.AddParameterWithValue("@last_footer", customText.last_footer);
         }
 
         internal void UpdateCustomText(CustomText customText)
         {
             string sql = @"UPDATE dbo.OfferCustomTexts 
-SET typ_prof=@typ_prof, text_order=@text_order, lang_ID=@lang_ID, custom_text=@custom_text, is_header=@is_header
+SET typ_prof=@typ_prof, text_order=@text_order, lang_ID=@lang_ID, custom_text=@custom_text, is_header=@is_header, keep_together=@keep_together, pg_break=@pg_break, last_footer=@last_footer
 WHERE ID=@id";
 
             using (SqlCommand cmd = GetCmd(sql))

@@ -15,5 +15,11 @@ namespace OfferCustomTexts
         public string custom_text { get; set; }
 
         public bool is_header { get; set; }
+
+        public bool keep_together { get; set; }
+
+        public bool pg_break { get; set; }
+
+        public bool last_footer { get; set; }
     }
 }

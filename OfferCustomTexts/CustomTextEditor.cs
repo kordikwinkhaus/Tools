@@ -68,7 +68,12 @@ namespace OfferCustomTexts
             else
             {
                 rbKoncovyText.Checked = true;
+                chkLastFooter.Checked = customText.last_footer;
             }
+            chkKeepTogether.Checked = customText.keep_together;
+            chkPageBreak.Checked = customText.pg_break;
+
+            rbKoncovyText_CheckedChanged(null, null);
         }
 
         private void cmdOK_Click(object sender, EventArgs e)
@@ -88,8 +93,23 @@ namespace OfferCustomTexts
             _customText.custom_text = rtfCustomText.Rtf;
             _customText.text_order = Convert.ToInt32(nudPoradi.Value);
             _customText.is_header = rbUvodniText.Checked;
+            if (!_customText.is_header)
+            {
+                _customText.last_footer = chkLastFooter.Checked;
+            }
+            else
+            {
+                _customText.last_footer = false;
+            }
+            _customText.keep_together = chkKeepTogether.Checked;
+            _customText.pg_break = chkPageBreak.Checked;
 
             this.DialogResult = DialogResult.OK;
+        }
+
+        private void rbKoncovyText_CheckedChanged(object sender, EventArgs e)
+        {
+            chkLastFooter.Enabled = rbKoncovyText.Checked;
         }
     }
 }

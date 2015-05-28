@@ -39,5 +39,20 @@ namespace OfferCustomTexts
         {
             get { return _model.is_header; }
         }
+
+        public bool KeepTogether
+        {
+            get { return _model.keep_together; }
+        }
+
+        public bool PageBreak
+        {
+            get { return _model.pg_break; }
+        }
+
+        public bool LastFooter
+        {
+            get { return _model.last_footer; }
+        }
     }
 }
