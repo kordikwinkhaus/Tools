@@ -143,8 +143,8 @@
   <data name="label1.Text" xml:space="preserve">
     <value>Available tools:</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>MainWindow</value>
+  <data name="&gt;&gt;lstTools.Name" xml:space="preserve">
+    <value>lstTools</value>
   </data>
   <data name="&gt;&gt;cmdClose.Name" xml:space="preserve">
     <value>cmdClose</value>
@@ -158,6 +158,10 @@
   <data name="lstTools.Size" type="System.Drawing.Size, System.Drawing">
     <value>234, 212</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="cmdClose.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>335, 255</value>
   </data>
@@ -167,7 +171,6 @@
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
@@ -180,9 +183,6 @@
   <data name="&gt;&gt;cmdRun.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lstTools.Name" xml:space="preserve">
-    <value>lstTools</value>
-  </data>
   <data name="cmdClose.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
@@ -191,6 +191,9 @@
   </data>
   <data name="lstTools.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 25</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainWindow</value>
   </data>
   <data name="cmdRun.Location" type="System.Drawing.Point, System.Drawing">
     <value>252, 25</value>
@@ -225,9 +228,6 @@
   <data name="cmdClose.Location" type="System.Drawing.Point, System.Drawing">
     <value>252, 54</value>
   </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="cmdClose.Text" xml:space="preserve">
     <value>Close</value>
   </data>
@@ -240,8 +240,8 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Tools</value>
   </data>
-  <data name="cmdClose.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
