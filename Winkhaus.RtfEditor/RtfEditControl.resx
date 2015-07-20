@@ -117,511 +117,511 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="rtfBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="tbUnderline.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
+  <data name="rtfBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 25</value>
   </data>
-  <data name="tbAlignCenter.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADr4AAA6+AepCscAAAABLSURBVDhPY6AOMG6YTxaGA2ySxGDaANOG/XgxQYDNqciY
-        NgCbU4nBcIDNqcRg2gBsTkXGBIFpfQNeTBuALYCIwXCAza/EYMoBAwMA6EqeEeuvxLcAAAAASUVORK5C
-        YII=
-</value>
-  </data>
-  <data name="tbBold.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="&gt;&gt;cmbFont.Name" xml:space="preserve">
-    <value>cmbFont</value>
-  </data>
-  <data name="&gt;&gt;rtfBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tbCut.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="&gt;&gt;cmbSize.Name" xml:space="preserve">
-    <value>cmbSize</value>
-  </data>
-  <data name="tbAlignLeft.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="tbRestoreDefaults.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADr4AAA6+AepCscAAAADwSURBVDhPYxgCwKReB4xJAmb1MgwmDesZTBs+A/F/KAax
-        V4PlMIBpvQeDfT0LnG3a8B6q6TXQoM1gDGJDxN4DXeQCVgsHxg3zgRKrGYzrRZAUdgMN5YCqYACzTRv6
-        wXJGDY8Z9OsFoDJAYNqwHC4B0bwcKoMJTBpmQ9X0Q0WAwLRhP1TwP4Nhw28Gw3oVqAwmgLgSZNl5qAgQ
-        gDgwA8C4PgEqgx2AXAqyCA6MG+6jGACSBAUmLgAJ5PdQHhCAosa8XgEFm9ZLQGVRgVm9BdSi3VAREgAo
-        JuDeJeBNrABmOyhdkAVAiQ2UiFDSwMACBgYAAV9vpVZ5eywAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="&gt;&gt;tbAlignLeft.Name" xml:space="preserve">
-    <value>tbAlignLeft</value>
+  <data name="rtfBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="rtfBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>634, 213</value>
   </data>
-  <data name="tbItalic.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADr4AAA6+AepCscAAAAC5SURBVDhPY6AtMK1PYTBt2A3E/8HYuGE7g0l9BFSWSGBS
-        7wI14DCDfT0LVJQEYFJfALG9PgcqQiIwbVgNNsC8XgEqQgIAOdm04TMQX4eKkAgQ/u+GipAIQBpBBoAM
-        IguAnA7ygn09B1SEBAAKNLDtDeuhIiQC0/oMsAGgxEQWMGnYDDbArF4GKkIC0KrnYTBs+A404DJUhEQA
-        yQMg/8+GihAJTOtNoEn3NdgA44b7EH69BFQFtQEDAwAvQ0GRYyG/VgAAAABJRU5ErkJggg==
-</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="rtfBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;cmbColor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="rtfBox.Text" xml:space="preserve">
+    <value />
   </data>
-  <data name="&gt;&gt;tbRestoreDefaults.Name" xml:space="preserve">
-    <value>tbRestoreDefaults</value>
+  <data name="&gt;&gt;rtfBox.Name" xml:space="preserve">
+    <value>rtfBox</value>
   </data>
-  <data name="tbSaveDefaults.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="tbOpen.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="&gt;&gt;tbAlignRight.Name" xml:space="preserve">
-    <value>tbAlignRight</value>
-  </data>
-  <data name="tbSave.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="tbSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADr4AAA6+AepCscAAAADOSURBVDhPYxgkwLhhPmFcbwNVjQWYNvxnMK1PwI0bDoNp
-        nABkAD5gXK8BNEACtysIGQADpg37GUzqC6A8JIDNAP16AaCtGUC55cAwOA3E9xkMG76D1WIYgm6AaX0F
-        UOw9WBwXRjEEJAADJg3NGIqx436oDiAACYCASb0OkP0aaMh0YIDlAPkuQNqBwaw+AGyjYcNzsFqcXjCp
-        LwH7HRcwbtgONDAEykMCMAO06nnANDqARSMIYwUgA0BOxYmBNuNNSFiTLjrGl5QHDjAwAAD8rYRfbIcq
-        KAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="&gt;&gt;tbPaste.Name" xml:space="preserve">
-    <value>tbPaste</value>
+  <data name="&gt;&gt;rtfBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;rtfBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;toolbar.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;rtfBox.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;tbAlignLeft.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tbCopy.Text" xml:space="preserve">
-    <value>Copy</value>
-  </data>
-  <data name="tbBold.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADr4AAA6+AepCscAAAADgSURBVDhPY6AeMG64z2Da8B8FGzZ8B4tD8HYGs/oAqGos
-        AJsB2LBxfQ5UBxpAMaA+ARU3LAa65jdU/jODfT0LVBcSQDYAGzBpWA+XN6nXgYoiAcIGbIbKE+ECVC+k
-        oNhuWl8D1YEGiAlEk4bpUNVYALIBIDYIg6IR2QAQBhmiVc8D1YUEkA1AB+b1CkhhAArEAqgMEsBnAAiY
-        1cvA5U0bDkNFkQAhA0zrDeDyRg3noaJIANkA1FhIADvZtOE2XB5rYKIYgBcDDaqXgOpCAoQMMGp4DKT7
-        GQzrVaA6qAEYGAAfmc/e50yb/wAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="tbCopy.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADr4AAA6+AepCscAAAADlSURBVDhPY6AN0KrnYTBpOM5g2vAfjg0bvgPF2qEq8ACQ
-        ZtOGw2BNyAAkbtjwG8rDAezrWYAa98NtRQfYxOAAonk1XLNpw3uoDALgNcCkvgSoAGh7fQMYm9VbgMWN
-        620g4nCXrWYwrFcBy6EAmEZkYFyvAdTwGmy4eb0CGJvUx2CoAwN0A0CaDRueQ2ytT4CKgsQdCBtgXC8C
-        1Hgd6uTXQHEDsDgIEGkADkVAQEsDKoDOnQwNqAjSDTCrlwEnX+OG+5DAI9UAZECWF5CBab0Eg1HDeaCX
-        YAkIgUHixvUhUJWUAgYGAEkwe3eoyLyIAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="&gt;&gt;tbCopy.Name" xml:space="preserve">
-    <value>tbCopy</value>
-  </data>
-  <data name="tbRestoreDefaults.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="tbUnderline.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="&gt;&gt;tbAlignCenter.Name" xml:space="preserve">
-    <value>tbAlignCenter</value>
-  </data>
-  <data name="&gt;&gt;tbSave.Name" xml:space="preserve">
-    <value>tbSave</value>
-  </data>
-  <data name="&gt;&gt;tbCut.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tbAlignRight.Text" xml:space="preserve">
-    <value>Right alignment</value>
-  </data>
-  <data name="tbAlignLeft.Text" xml:space="preserve">
-    <value>Left alignment</value>
-  </data>
-  <data name="tbRestoreDefaults.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
+  <metadata name="toolbar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="tbOpen.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADr4AAA6+AepCscAAAADGSURBVDhPYxgkwLhhPmFcbwNVjQWYNvxnMK1PwI0bDoNp
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADGSURBVDhPYxgkwLhhPmFcbwNVjQWYNvxnMK1PwI0bDoNp
         nABkADpAttG4XgNogASUhwWgGwDSbNrwGcojAiAbANMMEjNuuA+kLwPp7UAXNACxAVQVGoAZgKwZFzZp
         WI/pHZAEmK73AbLxGwDB1xns6znAesAAJAgDZvUWDPoNzyEKgc42qY8BuswBjE3qI4AuaAfKXQbLwQGy
         ASBgWK8CtgUXsK9nwW8ACCD7E1s0YngB5kysGBwLeBIS1qSLjvEl5YEDDAwAjtSGJnxS6lkAAAAASUVO
         RK5CYII=
 </value>
   </data>
-  <data name="tbSave.Text" xml:space="preserve">
-    <value>Export RTF file</value>
-  </data>
-  <data name="tbSaveDefaults.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="tbOpen.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="rtfBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+  <data name="tbOpen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator4.Name" xml:space="preserve">
-    <value>toolStripSeparator4</value>
+  <data name="tbOpen.Text" xml:space="preserve">
+    <value>Import RTF file</value>
   </data>
-  <data name="cmbSize.ToolTipText" xml:space="preserve">
-    <value>Size</value>
+  <data name="tbSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADOSURBVDhPYxgkwLhhPmFcbwNVjQWYNvxnMK1PwI0bDoNp
+        nABkAD5gXK8BNEACtysIGQADpg37GUzqC6A8JIDNAP16AaCtGUC55cAwOA3E9xkMGr6D1WIYgm6AaX0F
+        UOw9WBwXRjEEJAADJg3NGIqx436oDiAACYCASb0OkP0aaMh0YIDlAPkuQNqBwaw+AGyjQcNzsFqcXjCp
+        LwH7HRcwbtgONDAEykMCMAO06nnANDqARSMIYwUgA0BOxYmBNuNNSFiTLjrGl5QHDjAwAAD4uIRdI5yr
+        xwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="tbSave.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
   </data>
   <data name="tbSave.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 22</value>
   </data>
-  <data name="&gt;&gt;cmbSize.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="rtfBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="cmbColor.ToolTipText" xml:space="preserve">
-    <value>Color</value>
-  </data>
-  <data name="&gt;&gt;tbSave.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbPaste.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tbRestoreDefaults.Text" xml:space="preserve">
-    <value>Restore default settings</value>
-  </data>
-  <data name="toolbar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>634, 25</value>
-  </data>
-  <data name="&gt;&gt;toolbar.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;rtfBox.Name" xml:space="preserve">
-    <value>rtfBox</value>
-  </data>
-  <data name="tbItalic.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="cmbFont.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 23</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblDebug.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tbStrikeout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="&gt;&gt;tbStrikeout.Name" xml:space="preserve">
-    <value>tbStrikeout</value>
-  </data>
-  <data name="&gt;&gt;toolbar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tbPaste.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="tbAlignRight.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="&gt;&gt;tbOpen.Name" xml:space="preserve">
-    <value>tbOpen</value>
-  </data>
-  <data name="tbBold.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="&gt;&gt;cmbColor.Name" xml:space="preserve">
-    <value>cmbColor</value>
-  </data>
-  <data name="tbItalic.Text" xml:space="preserve">
-    <value>Italic</value>
-  </data>
-  <data name="cmbColor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 23</value>
-  </data>
-  <data name="tbAlignLeft.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="tbAlignRight.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADr4AAA6+AepCscAAAABRSURBVDhPY6AOMG6YTxaGA2ySxGDaA9OG5UC8HycmCEwb
-        urE6HYapB7A5jxgMB9icRwymPaA4FkzqCxhM6xtwYuoBbAFEDIYDbP4jBlMOGBgAM8OdvigRYYIAAAAA
-        SUVORK5CYII=
-</value>
+  <data name="tbSave.Text" xml:space="preserve">
+    <value>Export RTF file</value>
   </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="tbCut.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEoSURBVDhPYxhkwLg+B4htoDxMYFyvwWBa3wDlYQHGDfMZ
+        TBs+YzUEpNmg4TlQfj9UBAswra8BKviPYQhC838Gk4bZUFEswKReB2oAwhBkzWBc7wFVjQOAbIAZYFqf
+        gqLZuGE7VBUeoFXPA1R8GOiaEgajhvNATfehBhwGyxEFQApBBoBC3LQ+gTjNhvUqQOc3g71gVm8BpI/D
+        bQZ5BRI+/RBcbwDVBQXg+G14DTbAtGExEEP8DNMM44PCABRToHBBiWqIRAaYbV/PAtcMcjYsTEBiIFeC
+        ACgmTBuug9lgYNpwGyjYANFcXwHkX0bxM8KQyUA1HEA1oNj5DZUFApP6GGh0vQd6Yz3YS+jAtF4CKA/y
+        3muIuvoCqAwUgEwmGNJAQKw64gADAwCMr4+B8WGBLQAAAABJRU5ErkJggg==
+</value>
   </data>
-  <data name="&gt;&gt;tbRestoreDefaults.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="tbCut.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
   </data>
-  <data name="tbAlignRight.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tbCut.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 22</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
-    <value>toolStripSeparator3</value>
+  <data name="tbCut.Text" xml:space="preserve">
+    <value>Cut</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cmbSize.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="tbCopy.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADlSURBVDhPY6AN0KrnYTBpOM5g2vAfjg0avgPF2qEq8ACQ
+        ZtOGw2BNyAAkbtDwG8rDAezrWYAa98NtRQfYxOAAonk1XLNpw3uoDALgNcCkvgSoAGh7fQMYm9VbgMWN
+        620g4nCXrWYwrFcBy6EAmEZkYFyvAdTwGmy4eb0CGJvUx2CoAwN0A0CaDRqeQ2ytT4CKgsQdCBtgXC8C
+        1Hgd6uTXQHEDsDgIEGkADkVAQEsDKoDOnQwNqAjSDTCrlwEnX+OG+5DAI9UAZECWF5CBab0Eg1HDeaCX
+        YAkIgUHixvUhUJWUAgYGAD8Se3MVdsfjAAAAAElFTkSuQmCC
+</value>
   </data>
-  <data name="&gt;&gt;tbCut.Name" xml:space="preserve">
-    <value>tbCut</value>
+  <data name="tbCopy.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
   </data>
-  <data name="rtfBox.Text" xml:space="preserve">
-    <value />
+  <data name="tbCopy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
   </data>
-  <data name="tbSaveDefaults.Text" xml:space="preserve">
-    <value>Save settings as default</value>
-  </data>
-  <data name="&gt;&gt;rtfBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbOpen.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
+  <data name="tbCopy.Text" xml:space="preserve">
+    <value>Copy</value>
   </data>
   <data name="tbPaste.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADr4AAA6+AepCscAAAADfSURBVDhPY6AdMKmPYDBpaGcwrU+AihAA5vUKDMb1DmBs
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADfSURBVDhPY6AdMKmPYDBpaGcwrU+AihAA5vUKDMb1DmBs
         2rAfiC8z2NdzAA05DubD5EDqsALT+gagwv+EMVAdVgAxYDXYBmwaIeKr8Rtg3DAfzkbHIACSh7ExAEgC
         ZgAuQJYB+vUCYOdDAjkEqK4GKoMGsBmA7G+w7UA2yECsAJsB4CiFpgPjehtwYJo0TAfzMQAhA7TqeSAJ
         C+yiDLAYCiBkAAyAvQVUiwHwGWBa7wGlE4BJXAesFgOABE0bDsMVgjBJBpjVB4BdgILrNYCG7kYRA4WB
         cX0OVBelgIEBAMhGjzBZwmHOAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="rtfBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 25</value>
-  </data>
-  <data name="&gt;&gt;tbBold.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbAlignCenter.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tbAlignCenter.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="&gt;&gt;tbSaveDefaults.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tbAlignCenter.Text" xml:space="preserve">
-    <value>Center alignment</value>
-  </data>
-  <data name="&gt;&gt;lblDebug.Name" xml:space="preserve">
-    <value>lblDebug</value>
-  </data>
   <data name="tbPaste.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="tbAlignCenter.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tbPaste.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 22</value>
-  </data>
-  <data name="tbCut.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="toolbar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="tbOpen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="&gt;&gt;tbUnderline.Name" xml:space="preserve">
-    <value>tbUnderline</value>
-  </data>
-  <data name="lblDebug.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 22</value>
-  </data>
-  <data name="&gt;&gt;tbCopy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolbar.Name" xml:space="preserve">
-    <value>toolbar</value>
-  </data>
-  <data name="&gt;&gt;tbUnderline.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbAlignRight.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cmbColor.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="tbSaveDefaults.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADr4AAA6+AepCscAAAABoSURBVDhPY6AOMG64z2Da8J/BtD6BwbjeAcpugMqiApAa
-        sDwQw8FgM0ADyJ/PYFYfAJVFBfgNaLgOxPsJYJAanAaQhuFg1ABkA96D2fiwacNrPAbgSDzIAG86gNDY
-        4h4Z0yIdkA0YGABCJAq1ai8dkAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="toolbar.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="cmbFont.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="tbStrikeout.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADr4AAA6+AepCscAAAAETSURBVDhPY6ANMKuXYTBtmAzE1xmMG+6DsVHDeQaThnao
-        CjzAsF4FqPE1EK9m0KrnAYuZ1VswGDY8BxtEEJg2LAfi/wz29RxQEQgwrU8h1oDrQNt+Q3kIYF/PAvYa
-        QWDcsB3sApP6GKgIicC03gNsAMgVpvUNGF4hCoBsN234DDXoOdCgBKgMHmDY8B2o8RISvgaMttdA+h+Q
-        BnoJaKBR/RW4PAZA1YzARjU3gVH7DWyIYcNbsBjIMpKAcb0IWBMIg2IDLzCud4CyUIFpw2FwmJjWS0BF
-        cACQIuN6GygPAUwbbgOT82MoDw8Ap4GG42Bnw4BxfQ7U9gqoCB4AygMg20DpAJR0TRvegzMSUVFJMmBg
-        AABV6HawsOF3igAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>634, 238</value>
-  </data>
-  <data name="tbUnderline.Text" xml:space="preserve">
-    <value>Underline</value>
   </data>
   <data name="tbPaste.Text" xml:space="preserve">
     <value>Paste</value>
   </data>
-  <data name="&gt;&gt;tbSaveDefaults.Name" xml:space="preserve">
-    <value>tbSaveDefaults</value>
+  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
   </data>
-  <data name="&gt;&gt;tbStrikeout.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="cmbFont.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cmbFont.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 23</value>
+  </data>
+  <data name="cmbFont.ToolTipText" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="cmbSize.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cmbSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 23</value>
+  </data>
+  <data name="cmbSize.ToolTipText" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="cmbColor.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cmbColor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 23</value>
+  </data>
+  <data name="cmbColor.ToolTipText" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="tbBold.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADgSURBVDhPY6AeMG64z2Da8B8FGzR8B4tD8HYGs/oAqGos
+        AJsB2LBxfQ5UBxpAMaA+ARU3LAa65jdU/jODfT0LVBcSQDYAGzBpWA+XN6nXgYoiAcIGbIbKE+ECVC+k
+        oNhuWl8D1YEGiAlEk4bpUNVYALIBIDYIg6IR2QAQBhmiVc8D1YUEkA1AB+b1CkhhAArEAqgMEsBnAAiY
+        1cvA5U0bDkNFkQAhA0zrDeDyRg3noaJIANkA1FhIADvZtOE2XB5rYKIYgBcDDaqXgOpCAoQMMGp4DKT7
+        GQzrVaA6qAEYGAAW28/bjleQrQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="tbBold.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tbBold.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="tbBold.Text" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="tbItalic.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC5SURBVDhPY6AtMK1PYTBt2A3E/8HYuGE7g0l9BFSWSGBS
+        7wI14DCDfT0LVJQEYFJfALG9PgcqQiIwbVgNNsC8XgEqQgIAOdm04TMQX4eKkAgQ/u+GipAIQBpBBoAM
+        IguAnA7ygn09B1SEBAAKNLDtDeuhIiQC0/oMsAGgxEQWMGnYDDbArF4GKkIC0KrnYTBo+A404DJUhEQA
+        yQMg/8+GihAJTOtNoEn3NdgA44b7EH69BFQFtQEDAwAuWUGQmXymDgAAAABJRU5ErkJggg==
+</value>
   </data>
   <data name="tbItalic.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="tbCut.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="tbItalic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="tbItalic.Text" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="tbUnderline.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADr4AAA6+AepCscAAAAEoSURBVDhPYxhkwLg+B4htoDxMYFyvwWBa3wDlYQHGDfMZ
-        TBs+YzUEpNmw4TlQfj9UBAswra8BKviPYQhC838Gk4bZUFEswKReB2oAwhBkzWBc7wFVjQOAbIAZYFqf
-        gqLZuGE7VBUeoFXPA1R8GOiaEgajhvNATfehBhwGyxEFQApBBoBC3LQ+gTjNhvUqQOc3g71gVm8BpI/D
-        bQZ5BRI+/RBcbwDVBQXg+G14DTbAtGExEEP8DNMM44PCABRToHBBiWqIRAaYbV/PAtcMcjYsTEBiIFeC
-        ACgmTBuug9lgYNpwGyjYANFcXwHkX0bxM8KQyUA1HEA1oNj5DZUFApP6GGh0vQd6Yz3YS+jAtF4CKA/y
-        3muIuvoCqAwUgEwmGNJAQKw64gADAwCakI+ISWyZxgAAAABJRU5ErkJggg==
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACoSURBVDhPY6AuMGlYz2Da8J/BoOE3g2l9ClSUAcg2YTBq
+        eAyWM23YDxXFAuzrWcCKTBo2Q0UQwLQ+A2JAvQRUBAcAKTJumA/lIYBpfQJYjiAYNYAKBhg33Mcajcb1
+        OcQacBqYaM5DeQhg2jAZiC9DeXgALMEY1ztARRgYzOplgGLvwa4gCpjWV4CTLsg1oKQLstmkvgQqSysA
+        cjYpGAMY17eRhMGAgQEARFZ0LsUNstgAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="tbUnderline.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tbUnderline.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="tbUnderline.Text" xml:space="preserve">
+    <value>Underline</value>
+  </data>
+  <data name="tbStrikeout.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAETSURBVDhPY6ANMKuXYTBtmAzE1xmMG+6DsVHDeQaThnao
+        CjzAsF4FqPE1EK9m0KrnAYuZ1VswGDQ8BxtEEJg2LAfi/wz29RxQEQgwrU8h1oDrQNt+Q3kIYF/PAvYa
+        QWDcsB3sApP6GKgIicC03gNsAMgVpvUNGF4hCoBsN234DDXoOdCgBKgMHmDQ8B2o8RISvgaMttdA+h+Q
+        BnoJaKBR/RW4PAZA1YzARjU3GQzqv4ENMWx4CxYDWUYSMK4XAWsCYVBs4AXG9Q5QFiowbTgMDhPTegmo
+        CA4AUmRcbwPlIYBpw21gcn4M5eEB4DTQcBzsbBgwrs+B2l4BFcEDQHkAZBsoHYCSrmnDe3BGIioqSQYM
+        DABCq3amy1jqswAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="tbStrikeout.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
-  </data>
-  <data name="cmbSize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 23</value>
-  </data>
-  <data name="&gt;&gt;cmbFont.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbItalic.Name" xml:space="preserve">
-    <value>tbItalic</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="toolbar.Text" xml:space="preserve">
-    <value>toolStrip1</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
-    <value>toolStripSeparator1</value>
-  </data>
-  <data name="tbCut.Text" xml:space="preserve">
-    <value>Cut</value>
-  </data>
-  <data name="tbCopy.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="tbOpen.Text" xml:space="preserve">
-    <value>Import RTF file</value>
-  </data>
-  <data name="&gt;&gt;tbBold.Name" xml:space="preserve">
-    <value>tbBold</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tbUnderline.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADr4AAA6+AepCscAAAACoSURBVDhPY6AuMGlYz2Da8J/BsOE3g2l9ClSUAcg2YTBq
-        eAyWM23YDxXFAuzrWcCKTBo2Q0UQwLQ+A2JAvQRUBAcAKTJumA/lIYBpfQJYjiAYNYAKBhg33Mcajcb1
-        OcQacBqYaM5DeQhg2jAZiC9DeXgALMEY1ztARRgYzOplgGLvwa4gCpjWV4CTLsg1oKQLstmkvgQqSysA
-        cjYpGAMY17eRhMGAgQEASA90Ly3DsIkAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
-    <value>toolStripSeparator2</value>
-  </data>
-  <data name="rtfBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="tbAlignLeft.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADr4AAA6+AepCscAAAABLSURBVDhPY6AOMG6YTxaGA2ySxGDqAdOG/XgxQYDNeciY
-        9gCbs4nBcIDN2cRg6gFszkPGBIFpfQNeTHuALYCIwXCAzd/EYMoBAwMA8aieEddx810AAAAASUVORK5C
-        YII=
-</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>RtfEditControl</value>
-  </data>
-  <data name="cmbFont.ToolTipText" xml:space="preserve">
-    <value>Font</value>
-  </data>
-  <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
-  </data>
-  <data name="tbBold.Text" xml:space="preserve">
-    <value>Bold</value>
-  </data>
-  <data name="tbCopy.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tbStrikeout.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 22</value>
-  </data>
-  <data name="&gt;&gt;tbItalic.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="tbStrikeout.Text" xml:space="preserve">
     <value>Strike-out</value>
   </data>
+  <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="tbAlignLeft.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABLSURBVDhPY6AOMG6YTxaGA2ySxGDqAdOG/XgxQYDNeciY
+        9gCbs4nBcIDN2cRg6gFszkPGBIFpfQNeTHuALYCIwXCAzd/EYMoBAwMA8aieEddx810AAAAASUVORK5C
+        YII=
+</value>
+  </data>
+  <data name="tbAlignLeft.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tbAlignLeft.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="tbAlignLeft.Text" xml:space="preserve">
+    <value>Left alignment</value>
+  </data>
+  <data name="tbAlignCenter.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABLSURBVDhPY6AOMG6YTxaGA2ySxGDaANOG/XgxQYDNqciY
+        NgCbU4nBcIDNqcRg2gBsTkXGBIFpfQNeTBuALYCIwXCAza/EYMoBAwMA6EqeEeuvxLcAAAAASUVORK5C
+        YII=
+</value>
+  </data>
+  <data name="tbAlignCenter.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tbAlignCenter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="tbAlignCenter.Text" xml:space="preserve">
+    <value>Center alignment</value>
+  </data>
+  <data name="tbAlignRight.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY6AOMG6YTxaGA2ySxGDaA9OG5UC8HycmCEwb
+        urE6HYapB7A5jxgMB9icRwymPaA4FkzqCxhM6xtwYuoBbAFEDIYDbP4jBlMOGBgAM8OdvigRYYIAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="tbAlignRight.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tbAlignRight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="tbAlignRight.Text" xml:space="preserve">
+    <value>Right alignment</value>
+  </data>
+  <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="tbSaveDefaults.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABoSURBVDhPY6AOMG64z2Da8J/BtD6BwbjeAcpugMqiApAa
+        sDwQw8FgM0ADyJ/PYFYfAJVFBfgNaLgOxPsJYJAanAaQhuFg1ABkA96D2fiwacNrPAbgSDzIAG86gNDY
+        4h4Z0yIdkA0YGABCJAq1ai8dkAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="tbSaveDefaults.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tbSaveDefaults.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="tbSaveDefaults.Text" xml:space="preserve">
+    <value>Save settings as default</value>
+  </data>
+  <data name="tbRestoreDefaults.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADwSURBVDhPYxgCwKReB4xJAmb1MgwmDesZTBs+A/F/KAax
+        V4PlMIBpvQeDfT0LnG3a8B6q6TXQoM1gDGJDxN4DXeQCVgsHxg3zgRKrGYzrRZAUdgMN5YCqYACzTRv6
+        wXJGDY8Z9OsFoDJAYNqwHC4B0bwcKoMJTBpmQ9X0Q0WAwLRhP1TwP4NBw28Gw3oVqAwmgLgSZNl5qAgQ
+        gDgwA8C4PgEqgx2AXAqyCA6MG+6jGACSBAUmLgAJ5PdQHhCAosa8XgEFm9ZLQGVRgVm9BdSi3VAREgAo
+        JuDeJeBNrABmOyhdkAVAiQ2UiFDSwMACBgYA+5pvojVpAHgAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="tbRestoreDefaults.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tbRestoreDefaults.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="tbRestoreDefaults.Text" xml:space="preserve">
+    <value>Restore default settings</value>
+  </data>
+  <data name="lblDebug.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 22</value>
+  </data>
+  <data name="toolbar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="toolbar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>634, 25</value>
+  </data>
+  <data name="toolbar.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="toolbar.Text" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="&gt;&gt;toolbar.Name" xml:space="preserve">
+    <value>toolbar</value>
+  </data>
+  <data name="&gt;&gt;toolbar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolbar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;toolbar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="toolbar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>634, 238</value>
+  </data>
+  <data name="&gt;&gt;tbOpen.Name" xml:space="preserve">
+    <value>tbOpen</value>
+  </data>
+  <data name="&gt;&gt;tbOpen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbSave.Name" xml:space="preserve">
+    <value>tbSave</value>
+  </data>
+  <data name="&gt;&gt;tbSave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbCut.Name" xml:space="preserve">
+    <value>tbCut</value>
+  </data>
+  <data name="&gt;&gt;tbCut.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbCopy.Name" xml:space="preserve">
+    <value>tbCopy</value>
+  </data>
+  <data name="&gt;&gt;tbCopy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbPaste.Name" xml:space="preserve">
+    <value>tbPaste</value>
+  </data>
+  <data name="&gt;&gt;tbPaste.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
+    <value>toolStripSeparator2</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbFont.Name" xml:space="preserve">
+    <value>cmbFont</value>
+  </data>
+  <data name="&gt;&gt;cmbFont.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbSize.Name" xml:space="preserve">
+    <value>cmbSize</value>
+  </data>
+  <data name="&gt;&gt;cmbSize.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbColor.Name" xml:space="preserve">
+    <value>cmbColor</value>
+  </data>
+  <data name="&gt;&gt;cmbColor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbBold.Name" xml:space="preserve">
+    <value>tbBold</value>
+  </data>
+  <data name="&gt;&gt;tbBold.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbItalic.Name" xml:space="preserve">
+    <value>tbItalic</value>
+  </data>
+  <data name="&gt;&gt;tbItalic.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbUnderline.Name" xml:space="preserve">
+    <value>tbUnderline</value>
+  </data>
+  <data name="&gt;&gt;tbUnderline.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbStrikeout.Name" xml:space="preserve">
+    <value>tbStrikeout</value>
+  </data>
+  <data name="&gt;&gt;tbStrikeout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
+    <value>toolStripSeparator3</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbAlignLeft.Name" xml:space="preserve">
+    <value>tbAlignLeft</value>
+  </data>
+  <data name="&gt;&gt;tbAlignLeft.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbAlignCenter.Name" xml:space="preserve">
+    <value>tbAlignCenter</value>
+  </data>
+  <data name="&gt;&gt;tbAlignCenter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbAlignRight.Name" xml:space="preserve">
+    <value>tbAlignRight</value>
+  </data>
+  <data name="&gt;&gt;tbAlignRight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator4.Name" xml:space="preserve">
+    <value>toolStripSeparator4</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbSaveDefaults.Name" xml:space="preserve">
+    <value>tbSaveDefaults</value>
+  </data>
+  <data name="&gt;&gt;tbSaveDefaults.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbRestoreDefaults.Name" xml:space="preserve">
+    <value>tbRestoreDefaults</value>
+  </data>
+  <data name="&gt;&gt;tbRestoreDefaults.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblDebug.Name" xml:space="preserve">
+    <value>lblDebug</value>
+  </data>
+  <data name="&gt;&gt;lblDebug.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>RtfEditControl</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

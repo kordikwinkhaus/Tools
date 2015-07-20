@@ -121,6 +121,21 @@ namespace Winkhaus.RtfEditor
                 tbItalic.PerformClick();
                 e.Handled = true;
             }
+            else if (e.KeyCode == Keys.C && e.Control)
+            {
+                tbCopy.PerformClick();
+                e.Handled = true;
+            }
+            else if (e.KeyCode == Keys.V && e.Control)
+            {
+                tbPaste.PerformClick();
+                e.Handled = true;
+            }
+            else if (e.KeyCode == Keys.X && e.Control)
+            {
+                tbCut.PerformClick();
+                e.Handled = true;
+            }
             else if (e.KeyCode == Keys.Escape)
             {
                 e.Handled = true;

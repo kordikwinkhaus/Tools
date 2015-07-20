@@ -62,14 +62,12 @@
             resources.ApplyResources(this.rtfBox, "rtfBox");
             this.rtfBox.HideSelection = false;
             this.rtfBox.Name = "rtfBox";
-            this.rtfBox.ShortcutsEnabled = false;
             this.rtfBox.SelectionChanged += new System.EventHandler(this.rtfBox_SelectionChanged);
             this.rtfBox.Click += new System.EventHandler(this.rtfBox_Click);
             this.rtfBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.rtfBox_KeyDown);
             // 
             // toolbar
             // 
-            resources.ApplyResources(this.toolbar, "toolbar");
             this.toolbar.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolbar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tbOpen,
@@ -94,52 +92,53 @@
             this.tbSaveDefaults,
             this.tbRestoreDefaults,
             this.lblDebug});
+            resources.ApplyResources(this.toolbar, "toolbar");
             this.toolbar.Name = "toolbar";
             // 
             // tbOpen
             // 
-            resources.ApplyResources(this.tbOpen, "tbOpen");
             this.tbOpen.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.tbOpen, "tbOpen");
             this.tbOpen.Name = "tbOpen";
             this.tbOpen.Click += new System.EventHandler(this.tbOpen_Click);
             // 
             // tbSave
             // 
-            resources.ApplyResources(this.tbSave, "tbSave");
             this.tbSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.tbSave, "tbSave");
             this.tbSave.Name = "tbSave";
             this.tbSave.Click += new System.EventHandler(this.tbSave_Click);
             // 
             // toolStripSeparator1
             // 
-            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             this.toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             // 
             // tbCut
             // 
-            resources.ApplyResources(this.tbCut, "tbCut");
             this.tbCut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.tbCut, "tbCut");
             this.tbCut.Name = "tbCut";
             this.tbCut.Click += new System.EventHandler(this.tbCut_Click);
             // 
             // tbCopy
             // 
-            resources.ApplyResources(this.tbCopy, "tbCopy");
             this.tbCopy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.tbCopy, "tbCopy");
             this.tbCopy.Name = "tbCopy";
             this.tbCopy.Click += new System.EventHandler(this.tbCopy_Click);
             // 
             // tbPaste
             // 
-            resources.ApplyResources(this.tbPaste, "tbPaste");
             this.tbPaste.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.tbPaste, "tbPaste");
             this.tbPaste.Name = "tbPaste";
             this.tbPaste.Click += new System.EventHandler(this.tbPaste_Click);
             // 
             // toolStripSeparator2
             // 
-            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
             this.toolStripSeparator2.Name = "toolStripSeparator2";
+            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
             // 
             // cmbFont
             // 
@@ -165,88 +164,88 @@
             // 
             // tbBold
             // 
-            resources.ApplyResources(this.tbBold, "tbBold");
             this.tbBold.CheckOnClick = true;
             this.tbBold.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.tbBold, "tbBold");
             this.tbBold.Name = "tbBold";
             this.tbBold.Tag = "";
             this.tbBold.Click += new System.EventHandler(this.ChangeFontStyle_Click);
             // 
             // tbItalic
             // 
-            resources.ApplyResources(this.tbItalic, "tbItalic");
             this.tbItalic.CheckOnClick = true;
             this.tbItalic.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.tbItalic, "tbItalic");
             this.tbItalic.Name = "tbItalic";
             this.tbItalic.Tag = "";
             this.tbItalic.Click += new System.EventHandler(this.ChangeFontStyle_Click);
             // 
             // tbUnderline
             // 
-            resources.ApplyResources(this.tbUnderline, "tbUnderline");
             this.tbUnderline.CheckOnClick = true;
             this.tbUnderline.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.tbUnderline, "tbUnderline");
             this.tbUnderline.Name = "tbUnderline";
             this.tbUnderline.Tag = "";
             this.tbUnderline.Click += new System.EventHandler(this.ChangeFontStyle_Click);
             // 
             // tbStrikeout
             // 
-            resources.ApplyResources(this.tbStrikeout, "tbStrikeout");
             this.tbStrikeout.CheckOnClick = true;
             this.tbStrikeout.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.tbStrikeout, "tbStrikeout");
             this.tbStrikeout.Name = "tbStrikeout";
             this.tbStrikeout.Click += new System.EventHandler(this.ChangeFontStyle_Click);
             // 
             // toolStripSeparator3
             // 
-            resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
             this.toolStripSeparator3.Name = "toolStripSeparator3";
+            resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
             // 
             // tbAlignLeft
             // 
-            resources.ApplyResources(this.tbAlignLeft, "tbAlignLeft");
             this.tbAlignLeft.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.tbAlignLeft, "tbAlignLeft");
             this.tbAlignLeft.Name = "tbAlignLeft";
             this.tbAlignLeft.Click += new System.EventHandler(this.tbAlignLeft_Click);
             // 
             // tbAlignCenter
             // 
-            resources.ApplyResources(this.tbAlignCenter, "tbAlignCenter");
             this.tbAlignCenter.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.tbAlignCenter, "tbAlignCenter");
             this.tbAlignCenter.Name = "tbAlignCenter";
             this.tbAlignCenter.Click += new System.EventHandler(this.tbAlignCenter_Click);
             // 
             // tbAlignRight
             // 
-            resources.ApplyResources(this.tbAlignRight, "tbAlignRight");
             this.tbAlignRight.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.tbAlignRight, "tbAlignRight");
             this.tbAlignRight.Name = "tbAlignRight";
             this.tbAlignRight.Click += new System.EventHandler(this.tbAlignRight_Click);
             // 
             // toolStripSeparator4
             // 
-            resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
             this.toolStripSeparator4.Name = "toolStripSeparator4";
+            resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
             // 
             // tbSaveDefaults
             // 
-            resources.ApplyResources(this.tbSaveDefaults, "tbSaveDefaults");
             this.tbSaveDefaults.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.tbSaveDefaults, "tbSaveDefaults");
             this.tbSaveDefaults.Name = "tbSaveDefaults";
             this.tbSaveDefaults.Click += new System.EventHandler(this.tbSaveDefaults_Click);
             // 
             // tbRestoreDefaults
             // 
-            resources.ApplyResources(this.tbRestoreDefaults, "tbRestoreDefaults");
             this.tbRestoreDefaults.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.tbRestoreDefaults, "tbRestoreDefaults");
             this.tbRestoreDefaults.Name = "tbRestoreDefaults";
             this.tbRestoreDefaults.Click += new System.EventHandler(this.tbRestoreDefaults_Click);
             // 
             // lblDebug
             // 
-            resources.ApplyResources(this.lblDebug, "lblDebug");
             this.lblDebug.Name = "lblDebug";
+            resources.ApplyResources(this.lblDebug, "lblDebug");
             // 
             // RtfEditControl
             // 
