@@ -74,6 +74,8 @@ namespace OfferCustomTexts
             chkPageBreak.Checked = customText.pg_break;
 
             rbKoncovyText_CheckedChanged(null, null);
+
+            txtOnceKey.Text = customText.once_key;
         }
 
         private void cmdOK_Click(object sender, EventArgs e)
@@ -103,6 +105,8 @@ namespace OfferCustomTexts
             }
             _customText.keep_together = chkKeepTogether.Checked;
             _customText.pg_break = chkPageBreak.Checked;
+
+            _customText.once_key = txtOnceKey.Text;
 
             this.DialogResult = DialogResult.OK;
         }

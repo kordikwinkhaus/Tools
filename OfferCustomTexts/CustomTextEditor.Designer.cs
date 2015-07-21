@@ -47,6 +47,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.chkPageBreak = new System.Windows.Forms.CheckBox();
             this.chkKeepTogether = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtOnceKey = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudPoradi)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -171,11 +173,23 @@
             this.chkKeepTogether.Name = "chkKeepTogether";
             this.chkKeepTogether.UseVisualStyleBackColor = true;
             // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // txtOnceKey
+            // 
+            resources.ApplyResources(this.txtOnceKey, "txtOnceKey");
+            this.txtOnceKey.Name = "txtOnceKey";
+            // 
             // CustomTextEditor
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cmdStorno;
+            this.Controls.Add(this.txtOnceKey);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.rtfCustomText);
             this.Controls.Add(this.cmdStorno);
@@ -219,5 +233,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.CheckBox chkPageBreak;
         private System.Windows.Forms.CheckBox chkKeepTogether;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtOnceKey;
     }
 }

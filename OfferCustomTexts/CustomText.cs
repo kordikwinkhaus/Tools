@@ -21,5 +21,7 @@ namespace OfferCustomTexts
         public bool pg_break { get; set; }
 
         public bool last_footer { get; set; }
+
+        public string once_key { get; set; }
     }
 }

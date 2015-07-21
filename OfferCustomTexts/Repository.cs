@@ -28,11 +28,15 @@ CREATE TABLE dbo.OfferCustomTexts
   text_order INT NOT NULL,
   lang_ID INT NOT NULL,
   custom_text NVARCHAR(MAX) NOT NULL,
+  once_key NVARCHAR(20) NULL,
   is_header BIT NOT NULL, 
   keep_together BIT NOT NULL,
   pg_break BIT NOT NULL,
   last_footer BIT NOT NULL
 )";
+            string sql3 = @"IF NOT EXISTS(SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA='dbo' AND TABLE_NAME='OfferCustomTexts' AND COLUMN_NAME='once_key')
+  ALTER TABLE dbo.OfferCustomTexts ADD once_key NVARCHAR(20) NULL";
+
             string sql2 = @"IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[UserCustomData]') AND type in (N'U'))
 CREATE TABLE dbo.UserCustomData
 (
@@ -46,6 +50,8 @@ CREATE TABLE dbo.UserCustomData
             {
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = sql2;
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = sql3;
                 cmd.ExecuteNonQuery();
             }
         }
@@ -121,12 +127,13 @@ SELECT @@IDENTITY";
             cmd.AddParameterWithValue("@keep_together", customText.keep_together);
             cmd.AddParameterWithValue("@pg_break", customText.pg_break);
             cmd.AddParameterWithValue("@last_footer", customText.last_footer);
+            cmd.AddParameterWithValue("@once_key", customText.once_key);
         }
 
         internal void UpdateCustomText(CustomText customText)
         {
             string sql = @"UPDATE dbo.OfferCustomTexts 
-SET typ_prof=@typ_prof, text_order=@text_order, lang_ID=@lang_ID, custom_text=@custom_text, is_header=@is_header, keep_together=@keep_together, pg_break=@pg_break, last_footer=@last_footer
+SET typ_prof=@typ_prof, text_order=@text_order, lang_ID=@lang_ID, custom_text=@custom_text, is_header=@is_header, keep_together=@keep_together, pg_break=@pg_break, last_footer=@last_footer, once_key=@once_key
 WHERE ID=@id";
 
             using (SqlCommand cmd = GetCmd(sql))

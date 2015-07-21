@@ -54,5 +54,10 @@ namespace OfferCustomTexts
         {
             get { return _model.last_footer; }
         }
+
+        public string OnceKey
+        {
+            get { return _model.once_key; }
+        }
     }
 }

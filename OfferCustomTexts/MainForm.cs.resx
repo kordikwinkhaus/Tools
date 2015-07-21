@@ -129,6 +129,55 @@
   <data name="cmdDelete.Text" xml:space="preserve">
     <value>Odstranit</value>
   </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Filtr</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Typ textu</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="rbFooterTexts.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 17</value>
+  </data>
+  <data name="rbFooterTexts.Text" xml:space="preserve">
+    <value>Závěrečné texty</value>
+  </data>
+  <data name="rbHeaderTexts.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 17</value>
+  </data>
+  <data name="rbHeaderTexts.Text" xml:space="preserve">
+    <value>Úvodní texty</value>
+  </data>
+  <data name="rbAllTexts.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 17</value>
+  </data>
+  <data name="rbAllTexts.Text" xml:space="preserve">
+    <value>Vše</value>
+  </data>
+  <data name="cmdClearFilter.Text" xml:space="preserve">
+    <value>Zrušit filtr</value>
+  </data>
+  <data name="cmdApplyFilter.Text" xml:space="preserve">
+    <value>Použít filtr</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 13</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Jazyk</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 13</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Typ profilu</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 13</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Dostupné texty:</value>
+  </data>
   <data name="colProfileType.HeaderText" xml:space="preserve">
     <value>Typ profilu</value>
   </data>
@@ -150,54 +199,8 @@
   <data name="colLastFooter.HeaderText" xml:space="preserve">
     <value>Poslední zápatí</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="rbFooterTexts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 17</value>
-  </data>
-  <data name="rbFooterTexts.Text" xml:space="preserve">
-    <value>Závěrečné texty</value>
-  </data>
-  <data name="rbHeaderTexts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 17</value>
-  </data>
-  <data name="rbHeaderTexts.Text" xml:space="preserve">
-    <value>Úvodní texty</value>
-  </data>
-  <data name="rbAllTexts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 17</value>
-  </data>
-  <data name="rbAllTexts.Text" xml:space="preserve">
-    <value>Vše</value>
-  </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>Typ textu</value>
-  </data>
-  <data name="cmdClearFilter.Text" xml:space="preserve">
-    <value>Zrušit filtr</value>
-  </data>
-  <data name="cmdApplyFilter.Text" xml:space="preserve">
-    <value>Použít filtr</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Jazyk</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 13</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Typ profilu</value>
-  </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>Filtr</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 13</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Dostupné texty:</value>
+  <data name="colOnceKey.HeaderText" xml:space="preserve">
+    <value>Klíč pro jediné zobrazení</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
