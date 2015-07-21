@@ -30,12 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmdNew = new System.Windows.Forms.Button();
             this.cmdEdit = new System.Windows.Forms.Button();
             this.cmdClose = new System.Windows.Forms.Button();
             this.cmdDelete = new System.Windows.Forms.Button();
             this.dgvTexts = new System.Windows.Forms.DataGridView();
+            this.colProfileType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTextOrder = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colLangID = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colIsHeader = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.colKeepTogether = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.colPageBreak = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.colLastFooter = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.colCustomText = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsTexts = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -49,14 +57,6 @@
             this.cmbProfileType = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.colProfileType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTextOrder = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colLangID = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colIsHeader = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.colKeepTogether = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.colPageBreak = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.colLastFooter = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.colCustomText = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTexts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsTexts)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -93,8 +93,9 @@
             // 
             // dgvTexts
             // 
-            resources.ApplyResources(this.dgvTexts, "dgvTexts");
             this.dgvTexts.AllowUserToAddRows = false;
+            this.dgvTexts.AllowUserToDeleteRows = false;
+            resources.ApplyResources(this.dgvTexts, "dgvTexts");
             this.dgvTexts.AutoGenerateColumns = false;
             this.dgvTexts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTexts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -111,6 +112,70 @@
             this.dgvTexts.Name = "dgvTexts";
             this.dgvTexts.ReadOnly = true;
             this.dgvTexts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTexts.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTexts_CellDoubleClick);
+            // 
+            // colProfileType
+            // 
+            this.colProfileType.DataPropertyName = "TypProf";
+            resources.ApplyResources(this.colProfileType, "colProfileType");
+            this.colProfileType.Name = "colProfileType";
+            this.colProfileType.ReadOnly = true;
+            // 
+            // colTextOrder
+            // 
+            this.colTextOrder.DataPropertyName = "TextOrder";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.colTextOrder.DefaultCellStyle = dataGridViewCellStyle3;
+            resources.ApplyResources(this.colTextOrder, "colTextOrder");
+            this.colTextOrder.Name = "colTextOrder";
+            this.colTextOrder.ReadOnly = true;
+            // 
+            // colLangID
+            // 
+            this.colLangID.DataPropertyName = "LangID";
+            resources.ApplyResources(this.colLangID, "colLangID");
+            this.colLangID.Name = "colLangID";
+            this.colLangID.ReadOnly = true;
+            this.colLangID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // colIsHeader
+            // 
+            this.colIsHeader.DataPropertyName = "IsHeader";
+            resources.ApplyResources(this.colIsHeader, "colIsHeader");
+            this.colIsHeader.Name = "colIsHeader";
+            this.colIsHeader.ReadOnly = true;
+            this.colIsHeader.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // colKeepTogether
+            // 
+            this.colKeepTogether.DataPropertyName = "KeepTogether";
+            resources.ApplyResources(this.colKeepTogether, "colKeepTogether");
+            this.colKeepTogether.Name = "colKeepTogether";
+            this.colKeepTogether.ReadOnly = true;
+            this.colKeepTogether.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colKeepTogether.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // colPageBreak
+            // 
+            this.colPageBreak.DataPropertyName = "PageBreak";
+            resources.ApplyResources(this.colPageBreak, "colPageBreak");
+            this.colPageBreak.Name = "colPageBreak";
+            this.colPageBreak.ReadOnly = true;
+            // 
+            // colLastFooter
+            // 
+            this.colLastFooter.DataPropertyName = "LastFooter";
+            resources.ApplyResources(this.colLastFooter, "colLastFooter");
+            this.colLastFooter.Name = "colLastFooter";
+            this.colLastFooter.ReadOnly = true;
+            // 
+            // colCustomText
+            // 
+            this.colCustomText.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colCustomText.DataPropertyName = "CustomText";
+            resources.ApplyResources(this.colCustomText, "colCustomText");
+            this.colCustomText.Name = "colCustomText";
+            this.colCustomText.ReadOnly = true;
             // 
             // groupBox1
             // 
@@ -127,10 +192,10 @@
             // 
             // groupBox2
             // 
-            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Controls.Add(this.rbFooterTexts);
             this.groupBox2.Controls.Add(this.rbHeaderTexts);
             this.groupBox2.Controls.Add(this.rbAllTexts);
+            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
             // 
@@ -197,69 +262,6 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // colProfileType
-            // 
-            this.colProfileType.DataPropertyName = "TypProf";
-            resources.ApplyResources(this.colProfileType, "colProfileType");
-            this.colProfileType.Name = "colProfileType";
-            this.colProfileType.ReadOnly = true;
-            // 
-            // colTextOrder
-            // 
-            this.colTextOrder.DataPropertyName = "TextOrder";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.colTextOrder.DefaultCellStyle = dataGridViewCellStyle1;
-            resources.ApplyResources(this.colTextOrder, "colTextOrder");
-            this.colTextOrder.Name = "colTextOrder";
-            this.colTextOrder.ReadOnly = true;
-            // 
-            // colLangID
-            // 
-            this.colLangID.DataPropertyName = "LangID";
-            resources.ApplyResources(this.colLangID, "colLangID");
-            this.colLangID.Name = "colLangID";
-            this.colLangID.ReadOnly = true;
-            this.colLangID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // colIsHeader
-            // 
-            this.colIsHeader.DataPropertyName = "IsHeader";
-            resources.ApplyResources(this.colIsHeader, "colIsHeader");
-            this.colIsHeader.Name = "colIsHeader";
-            this.colIsHeader.ReadOnly = true;
-            this.colIsHeader.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // colKeepTogether
-            // 
-            this.colKeepTogether.DataPropertyName = "KeepTogether";
-            resources.ApplyResources(this.colKeepTogether, "colKeepTogether");
-            this.colKeepTogether.Name = "colKeepTogether";
-            this.colKeepTogether.ReadOnly = true;
-            this.colKeepTogether.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colKeepTogether.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // colPageBreak
-            // 
-            this.colPageBreak.DataPropertyName = "PageBreak";
-            resources.ApplyResources(this.colPageBreak, "colPageBreak");
-            this.colPageBreak.Name = "colPageBreak";
-            this.colPageBreak.ReadOnly = true;
-            // 
-            // colLastFooter
-            // 
-            this.colLastFooter.DataPropertyName = "LastFooter";
-            resources.ApplyResources(this.colLastFooter, "colLastFooter");
-            this.colLastFooter.Name = "colLastFooter";
-            this.colLastFooter.ReadOnly = true;
-            // 
-            // colCustomText
-            // 
-            this.colCustomText.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colCustomText.DataPropertyName = "CustomText";
-            resources.ApplyResources(this.colCustomText, "colCustomText");
-            this.colCustomText.Name = "colCustomText";
-            this.colCustomText.ReadOnly = true;
-            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -273,6 +275,7 @@
             this.Controls.Add(this.cmdEdit);
             this.Controls.Add(this.cmdNew);
             this.Name = "MainForm";
+            this.Shown += new System.EventHandler(this.MainForm_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTexts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsTexts)).EndInit();
             this.groupBox1.ResumeLayout(false);

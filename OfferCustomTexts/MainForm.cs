@@ -48,6 +48,14 @@ namespace OfferCustomTexts
             BindAllTexts();
         }
 
+        private void MainForm_Shown(object sender, EventArgs e)
+        {
+            if (dgvTexts.SortedColumn == null)
+            {
+                dgvTexts.Sort(colTextOrder, ListSortDirection.Ascending);
+            }
+        }
+
         #region Filtering
 
         private void BindAllTexts()
@@ -145,8 +153,21 @@ namespace OfferCustomTexts
             if (dgvTexts.SelectedRows.Count == 0) return;
 
             int index = dgvTexts.SelectedRows[0].Index;
+            EditText(index);
+        }
+
+        private void dgvTexts_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex == -1) return;
+            if (e.ColumnIndex == -1) return;
+
+            EditText(e.RowIndex);
+        }
+
+        private void EditText(int index)
+        {
             CustomTextViewModel vm = (CustomTextViewModel)bsTexts[index];
-            
+
             var frm = new CustomTextEditor(_repository);
             frm.CustomText = vm.Model;
             if (frm.ShowDialog() == DialogResult.OK)
