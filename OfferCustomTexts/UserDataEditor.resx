@@ -279,6 +279,9 @@
   <data name="&gt;&gt;cmdOK.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="cmdExport.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="cmdExport.Location" type="System.Drawing.Point, System.Drawing">
     <value>600, 221</value>
   </data>
@@ -302,6 +305,9 @@
   </data>
   <data name="&gt;&gt;cmdExport.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="cmdImport.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
   <data name="cmdImport.Location" type="System.Drawing.Point, System.Drawing">
     <value>600, 250</value>

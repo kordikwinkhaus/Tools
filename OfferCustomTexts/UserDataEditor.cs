@@ -76,14 +76,8 @@ namespace OfferCustomTexts
 
         private void cmdExport_Click(object sender, EventArgs e)
         {
-            using (SaveFileDialog dlg = new SaveFileDialog())
+            using (SaveFileDialog dlg = Dialogs.GetSaveXmlDialog())
             {
-                dlg.Title = Properties.Resources.ExportXml;
-                dlg.ValidateNames = true;
-                dlg.CheckPathExists = true;
-                dlg.Filter = Properties.Resources.XmlFiles + " (*.xml)|*.xml";
-                dlg.OverwritePrompt = true;
-
                 if (dlg.ShowDialog() == DialogResult.OK)
                 {
                     try
@@ -108,13 +102,8 @@ namespace OfferCustomTexts
 
         private void cmdImport_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog dlg = new OpenFileDialog())
+            using (OpenFileDialog dlg = Dialogs.GetOpenXmlDialog())
             {
-                dlg.Title = Properties.Resources.ImportXml;
-                dlg.ValidateNames = true;
-                dlg.CheckFileExists = true;
-                dlg.Filter = Properties.Resources.XmlFiles + " (*.xml)|*.xml";
-
                 if (dlg.ShowDialog() == DialogResult.OK)
                 {
                     try

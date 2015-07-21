@@ -129,6 +129,30 @@
   <data name="cmdDelete.Text" xml:space="preserve">
     <value>Odstranit</value>
   </data>
+  <data name="colProfileType.HeaderText" xml:space="preserve">
+    <value>Typ profilu</value>
+  </data>
+  <data name="colTextOrder.HeaderText" xml:space="preserve">
+    <value>Pořadí</value>
+  </data>
+  <data name="colLangID.HeaderText" xml:space="preserve">
+    <value>Jazyk</value>
+  </data>
+  <data name="colIsHeader.HeaderText" xml:space="preserve">
+    <value>Úvodní</value>
+  </data>
+  <data name="colKeepTogether.HeaderText" xml:space="preserve">
+    <value>Zakázat rozdělení</value>
+  </data>
+  <data name="colPageBreak.HeaderText" xml:space="preserve">
+    <value>Stránkový zlom</value>
+  </data>
+  <data name="colLastFooter.HeaderText" xml:space="preserve">
+    <value>Poslední zápatí</value>
+  </data>
+  <data name="colOnceKey.HeaderText" xml:space="preserve">
+    <value>Klíč pro jediné zobrazení</value>
+  </data>
   <data name="groupBox1.Text" xml:space="preserve">
     <value>Filtr</value>
   </data>
@@ -178,29 +202,11 @@
   <data name="label1.Text" xml:space="preserve">
     <value>Dostupné texty:</value>
   </data>
-  <data name="colProfileType.HeaderText" xml:space="preserve">
-    <value>Typ profilu</value>
+  <data name="cmdExport.Text" xml:space="preserve">
+    <value>Exportovat...</value>
   </data>
-  <data name="colTextOrder.HeaderText" xml:space="preserve">
-    <value>Pořadí</value>
-  </data>
-  <data name="colLangID.HeaderText" xml:space="preserve">
-    <value>Jazyk</value>
-  </data>
-  <data name="colIsHeader.HeaderText" xml:space="preserve">
-    <value>Úvodní</value>
-  </data>
-  <data name="colKeepTogether.HeaderText" xml:space="preserve">
-    <value>Zakázat rozdělení</value>
-  </data>
-  <data name="colPageBreak.HeaderText" xml:space="preserve">
-    <value>Stránkový zlom</value>
-  </data>
-  <data name="colLastFooter.HeaderText" xml:space="preserve">
-    <value>Poslední zápatí</value>
-  </data>
-  <data name="colOnceKey.HeaderText" xml:space="preserve">
-    <value>Klíč pro jediné zobrazení</value>
+  <data name="cmdImport.Text" xml:space="preserve">
+    <value>Importovat...</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

@@ -63,6 +63,7 @@
       <DependentUpon>CustomTextEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomTextViewModel.cs" />
+    <Compile Include="Dialogs.cs" />
     <Compile Include="Language.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>

@@ -203,7 +203,17 @@ WHERE c.TABLE_SCHEMA='dbo' AND c.TABLE_NAME='UserCustomData'";
 
         internal UserDataTable GetUserData()
         {
-            string sql = "SELECT * FROM dbo.UserCustomData";
+            return GetData("UserCustomData");
+        }
+
+        internal UserDataTable GetCustomTexts()
+        {
+            return GetData("OfferCustomTexts");
+        }
+
+        private UserDataTable GetData(string tableName)
+        {
+            string sql = "SELECT * FROM dbo." + tableName;
 
             DataSet ds = new DataSet();
 
@@ -212,7 +222,7 @@ WHERE c.TABLE_SCHEMA='dbo' AND c.TABLE_NAME='UserCustomData'";
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.FillSchema(ds, SchemaType.Source);
                 da.Fill(ds);
-                ds.Tables[0].TableName = "UserCustomData";
+                ds.Tables[0].TableName = tableName;
 
                 return new UserDataTable(da, ds);
             }

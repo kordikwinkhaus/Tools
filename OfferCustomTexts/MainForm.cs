@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using OfferCustomTexts.Properties;
@@ -36,6 +37,11 @@ namespace OfferCustomTexts
             colLangID.DisplayMember = "Name";
             colLangID.ValueMember = "LangID";
 
+            LoadData();
+        }
+
+        private void LoadData()
+        {
             // načtení kolekce uživatelských textů
             _textsVM = new List<CustomTextViewModel>();
             var customTexts = _repository.GetTexts();
@@ -203,5 +209,62 @@ namespace OfferCustomTexts
         }
 
         #endregion
+
+        private void cmdExport_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog dlg = Dialogs.GetSaveXmlDialog())
+            {
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        ExportCore(dlg.FileName);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void ExportCore(string fileName)
+        {
+            using (FileStream file = new FileStream(fileName, FileMode.OpenOrCreate))
+            {
+                var userData = _repository.GetCustomTexts();
+                userData.WriteXml(file);
+            }
+        }
+
+        private void cmdImport_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog dlg = Dialogs.GetOpenXmlDialog())
+            {
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        ImportCore(dlg.FileName);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void ImportCore(string fileName)
+        {
+            using (FileStream file = new FileStream(fileName, FileMode.Open))
+            {
+                var userData = _repository.GetCustomTexts();
+                userData.ReadXmlAndStartMerge(file);
+                userData.CommitMerge(false);
+                userData.Update();
+                LoadData();
+            }
+        }
     }
 }
