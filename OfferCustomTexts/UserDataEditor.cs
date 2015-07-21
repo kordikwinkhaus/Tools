@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.IO;
 using System.Windows.Forms;
 
 namespace OfferCustomTexts
@@ -67,6 +70,111 @@ namespace OfferCustomTexts
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void cmdExport_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog dlg = new SaveFileDialog())
+            {
+                dlg.Title = Properties.Resources.ExportXml;
+                dlg.ValidateNames = true;
+                dlg.CheckPathExists = true;
+                dlg.Filter = Properties.Resources.XmlFiles + " (*.xml)|*.xml";
+                dlg.OverwritePrompt = true;
+
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        ExportCore(dlg.FileName);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void ExportCore(string fileName)
+        {
+            using (FileStream file = new FileStream(fileName, FileMode.OpenOrCreate))
+            {
+                _userData.WriteXml(file);
+            }
+        }
+
+        private void cmdImport_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog dlg = new OpenFileDialog())
+            {
+                dlg.Title = Properties.Resources.ImportXml;
+                dlg.ValidateNames = true;
+                dlg.CheckFileExists = true;
+                dlg.Filter = Properties.Resources.XmlFiles + " (*.xml)|*.xml";
+
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        ImportCore(dlg.FileName);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void ImportCore(string fileName)
+        {
+            using (FileStream file = new FileStream(fileName, FileMode.Open))
+            {
+                var newColumns = _userData.ReadXmlAndStartMerge(file);
+                if (newColumns.Count != 0)
+                {
+                    var result = MessageBox.Show(Properties.Resources.HasNewColumns, this.Text, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+
+                    switch (result)
+                    {
+                        case DialogResult.Yes:
+                            CreateColumns(newColumns);
+                            LoadData();
+                            file.Position = 0;
+                            _userData.ReadXmlAndStartMerge(file);
+                            _userData.CommitMerge(true);
+                            break;
+
+                        case DialogResult.No:
+                            _userData.CommitMerge(false);
+                            break;
+
+                        default:
+                            _userData.CancelMerge();
+                            break;
+                    }
+                }
+                else
+                {
+                    _userData.CommitMerge(true);
+                }
+            }
+        }
+
+        private void CreateColumns(IList<DataColumn> newColumns)
+        {
+            foreach (var column in newColumns)
+            {
+                if (column.DataType == typeof(string))
+                {
+                    try
+                    {
+                        _repository.AddUserDataColumn(column.ColumnName, column.MaxLength);
+                    }
+                    catch { }
                 }
             }
         }

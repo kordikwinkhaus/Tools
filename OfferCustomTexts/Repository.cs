@@ -205,13 +205,16 @@ WHERE c.TABLE_SCHEMA='dbo' AND c.TABLE_NAME='UserCustomData'";
         {
             string sql = "SELECT * FROM dbo.UserCustomData";
 
-            DataTable dt = new DataTable();
+            DataSet ds = new DataSet();
 
             using (SqlCommand cmd = GetCmd(sql))
             {
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
-                return new UserDataTable(da, dt);
+                da.FillSchema(ds, SchemaType.Source);
+                da.Fill(ds);
+                ds.Tables[0].TableName = "UserCustomData";
+
+                return new UserDataTable(da, ds);
             }
         }
 

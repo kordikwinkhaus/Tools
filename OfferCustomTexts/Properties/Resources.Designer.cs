@@ -70,11 +70,38 @@ namespace OfferCustomTexts.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Export XML.
+        /// </summary>
+        internal static string ExportXml {
+            get {
+                return ResourceManager.GetString("ExportXml", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to (For all).
         /// </summary>
         internal static string ForAllProfiles {
             get {
                 return ResourceManager.GetString("ForAllProfiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Imported dataset contains one or more new columns. Do you want to create them?.
+        /// </summary>
+        internal static string HasNewColumns {
+            get {
+                return ResourceManager.GetString("HasNewColumns", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Import XML.
+        /// </summary>
+        internal static string ImportXml {
+            get {
+                return ResourceManager.GetString("ImportXml", resourceCulture);
             }
         }
         
@@ -102,6 +129,15 @@ namespace OfferCustomTexts.Properties {
         internal static string ReportsUserData {
             get {
                 return ResourceManager.GetString("ReportsUserData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to XML files.
+        /// </summary>
+        internal static string XmlFiles {
+            get {
+                return ResourceManager.GetString("XmlFiles", resourceCulture);
             }
         }
     }

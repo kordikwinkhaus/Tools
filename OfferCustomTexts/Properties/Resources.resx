@@ -120,8 +120,17 @@
   <data name="ColumnNameIsNotValid" xml:space="preserve">
     <value>Column name is not valid.</value>
   </data>
+  <data name="ExportXml" xml:space="preserve">
+    <value>Export XML</value>
+  </data>
   <data name="ForAllProfiles" xml:space="preserve">
     <value>(For all)</value>
+  </data>
+  <data name="HasNewColumns" xml:space="preserve">
+    <value>Imported dataset contains one or more new columns. Do you want to create them?</value>
+  </data>
+  <data name="ImportXml" xml:space="preserve">
+    <value>Import XML</value>
   </data>
   <data name="ReallyDeleteText" xml:space="preserve">
     <value>Do you really want to delete selected custom text?</value>
@@ -131,5 +140,8 @@
   </data>
   <data name="ReportsUserData" xml:space="preserve">
     <value>Reports - user data</value>
+  </data>
+  <data name="XmlFiles" xml:space="preserve">
+    <value>XML files</value>
   </data>
 </root>

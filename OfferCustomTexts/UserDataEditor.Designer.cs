@@ -35,6 +35,8 @@
             this.cmdAutoResize = new System.Windows.Forms.Button();
             this.cmdAddColumn = new System.Windows.Forms.Button();
             this.cmdOK = new System.Windows.Forms.Button();
+            this.cmdExport = new System.Windows.Forms.Button();
+            this.cmdImport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,11 +81,27 @@
             this.cmdOK.UseVisualStyleBackColor = true;
             this.cmdOK.Click += new System.EventHandler(this.cmdOK_Click);
             // 
+            // cmdExport
+            // 
+            resources.ApplyResources(this.cmdExport, "cmdExport");
+            this.cmdExport.Name = "cmdExport";
+            this.cmdExport.UseVisualStyleBackColor = true;
+            this.cmdExport.Click += new System.EventHandler(this.cmdExport_Click);
+            // 
+            // cmdImport
+            // 
+            resources.ApplyResources(this.cmdImport, "cmdImport");
+            this.cmdImport.Name = "cmdImport";
+            this.cmdImport.UseVisualStyleBackColor = true;
+            this.cmdImport.Click += new System.EventHandler(this.cmdImport_Click);
+            // 
             // UserDataEditor
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cmdClose;
+            this.Controls.Add(this.cmdImport);
+            this.Controls.Add(this.cmdExport);
             this.Controls.Add(this.cmdOK);
             this.Controls.Add(this.cmdAddColumn);
             this.Controls.Add(this.cmdAutoResize);
@@ -104,5 +122,7 @@
         private System.Windows.Forms.Button cmdAutoResize;
         private System.Windows.Forms.Button cmdAddColumn;
         private System.Windows.Forms.Button cmdOK;
+        private System.Windows.Forms.Button cmdExport;
+        private System.Windows.Forms.Button cmdImport;
     }
 }

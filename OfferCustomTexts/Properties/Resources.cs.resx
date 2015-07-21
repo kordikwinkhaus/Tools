@@ -132,4 +132,16 @@
   <data name="ReportsUserData" xml:space="preserve">
     <value>Reporty - data o uživatelích</value>
   </data>
+  <data name="HasNewColumns" xml:space="preserve">
+    <value>Importovaná data obsahují jeden nebo více nových sloupců. Chcete je vytvořit?</value>
+  </data>
+  <data name="ExportXml" xml:space="preserve">
+    <value>Exportovat XML</value>
+  </data>
+  <data name="ImportXml" xml:space="preserve">
+    <value>Importovat XML</value>
+  </data>
+  <data name="XmlFiles" xml:space="preserve">
+    <value>XML soubory</value>
+  </data>
 </root>
