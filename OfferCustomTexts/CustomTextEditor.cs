@@ -73,9 +73,12 @@ namespace OfferCustomTexts
             chkKeepTogether.Checked = customText.keep_together;
             chkPageBreak.Checked = customText.pg_break;
 
-            rbKoncovyText_CheckedChanged(null, null);
-
             txtOnceKey.Text = customText.once_key;
+            txtOptDesc.Text = customText.opt_desc;
+            chkOptional.Checked = customText.optional;
+
+            rbKoncovyText_CheckedChanged(null, null);
+            chkOptional_CheckedChanged(null, null);
         }
 
         private void cmdOK_Click(object sender, EventArgs e)
@@ -107,6 +110,10 @@ namespace OfferCustomTexts
             _customText.pg_break = chkPageBreak.Checked;
 
             _customText.once_key = txtOnceKey.Text;
+            _customText.opt_desc = txtOptDesc.Text;
+            _customText.optional = chkOptional.Checked;
+
+            _customText.Fix();
 
             this.DialogResult = DialogResult.OK;
         }
@@ -114,6 +121,14 @@ namespace OfferCustomTexts
         private void rbKoncovyText_CheckedChanged(object sender, EventArgs e)
         {
             chkLastFooter.Enabled = rbKoncovyText.Checked;
+        }
+
+        private void chkOptional_CheckedChanged(object sender, EventArgs e)
+        {
+            txtOptDesc.Enabled = lblOptDesc.Enabled = chkOptional.Checked;
+            lblTypProfilu.Enabled = cmbTypProfilu.Enabled =
+                lblLanguage.Enabled = cmbLanguages.Enabled =
+                lblOnceKey.Enabled = txtOnceKey.Enabled = !chkOptional.Checked;
         }
     }
 }

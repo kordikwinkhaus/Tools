@@ -59,5 +59,15 @@ namespace OfferCustomTexts
         {
             get { return _model.once_key; }
         }
+
+        public string OptDesc 
+        {
+            get { return _model.opt_desc; }
+        }
+
+        public bool Optional 
+        {
+            get { return _model.optional; }
+        }
     }
 }

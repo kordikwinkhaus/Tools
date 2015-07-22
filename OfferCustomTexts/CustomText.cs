@@ -23,5 +23,28 @@ namespace OfferCustomTexts
         public bool last_footer { get; set; }
 
         public string once_key { get; set; }
+
+        public bool optional { get; set; }
+
+        public string opt_desc { get; set; }
+
+        internal void Fix()
+        {
+            if (optional)
+            {
+                lang_ID = 0;
+                typ_prof = null;
+                once_key = null;
+            }
+            else
+            {
+                opt_desc = null;
+            }
+
+            if (is_header)
+            {
+                last_footer = false;
+            }
+        }
     }
 }

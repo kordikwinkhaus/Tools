@@ -142,6 +142,9 @@
   <data name="cmbLanguages.ToolTip" xml:space="preserve">
     <value>Jazyk ponechte jak je, pokud nemáte vícejazykovou databázi.</value>
   </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Typ textu</value>
+  </data>
   <data name="chkLastFooter.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 17</value>
   </data>
@@ -163,11 +166,20 @@
   <data name="rbUvodniText.Text" xml:space="preserve">
     <value>Úvodní text</value>
   </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>Typ textu</value>
-  </data>
   <data name="cmdStorno.Text" xml:space="preserve">
     <value>&amp;Storno</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Možnosti</value>
+  </data>
+  <data name="lblOptDesc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 13</value>
+  </data>
+  <data name="lblOptDesc.Text" xml:space="preserve">
+    <value>Popis</value>
+  </data>
+  <data name="chkOptional.Text" xml:space="preserve">
+    <value>Volitelný text</value>
   </data>
   <data name="chkPageBreak.Size" type="System.Drawing.Size, System.Drawing">
     <value>168, 17</value>
@@ -180,9 +192,6 @@
   </data>
   <data name="chkKeepTogether.Text" xml:space="preserve">
     <value>Nerozdělovat text na více stránek</value>
-  </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>Možnosti</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>119, 13</value>

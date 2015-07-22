@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomTextEditor));
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTypProfilu = new System.Windows.Forms.Label();
             this.cmbTypProfilu = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.nudPoradi = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblLanguage = new System.Windows.Forms.Label();
             this.cmbLanguages = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.chkLastFooter = new System.Windows.Forms.CheckBox();
@@ -45,19 +45,22 @@
             this.rtfCustomText = new Winkhaus.RtfEditor.RtfEditControl();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtOptDesc = new System.Windows.Forms.TextBox();
+            this.lblOptDesc = new System.Windows.Forms.Label();
+            this.chkOptional = new System.Windows.Forms.CheckBox();
             this.chkPageBreak = new System.Windows.Forms.CheckBox();
             this.chkKeepTogether = new System.Windows.Forms.CheckBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblOnceKey = new System.Windows.Forms.Label();
             this.txtOnceKey = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudPoradi)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // lblTypProfilu
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            resources.ApplyResources(this.lblTypProfilu, "lblTypProfilu");
+            this.lblTypProfilu.Name = "lblTypProfilu";
             // 
             // cmbTypProfilu
             // 
@@ -86,11 +89,11 @@
             -2147483648});
             this.nudPoradi.Name = "nudPoradi";
             // 
-            // label3
+            // lblLanguage
             // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            this.toolTip1.SetToolTip(this.label3, resources.GetString("label3.ToolTip"));
+            resources.ApplyResources(this.lblLanguage, "lblLanguage");
+            this.lblLanguage.Name = "lblLanguage";
+            this.toolTip1.SetToolTip(this.lblLanguage, resources.GetString("lblLanguage.ToolTip"));
             // 
             // cmbLanguages
             // 
@@ -155,11 +158,31 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtOptDesc);
+            this.groupBox2.Controls.Add(this.lblOptDesc);
+            this.groupBox2.Controls.Add(this.chkOptional);
             this.groupBox2.Controls.Add(this.chkPageBreak);
             this.groupBox2.Controls.Add(this.chkKeepTogether);
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
+            // 
+            // txtOptDesc
+            // 
+            resources.ApplyResources(this.txtOptDesc, "txtOptDesc");
+            this.txtOptDesc.Name = "txtOptDesc";
+            // 
+            // lblOptDesc
+            // 
+            resources.ApplyResources(this.lblOptDesc, "lblOptDesc");
+            this.lblOptDesc.Name = "lblOptDesc";
+            // 
+            // chkOptional
+            // 
+            resources.ApplyResources(this.chkOptional, "chkOptional");
+            this.chkOptional.Name = "chkOptional";
+            this.chkOptional.UseVisualStyleBackColor = true;
+            this.chkOptional.CheckedChanged += new System.EventHandler(this.chkOptional_CheckedChanged);
             // 
             // chkPageBreak
             // 
@@ -173,10 +196,10 @@
             this.chkKeepTogether.Name = "chkKeepTogether";
             this.chkKeepTogether.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // lblOnceKey
             // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
+            resources.ApplyResources(this.lblOnceKey, "lblOnceKey");
+            this.lblOnceKey.Name = "lblOnceKey";
             // 
             // txtOnceKey
             // 
@@ -189,18 +212,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cmdStorno;
             this.Controls.Add(this.txtOnceKey);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblOnceKey);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.rtfCustomText);
             this.Controls.Add(this.cmdStorno);
             this.Controls.Add(this.cmdOK);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cmbLanguages);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblLanguage);
             this.Controls.Add(this.nudPoradi);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbTypProfilu);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTypProfilu);
             this.Name = "CustomTextEditor";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
@@ -216,11 +239,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTypProfilu;
         private System.Windows.Forms.ComboBox cmbTypProfilu;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown nudPoradi;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblLanguage;
         private System.Windows.Forms.ComboBox cmbLanguages;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rbKoncovyText;
@@ -233,7 +256,10 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.CheckBox chkPageBreak;
         private System.Windows.Forms.CheckBox chkKeepTogether;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblOnceKey;
         private System.Windows.Forms.TextBox txtOnceKey;
+        private System.Windows.Forms.TextBox txtOptDesc;
+        private System.Windows.Forms.Label lblOptDesc;
+        private System.Windows.Forms.CheckBox chkOptional;
     }
 }

@@ -23,19 +23,19 @@ namespace OfferCustomTexts
             string sql = @"IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[OfferCustomTexts]') AND type in (N'U'))
 CREATE TABLE dbo.OfferCustomTexts
 (
-  ID INT NOT NULL IDENTITY,
+  ID INT NOT NULL PRIMARY KEY,
   typ_prof NVARCHAR(25) NULL,
   text_order INT NOT NULL,
   lang_ID INT NOT NULL,
   custom_text NVARCHAR(MAX) NOT NULL,
   once_key NVARCHAR(20) NULL,
+  opt_desc NVARCHAR(25) NULL,
   is_header BIT NOT NULL, 
   keep_together BIT NOT NULL,
   pg_break BIT NOT NULL,
-  last_footer BIT NOT NULL
+  last_footer BIT NOT NULL,
+  optional BIT NOT NULL
 )";
-            string sql3 = @"IF NOT EXISTS(SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA='dbo' AND TABLE_NAME='OfferCustomTexts' AND COLUMN_NAME='once_key')
-  ALTER TABLE dbo.OfferCustomTexts ADD once_key NVARCHAR(20) NULL";
 
             string sql2 = @"IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[UserCustomData]') AND type in (N'U'))
 CREATE TABLE dbo.UserCustomData
@@ -50,8 +50,6 @@ CREATE TABLE dbo.UserCustomData
             {
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = sql2;
-                cmd.ExecuteNonQuery();
-                cmd.CommandText = sql3;
                 cmd.ExecuteNonQuery();
             }
         }
@@ -103,22 +101,27 @@ ORDER BY typ_prof";
 
         internal void CreateCustomText(CustomText customText)
         {
-            string sql = @"INSERT INTO dbo.OfferCustomTexts (typ_prof, text_order, lang_ID, custom_text, is_header, keep_together, pg_break, last_footer) 
-VALUES (@typ_prof, @text_order, @lang_ID, @custom_text, @is_header, @keep_together, @pg_break, @last_footer); 
-SELECT @@IDENTITY";
+            if (customText.ID == 0)
+            {
+                using (SqlCommand cmd = GetCmd("SELECT ISNULL(MAX(ID),0)+1 FROM dbo.OfferCustomTexts"))
+                {
+                    customText.ID = (int)cmd.ExecuteScalar();
+                }
+            }
+
+            string sql = @"INSERT INTO dbo.OfferCustomTexts (id, typ_prof, text_order, lang_ID, custom_text, is_header, keep_together, pg_break, last_footer, once_key, [optional], opt_desc) 
+VALUES (@id, @typ_prof, @text_order, @lang_ID, @custom_text, @is_header, @keep_together, @pg_break, @last_footer, @once_key, @optional, @opt_desc);";
 
             using (SqlCommand cmd = GetCmd(sql))
             {
                 AddCommonParameters(customText, cmd);
-
-                object result = cmd.ExecuteScalar();
-                int id = Convert.ToInt32(result);
-                customText.ID = id;
+                cmd.ExecuteNonQuery();
             }
         }
 
         private static void AddCommonParameters(CustomText customText, SqlCommand cmd)
         {
+            cmd.AddParameterWithValue("@id", customText.ID);
             cmd.AddParameterWithValue("@typ_prof", customText.typ_prof);
             cmd.AddParameterWithValue("@text_order", customText.text_order);
             cmd.AddParameterWithValue("@lang_ID", customText.lang_ID);
@@ -128,17 +131,18 @@ SELECT @@IDENTITY";
             cmd.AddParameterWithValue("@pg_break", customText.pg_break);
             cmd.AddParameterWithValue("@last_footer", customText.last_footer);
             cmd.AddParameterWithValue("@once_key", customText.once_key);
+            cmd.AddParameterWithValue("@optional", customText.optional);
+            cmd.AddParameterWithValue("@opt_desc", customText.opt_desc);
         }
 
         internal void UpdateCustomText(CustomText customText)
         {
             string sql = @"UPDATE dbo.OfferCustomTexts 
-SET typ_prof=@typ_prof, text_order=@text_order, lang_ID=@lang_ID, custom_text=@custom_text, is_header=@is_header, keep_together=@keep_together, pg_break=@pg_break, last_footer=@last_footer, once_key=@once_key
+SET typ_prof=@typ_prof, text_order=@text_order, lang_ID=@lang_ID, custom_text=@custom_text, is_header=@is_header, keep_together=@keep_together, pg_break=@pg_break, last_footer=@last_footer, once_key=@once_key, [optional]=@optional, opt_desc=@opt_desc
 WHERE ID=@id";
 
             using (SqlCommand cmd = GetCmd(sql))
             {
-                cmd.AddParameterWithValue("@id", customText.ID);
                 AddCommonParameters(customText, cmd);
 
                 object result = cmd.ExecuteScalar();
