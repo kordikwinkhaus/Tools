@@ -29,6 +29,11 @@ namespace Tools
                 catalog.Catalogs.Add(new DirectoryCatalog(".\\ToolsPlugins"));
             }
             catch (DirectoryNotFoundException) { /* ok */ }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                Environment.Exit(1);
+            }
 
             var container = new CompositionContainer(catalog);
 
