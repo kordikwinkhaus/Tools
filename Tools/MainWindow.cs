@@ -13,10 +13,13 @@ namespace Tools
     {
         private readonly string _connString;
         private readonly List<IToolsPlugin> _plugins;
+        private readonly Settings _settings;
 
         public MainWindow(string connString, CompositionContainer container)
         {
             InitializeComponent();
+
+            _settings = new Settings();
 
             var icon = Program.GetIcon();
             if (icon != null)
@@ -55,6 +58,8 @@ namespace Tools
             {
                 lstTools.Items.Add(plugin);
             }
+
+            _settings.WindowState.ApplyTo(this);
         }
 
         private bool VerifyPermissions(string connString)
@@ -116,6 +121,13 @@ ISNULL(IS_SRVROLEMEMBER('sysadmin'), 0) AS SysAdmin";
                     MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+            _settings.WindowState.TakeValuesFrom(this);
+            _settings.Save();
         }
     }
 }
