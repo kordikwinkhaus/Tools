@@ -15,13 +15,14 @@ namespace Tools
             {
                 sqlConnBuilder.ApplicationName = tokenValue.ToString();
             }
-            
-            object val;
-            oleConnBuilder.TryGetValue ("Server", out val);
-            if (val != null) sqlConnBuilder.Add("Server", val.ToString());
-
-            oleConnBuilder.TryGetValue("Database", out val);
-            if (val != null) sqlConnBuilder.Add("Database", val.ToString());
+            if (oleConnBuilder.TryGetValue("Server", out tokenValue))
+            {
+                sqlConnBuilder.Add("Server", tokenValue.ToString());
+            }
+            if (oleConnBuilder.TryGetValue("Database", out tokenValue))
+            {
+                sqlConnBuilder.Add("Database", tokenValue.ToString());
+            }
             if (oleConnBuilder.TryGetValue("Trusted_Connection", out tokenValue))
             {
                 sqlConnBuilder.IntegratedSecurity = (string.Compare(tokenValue.ToString(), "yes", true) == 0);
