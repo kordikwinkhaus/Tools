@@ -230,7 +230,7 @@ namespace OfferCustomTexts
 
         private void ExportCore(string fileName)
         {
-            using (FileStream file = new FileStream(fileName, FileMode.OpenOrCreate))
+            using (FileStream file = new FileStream(fileName, FileMode.Create))
             {
                 var userData = _repository.GetCustomTexts();
                 userData.WriteXml(file);

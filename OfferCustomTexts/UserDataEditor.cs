@@ -94,7 +94,7 @@ namespace OfferCustomTexts
 
         private void ExportCore(string fileName)
         {
-            using (FileStream file = new FileStream(fileName, FileMode.OpenOrCreate))
+            using (FileStream file = new FileStream(fileName, FileMode.Create))
             {
                 _userData.WriteXml(file);
             }
