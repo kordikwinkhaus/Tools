@@ -196,6 +196,12 @@
   <data name="lblOnceKey.Text" xml:space="preserve">
     <value>Klíč jediného zobrazení</value>
   </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>343, 13</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Sekvence pro nahrazení hodnotami aktuálního uživatele: [!NazevPole]</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Editor uživatelských textů</value>
   </data>

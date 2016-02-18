@@ -52,6 +52,7 @@
             this.chkKeepTogether = new System.Windows.Forms.CheckBox();
             this.lblOnceKey = new System.Windows.Forms.Label();
             this.txtOnceKey = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudPoradi)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -224,11 +225,18 @@
             this.txtOnceKey.Name = "txtOnceKey";
             this.toolTip1.SetToolTip(this.txtOnceKey, resources.GetString("txtOnceKey.ToolTip"));
             // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            this.toolTip1.SetToolTip(this.label1, resources.GetString("label1.ToolTip"));
+            // 
             // CustomTextEditor
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cmdStorno;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtOnceKey);
             this.Controls.Add(this.lblOnceKey);
             this.Controls.Add(this.groupBox2);
@@ -280,5 +288,6 @@
         private System.Windows.Forms.TextBox txtOptDesc;
         private System.Windows.Forms.Label lblOptDesc;
         private System.Windows.Forms.CheckBox chkOptional;
+        private System.Windows.Forms.Label label1;
     }
 }
