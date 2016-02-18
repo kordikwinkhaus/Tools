@@ -11,7 +11,7 @@ namespace OfferCustomTexts
 
         internal Repository(string connString)
         {
-            if (string.IsNullOrEmpty(connString)) throw new ArgumentNullException("connString");
+            if (string.IsNullOrEmpty(connString)) throw new ArgumentNullException(nameof(connString));
 
             _conn = new SqlConnection(connString);
 
@@ -144,10 +144,7 @@ WHERE ID=@id";
             using (SqlCommand cmd = GetCmd(sql))
             {
                 AddCommonParameters(customText, cmd);
-
-                object result = cmd.ExecuteScalar();
-                int id = Convert.ToInt32(result);
-                customText.ID = id;
+                cmd.ExecuteNonQuery();
             }
         }
 
