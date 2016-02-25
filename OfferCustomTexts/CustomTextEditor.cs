@@ -28,6 +28,12 @@ namespace OfferCustomTexts
             cmbLanguages.DataSource = _languages;
         }
 
+        protected override void OnShown(EventArgs e)
+        {
+            base.OnShown(e);
+            rtfCustomText.FocusRtfTextBox();
+        }
+
         private CustomText _customText;
         public CustomText CustomText 
         {

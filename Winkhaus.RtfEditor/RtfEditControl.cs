@@ -498,5 +498,10 @@ namespace Winkhaus.RtfEditor
         {
             _rtfBoxHadFocus = true;
         }
+
+        public void FocusRtfTextBox()
+        {
+            rtfBox.Focus();
+        }
     }
 }

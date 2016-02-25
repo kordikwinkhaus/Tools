@@ -132,6 +132,9 @@
   <data name="ImportXml" xml:space="preserve">
     <value>Import XML</value>
   </data>
+  <data name="ParsingText" xml:space="preserve">
+    <value>Parsing text...</value>
+  </data>
   <data name="ReallyDeleteText" xml:space="preserve">
     <value>Do you really want to delete selected custom text?</value>
   </data>

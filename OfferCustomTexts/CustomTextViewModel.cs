@@ -1,5 +1,4 @@
-﻿
-namespace OfferCustomTexts
+﻿namespace OfferCustomTexts
 {
     public class CustomTextViewModel
     {
@@ -30,10 +29,12 @@ namespace OfferCustomTexts
             get { return _model.lang_ID; }
         }
 
-        public string CustomText
+        internal string CustomRtfText
         {
-            get { return RichTextStripper.StripRichTextFormat(_model.custom_text); }
+            get { return _model.custom_text; }
         }
+
+        public string CustomText { get; set; }
 
         public bool IsHeader
         {

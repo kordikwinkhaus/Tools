@@ -144,4 +144,7 @@
   <data name="XmlFiles" xml:space="preserve">
     <value>XML soubory</value>
   </data>
+  <data name="ParsingText" xml:space="preserve">
+    <value>Probíhá zpracování textu...</value>
+  </data>
 </root>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using OfferCustomTexts.Properties;
 
@@ -47,11 +48,44 @@ namespace OfferCustomTexts
             var customTexts = _repository.GetTexts();
             foreach (var customText in customTexts)
             {
-                _textsVM.Add(new CustomTextViewModel(customText));
+                var customTextVM = new CustomTextViewModel(customText);
+                _textsVM.Add(customTextVM);
+                CalculateCustomText(customTextVM);
             }
 
             // nabindování do gridu
             BindAllTexts();
+        }
+
+        private void CalculateCustomText(CustomTextViewModel viewmodel)
+        {
+            var vm = viewmodel;
+            if (viewmodel.CustomRtfText.Length > 2500)
+            {
+                vm.CustomText = Properties.Resources.ParsingText;
+                Task.Factory.StartNew(() => CalculateCustomTextCore(vm));
+            }
+            else
+            {
+                CalculateCustomTextCore(vm);
+            }
+        }
+
+        private void CalculateCustomTextCore(CustomTextViewModel viewmodel)
+        {
+            string rawText = RichTextStripper.StripRichTextFormat(viewmodel.CustomRtfText);
+            if (InvokeRequired)
+            {
+                Invoke(new Action(() => 
+                {
+                    viewmodel.CustomText = rawText;
+                    dgvTexts.Invalidate();
+                }));
+            }
+            else
+            {
+                viewmodel.CustomText = rawText;
+            }
         }
 
         private void MainForm_Shown(object sender, EventArgs e)
@@ -182,6 +216,8 @@ namespace OfferCustomTexts
 
                 _repository.UpdateCustomText(frm.CustomText);
                 bsTexts.ResetBindings(false);
+
+                CalculateCustomText(vm);
 
                 TrySetSortInfo(dgvTexts, sorting);
             }

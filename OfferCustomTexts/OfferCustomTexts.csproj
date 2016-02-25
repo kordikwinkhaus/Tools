@@ -40,12 +40,13 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="WinkhausCR.Data">
-      <HintPath>..\..\..\wh_libraries\WinkhausCR.Data\WinkhausCR.Data\bin\Release\WinkhausCR.Data.dll</HintPath>
+    <Reference Include="WinkhausCR.Data, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinkhausCR.Data.3.1.0\lib\net40\WinkhausCR.Data.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="WinkhausCR.Winforms, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\wh_libraries\WinkhausCR.Winforms\WinkhausCR.Winforms\bin\Release\WinkhausCR.Winforms.dll</HintPath>
+    <Reference Include="WinkhausCR.Winforms, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinkhausCR.Winforms.2.1.0\lib\net40\WinkhausCR.Winforms.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -142,6 +143,9 @@
   <ItemGroup>
     <Content Include="users.ico" />
     <Content Include="document-text.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -62,21 +62,18 @@
             // 
             resources.ApplyResources(this.lblTypProfilu, "lblTypProfilu");
             this.lblTypProfilu.Name = "lblTypProfilu";
-            this.toolTip1.SetToolTip(this.lblTypProfilu, resources.GetString("lblTypProfilu.ToolTip"));
             // 
             // cmbTypProfilu
             // 
-            resources.ApplyResources(this.cmbTypProfilu, "cmbTypProfilu");
             this.cmbTypProfilu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTypProfilu.FormattingEnabled = true;
+            resources.ApplyResources(this.cmbTypProfilu, "cmbTypProfilu");
             this.cmbTypProfilu.Name = "cmbTypProfilu";
-            this.toolTip1.SetToolTip(this.cmbTypProfilu, resources.GetString("cmbTypProfilu.ToolTip"));
             // 
             // label2
             // 
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.toolTip1.SetToolTip(this.label2, resources.GetString("label2.ToolTip"));
             // 
             // nudPoradi
             // 
@@ -92,7 +89,6 @@
             0,
             -2147483648});
             this.nudPoradi.Name = "nudPoradi";
-            this.toolTip1.SetToolTip(this.nudPoradi, resources.GetString("nudPoradi.ToolTip"));
             // 
             // lblLanguage
             // 
@@ -102,21 +98,20 @@
             // 
             // cmbLanguages
             // 
-            resources.ApplyResources(this.cmbLanguages, "cmbLanguages");
             this.cmbLanguages.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLanguages.FormattingEnabled = true;
+            resources.ApplyResources(this.cmbLanguages, "cmbLanguages");
             this.cmbLanguages.Name = "cmbLanguages";
             this.toolTip1.SetToolTip(this.cmbLanguages, resources.GetString("cmbLanguages.ToolTip"));
             // 
             // groupBox1
             // 
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.chkLastFooter);
             this.groupBox1.Controls.Add(this.rbKoncovyText);
             this.groupBox1.Controls.Add(this.rbUvodniText);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
-            this.toolTip1.SetToolTip(this.groupBox1, resources.GetString("groupBox1.ToolTip"));
             // 
             // chkLastFooter
             // 
@@ -130,7 +125,6 @@
             resources.ApplyResources(this.rbKoncovyText, "rbKoncovyText");
             this.rbKoncovyText.Name = "rbKoncovyText";
             this.rbKoncovyText.TabStop = true;
-            this.toolTip1.SetToolTip(this.rbKoncovyText, resources.GetString("rbKoncovyText.ToolTip"));
             this.rbKoncovyText.UseVisualStyleBackColor = true;
             this.rbKoncovyText.CheckedChanged += new System.EventHandler(this.rbKoncovyText_CheckedChanged);
             // 
@@ -139,14 +133,12 @@
             resources.ApplyResources(this.rbUvodniText, "rbUvodniText");
             this.rbUvodniText.Name = "rbUvodniText";
             this.rbUvodniText.TabStop = true;
-            this.toolTip1.SetToolTip(this.rbUvodniText, resources.GetString("rbUvodniText.ToolTip"));
             this.rbUvodniText.UseVisualStyleBackColor = true;
             // 
             // cmdOK
             // 
             resources.ApplyResources(this.cmdOK, "cmdOK");
             this.cmdOK.Name = "cmdOK";
-            this.toolTip1.SetToolTip(this.cmdOK, resources.GetString("cmdOK.ToolTip"));
             this.cmdOK.UseVisualStyleBackColor = true;
             this.cmdOK.Click += new System.EventHandler(this.cmdOK_Click);
             // 
@@ -155,7 +147,6 @@
             resources.ApplyResources(this.cmdStorno, "cmdStorno");
             this.cmdStorno.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cmdStorno.Name = "cmdStorno";
-            this.toolTip1.SetToolTip(this.cmdStorno, resources.GetString("cmdStorno.ToolTip"));
             this.cmdStorno.UseVisualStyleBackColor = true;
             // 
             // rtfCustomText
@@ -165,37 +156,32 @@
             this.rtfCustomText.Rtf = "{\\rtf1\\ansi\\ansicpg1250\\deff0\\deflang1029{\\fonttbl{\\f0\\fnil\\fcharset238{\\*\\fname " +
     "Arial;}Arial CE;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20\\par\r\n}\r\n";
             this.rtfCustomText.ShowSettingsControls = false;
-            this.toolTip1.SetToolTip(this.rtfCustomText, resources.GetString("rtfCustomText.ToolTip"));
             // 
             // groupBox2
             // 
-            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Controls.Add(this.txtOptDesc);
             this.groupBox2.Controls.Add(this.lblOptDesc);
             this.groupBox2.Controls.Add(this.chkOptional);
             this.groupBox2.Controls.Add(this.chkPageBreak);
             this.groupBox2.Controls.Add(this.chkKeepTogether);
+            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
-            this.toolTip1.SetToolTip(this.groupBox2, resources.GetString("groupBox2.ToolTip"));
             // 
             // txtOptDesc
             // 
             resources.ApplyResources(this.txtOptDesc, "txtOptDesc");
             this.txtOptDesc.Name = "txtOptDesc";
-            this.toolTip1.SetToolTip(this.txtOptDesc, resources.GetString("txtOptDesc.ToolTip"));
             // 
             // lblOptDesc
             // 
             resources.ApplyResources(this.lblOptDesc, "lblOptDesc");
             this.lblOptDesc.Name = "lblOptDesc";
-            this.toolTip1.SetToolTip(this.lblOptDesc, resources.GetString("lblOptDesc.ToolTip"));
             // 
             // chkOptional
             // 
             resources.ApplyResources(this.chkOptional, "chkOptional");
             this.chkOptional.Name = "chkOptional";
-            this.toolTip1.SetToolTip(this.chkOptional, resources.GetString("chkOptional.ToolTip"));
             this.chkOptional.UseVisualStyleBackColor = true;
             this.chkOptional.CheckedChanged += new System.EventHandler(this.chkOptional_CheckedChanged);
             // 
@@ -203,40 +189,34 @@
             // 
             resources.ApplyResources(this.chkPageBreak, "chkPageBreak");
             this.chkPageBreak.Name = "chkPageBreak";
-            this.toolTip1.SetToolTip(this.chkPageBreak, resources.GetString("chkPageBreak.ToolTip"));
             this.chkPageBreak.UseVisualStyleBackColor = true;
             // 
             // chkKeepTogether
             // 
             resources.ApplyResources(this.chkKeepTogether, "chkKeepTogether");
             this.chkKeepTogether.Name = "chkKeepTogether";
-            this.toolTip1.SetToolTip(this.chkKeepTogether, resources.GetString("chkKeepTogether.ToolTip"));
             this.chkKeepTogether.UseVisualStyleBackColor = true;
             // 
             // lblOnceKey
             // 
             resources.ApplyResources(this.lblOnceKey, "lblOnceKey");
             this.lblOnceKey.Name = "lblOnceKey";
-            this.toolTip1.SetToolTip(this.lblOnceKey, resources.GetString("lblOnceKey.ToolTip"));
             // 
             // txtOnceKey
             // 
             resources.ApplyResources(this.txtOnceKey, "txtOnceKey");
             this.txtOnceKey.Name = "txtOnceKey";
-            this.toolTip1.SetToolTip(this.txtOnceKey, resources.GetString("txtOnceKey.ToolTip"));
             // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.toolTip1.SetToolTip(this.label1, resources.GetString("label1.ToolTip"));
             // 
             // CustomTextEditor
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cmdStorno;
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtOnceKey);
             this.Controls.Add(this.lblOnceKey);
             this.Controls.Add(this.groupBox2);
@@ -250,10 +230,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbTypProfilu);
             this.Controls.Add(this.lblTypProfilu);
+            this.Controls.Add(this.label1);
             this.Name = "CustomTextEditor";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.toolTip1.SetToolTip(this, resources.GetString("$this.ToolTip"));
             ((System.ComponentModel.ISupportInitialize)(this.nudPoradi)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
