@@ -37,10 +37,14 @@
       <ComboBox Width="140" />
       <ComboBox Width="40" />
       <ComboBox Width="50" />
-      <ToggleButton x:Name="cmdBoldFont" Click="cmdBoldFont_Click">
+      <ToggleButton x:Name="cmdBoldFont" 
+                    Command="EditingCommands.ToggleBold" 
+                    CommandTarget="{Binding ElementName=rtfTextBox}">
         <Image Source="/Winkhaus.RtfEdit;component/Resources/Icons/Text-Bold.png"/>
       </ToggleButton>
-      <ToggleButton x:Name="cmdItalicFont" Click="cmdItalicFont_Click">
+      <ToggleButton x:Name="cmdItalicFont" 
+                    Command="EditingCommands.ToggleItalic"
+                    CommandTarget="{Binding ElementName=rtfTextBox}">
         <Image Source="/Winkhaus.RtfEdit;component/Resources/Icons/Text Italic.png"/>
       </ToggleButton>
       <ToggleButton x:Name="cmdUnderline" Click="cmdUnderline_Click">
@@ -52,24 +56,32 @@
 
       <Separator/>
 
-      <Button>
+      <Button x:Name="cmdAlignLeft" 
+              Command="EditingCommands.AlignLeft" 
+              CommandTarget="{Binding ElementName=rtfTextBox}">
         <Image Source="/Winkhaus.RtfEdit;component/Resources/Icons/Text-Left-Align.png"/>
       </Button>
-      <Button>
+      <Button x:Name="cmdAlignCenter"
+              Command="EditingCommands.AlignCenter" 
+              CommandTarget="{Binding ElementName=rtfTextBox}">
         <Image Source="/Winkhaus.RtfEdit;component/Resources/Icons/Text-Center-Align.png"/>
       </Button>
-      <Button>
+      <Button x:Name="cmdAlignRight" 
+              Command="EditingCommands.AlignRight" 
+              CommandTarget="{Binding ElementName=rtfTextBox}">
         <Image Source="/Winkhaus.RtfEdit;component/Resources/Icons/Text-Right-Align.png"/>
       </Button>
 
       <Separator/>
 
+      <!--
       <Button>
         <Image Source="/Winkhaus.RtfEdit;component/Resources/Icons/Save.png"/>
       </Button>
       <Button>
         <Image Source="/Winkhaus.RtfEdit;component/Resources/Icons/Undo.png"/>
       </Button>
+      -->
     </ToolBar>
 
     <RichTextBox x:Name="rtfTextBox" 

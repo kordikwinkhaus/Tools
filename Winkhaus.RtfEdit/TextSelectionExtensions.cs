@@ -7,8 +7,6 @@ namespace Winkhaus.RtfEdit
 {
     public static class TextSelectionExtensions
     {
-        #region Bold
-
         public static bool IsBold(this TextSelection selection)
         {
             object fwObj = selection.GetPropertyValue(TextElement.FontWeightProperty);
@@ -23,15 +21,6 @@ namespace Winkhaus.RtfEdit
             }
         }
 
-        public static void SetFontWeight(this TextSelection selection, bool bold)
-        {
-            selection.ApplyPropertyValue(TextElement.FontWeightProperty, (bold) ? FontWeights.Bold : FontWeights.Normal);
-        }
-
-        #endregion
-
-        #region Italic
-
         public static bool IsItalic(this TextSelection selection)
         {
             object fsObj = selection.GetPropertyValue(TextElement.FontStyleProperty);
@@ -45,13 +34,6 @@ namespace Winkhaus.RtfEdit
                 return fontStyle == FontStyles.Italic;
             }
         }
-
-        public static void SetItalic(this TextSelection selection, bool italic)
-        {
-            selection.ApplyPropertyValue(TextElement.FontStyleProperty, (italic) ? FontStyles.Italic : FontStyles.Normal);
-        }
-
-        #endregion
 
         #region Underline, Strikethrough
 
@@ -78,7 +60,7 @@ namespace Winkhaus.RtfEdit
         private static bool CheckTextDecoration(RichTextBox rtf, TextDecoration decoration)
         {
             var caret = rtf.CaretPosition;
-            Paragraph paragraph = FindParagraph(rtf.Document.Blocks, caret);
+            Paragraph paragraph = FindBlock<Paragraph>(rtf.Document.Blocks, caret);
             if (paragraph != null)
             {
                 Inline inline = paragraph.Inlines.FirstOrDefault(x => x.ContentStart.CompareTo(caret) <= 0 && x.ContentEnd.CompareTo(caret) >= 0) as Inline;
@@ -99,13 +81,13 @@ namespace Winkhaus.RtfEdit
             return false;
         }
 
-        private static Paragraph FindParagraph(BlockCollection blocks, TextPointer position)
+        private static T FindBlock<T>(BlockCollection blocks, TextPointer position) where T : Block
         {
-            Paragraph paragraph = null;
+            T result = null;
             Block block = blocks.FirstOrDefault(x => x.ContentStart.CompareTo(position) == -1 && x.ContentEnd.CompareTo(position) == 1);
-            if (block is Paragraph)
+            if (block is T)
             {
-                paragraph = (Paragraph)block;
+                result = (T)block;
             }
             else if (block is Table)
             {
@@ -116,17 +98,17 @@ namespace Winkhaus.RtfEdit
                     {
                         foreach (TableCell cell in row.Cells)
                         {
-                            paragraph = FindParagraph(cell.Blocks, position);
-                            if (paragraph != null)
+                            result = FindBlock<T>(cell.Blocks, position);
+                            if (result != null)
                             {
-                                return paragraph;
+                                return result;
                             }
                         }
                     }
                 }
             }
 
-            return paragraph;
+            return result;
         }
 
         #endregion

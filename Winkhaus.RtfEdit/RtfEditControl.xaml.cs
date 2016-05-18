@@ -40,16 +40,6 @@ namespace Winkhaus.RtfEdit
             rtfTextBox.Focus();
         }
 
-        private void cmdBoldFont_Click(object sender, RoutedEventArgs e)
-        {
-            rtfTextBox.Selection.SetFontWeight(cmdBoldFont.IsChecked == true);
-        }
-
-        private void cmdItalicFont_Click(object sender, RoutedEventArgs e)
-        {
-            rtfTextBox.Selection.SetItalic(cmdItalicFont.IsChecked == true);
-        }
-
         private void cmdUnderline_Click(object sender, RoutedEventArgs e)
         {
             rtfTextBox.Selection.SetUnderline(cmdUnderline.IsChecked == true);
@@ -77,10 +67,6 @@ namespace Winkhaus.RtfEdit
                 cmdUnderline.IsChecked = rtfTextBox.IsUnderline();
                 cmdStrikethrough.IsChecked = rtfTextBox.IsStrikethrough();
                 
-                //tbItalic.Checked = selection.Italic;
-                //tbUnderline.Checked = selection.Underline;
-                //tbStrikeout.Checked = selection.Strikeout;
-
                 //_sizeSelector.TrySelectSize(Convert.ToInt32(selection.Size));
                 //_fontSelector.TrySelectFontFamily(rtfBox.SelectionFont.FontFamily);
             }
@@ -89,8 +75,6 @@ namespace Winkhaus.RtfEdit
                 //_sizeSelector.TrySelectSize(-1);
                 //_fontSelector.TrySelectFontFamily((string)null);
             }
-
-            //SetButtonAlignmentState(rtfBox.SelectionAlignment);
 
             //_colorSelector.TrySelectColor(rtfBox.SelectionColor);
         }
