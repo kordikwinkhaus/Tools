@@ -79,6 +79,56 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="..\Winkhaus.RtfEditor\ikony\Copy.png">
+      <Link>Resources\Icons\Copy.png</Link>
+    </Resource>
+    <Resource Include="..\Winkhaus.RtfEditor\ikony\Documents.png">
+      <Link>Resources\Icons\Documents.png</Link>
+    </Resource>
+    <Resource Include="..\Winkhaus.RtfEditor\ikony\Export.png">
+      <Link>Resources\Icons\Export.png</Link>
+    </Resource>
+    <Resource Include="..\Winkhaus.RtfEditor\ikony\Folder Open.png">
+      <Link>Resources\Icons\Folder Open.png</Link>
+    </Resource>
+    <Resource Include="..\Winkhaus.RtfEditor\ikony\Import.png">
+      <Link>Resources\Icons\Import.png</Link>
+    </Resource>
+    <Resource Include="..\Winkhaus.RtfEditor\ikony\Paste.png">
+      <Link>Resources\Icons\Paste.png</Link>
+    </Resource>
+    <Resource Include="..\Winkhaus.RtfEditor\ikony\Save.png">
+      <Link>Resources\Icons\Save.png</Link>
+    </Resource>
+    <Resource Include="..\Winkhaus.RtfEditor\ikony\Scissors.png">
+      <Link>Resources\Icons\Scissors.png</Link>
+    </Resource>
+    <Resource Include="..\Winkhaus.RtfEditor\ikony\StrikeOut.png">
+      <Link>Resources\Icons\StrikeOut.png</Link>
+    </Resource>
+    <Resource Include="..\Winkhaus.RtfEditor\ikony\Text Italic.png">
+      <Link>Resources\Icons\Text Italic.png</Link>
+    </Resource>
+    <Resource Include="..\Winkhaus.RtfEditor\ikony\Text-Bold.png">
+      <Link>Resources\Icons\Text-Bold.png</Link>
+    </Resource>
+    <Resource Include="..\Winkhaus.RtfEditor\ikony\Text-Center-Align.png">
+      <Link>Resources\Icons\Text-Center-Align.png</Link>
+    </Resource>
+    <Resource Include="..\Winkhaus.RtfEditor\ikony\Text-Left-Align.png">
+      <Link>Resources\Icons\Text-Left-Align.png</Link>
+    </Resource>
+    <Resource Include="..\Winkhaus.RtfEditor\ikony\Text-Right-Align.png">
+      <Link>Resources\Icons\Text-Right-Align.png</Link>
+    </Resource>
+    <Resource Include="..\Winkhaus.RtfEditor\ikony\UnderLine.png">
+      <Link>Resources\Icons\UnderLine.png</Link>
+    </Resource>
+    <Resource Include="..\Winkhaus.RtfEditor\ikony\Undo.png">
+      <Link>Resources\Icons\Undo.png</Link>
+    </Resource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -42,7 +42,6 @@
             this.rbUvodniText = new System.Windows.Forms.RadioButton();
             this.cmdOK = new System.Windows.Forms.Button();
             this.cmdStorno = new System.Windows.Forms.Button();
-            this.rtfCustomText = new Winkhaus.RtfEditor.RtfEditControl();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtOptDesc = new System.Windows.Forms.TextBox();
@@ -53,6 +52,7 @@
             this.lblOnceKey = new System.Windows.Forms.Label();
             this.txtOnceKey = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.rtfEditorHost = new System.Windows.Forms.Integration.ElementHost();
             ((System.ComponentModel.ISupportInitialize)(this.nudPoradi)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -149,14 +149,6 @@
             this.cmdStorno.Name = "cmdStorno";
             this.cmdStorno.UseVisualStyleBackColor = true;
             // 
-            // rtfCustomText
-            // 
-            resources.ApplyResources(this.rtfCustomText, "rtfCustomText");
-            this.rtfCustomText.Name = "rtfCustomText";
-            this.rtfCustomText.Rtf = "{\\rtf1\\ansi\\ansicpg1250\\deff0\\deflang1029{\\fonttbl{\\f0\\fnil\\fcharset238{\\*\\fname " +
-    "Arial;}Arial CE;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20\\par\r\n}\r\n";
-            this.rtfCustomText.ShowSettingsControls = false;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtOptDesc);
@@ -212,15 +204,21 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
+            // rtfEditorHost
+            // 
+            resources.ApplyResources(this.rtfEditorHost, "rtfEditorHost");
+            this.rtfEditorHost.Name = "rtfEditorHost";
+            this.rtfEditorHost.Child = null;
+            // 
             // CustomTextEditor
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cmdStorno;
+            this.Controls.Add(this.rtfEditorHost);
             this.Controls.Add(this.txtOnceKey);
             this.Controls.Add(this.lblOnceKey);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.rtfCustomText);
             this.Controls.Add(this.cmdStorno);
             this.Controls.Add(this.cmdOK);
             this.Controls.Add(this.groupBox1);
@@ -257,7 +255,6 @@
         private System.Windows.Forms.RadioButton rbUvodniText;
         private System.Windows.Forms.Button cmdOK;
         private System.Windows.Forms.Button cmdStorno;
-        private Winkhaus.RtfEditor.RtfEditControl rtfCustomText;
         private System.Windows.Forms.CheckBox chkLastFooter;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -269,5 +266,6 @@
         private System.Windows.Forms.Label lblOptDesc;
         private System.Windows.Forms.CheckBox chkOptional;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Integration.ElementHost rtfEditorHost;
     }
 }

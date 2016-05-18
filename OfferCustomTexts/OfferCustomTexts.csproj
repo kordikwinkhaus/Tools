@@ -30,9 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,6 +43,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
     <Reference Include="WinkhausCR.Data, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\WinkhausCR.Data.3.1.0\lib\net40\WinkhausCR.Data.dll</HintPath>
       <Private>True</Private>
@@ -101,9 +107,9 @@
       <Project>{87fec1d7-09c7-422b-b1fe-77b63a42f3b2}</Project>
       <Name>Tools</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Winkhaus.RtfEditor\Winkhaus.RtfEditor.csproj">
-      <Project>{e6c52593-d1e6-4c66-9fce-627ac3ea6451}</Project>
-      <Name>Winkhaus.RtfEditor</Name>
+    <ProjectReference Include="..\Winkhaus.RtfEdit\Winkhaus.RtfEdit.csproj">
+      <Project>{7dd2c90e-0702-4119-b0bd-4fc1a2cb5f0e}</Project>
+      <Name>Winkhaus.RtfEdit</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

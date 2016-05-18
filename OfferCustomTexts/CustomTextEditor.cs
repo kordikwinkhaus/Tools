@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using OfferCustomTexts.Properties;
+using Winkhaus.RtfEdit;
 
 namespace OfferCustomTexts
 {
@@ -11,6 +12,7 @@ namespace OfferCustomTexts
         private readonly Repository _repository;
         private static string DEFAULT = Resources.ForAllProfiles;
         private readonly IList<Language> _languages;
+        private readonly RtfEditControl _rtfCustomText;
 
         public CustomTextEditor(Repository repository)
         {
@@ -26,12 +28,13 @@ namespace OfferCustomTexts
 
             _languages = _repository.GetLanguages();
             cmbLanguages.DataSource = _languages;
+            rtfEditorHost.Child = _rtfCustomText = new RtfEditControl();
         }
 
         protected override void OnShown(EventArgs e)
         {
             base.OnShown(e);
-            rtfCustomText.FocusRtfTextBox();
+            _rtfCustomText.FocusRtfTextBox();
         }
 
         private CustomText _customText;
@@ -65,7 +68,7 @@ namespace OfferCustomTexts
                 }
             }
 
-            rtfCustomText.Rtf = customText.custom_text;
+            _rtfCustomText.Rtf = customText.custom_text;
             nudPoradi.Value = customText.text_order;
             if (customText.is_header)
             {
@@ -101,7 +104,7 @@ namespace OfferCustomTexts
             Language lang = (Language)cmbLanguages.SelectedItem;
             _customText.lang_ID = lang.LangID;
 
-            _customText.custom_text = rtfCustomText.Rtf;
+            _customText.custom_text = _rtfCustomText.Rtf;
             _customText.text_order = Convert.ToInt32(nudPoradi.Value);
             _customText.is_header = rbUvodniText.Checked;
             if (!_customText.is_header)
