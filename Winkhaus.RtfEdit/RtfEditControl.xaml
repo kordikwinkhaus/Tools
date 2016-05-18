@@ -37,18 +37,18 @@
       <ComboBox Width="140" />
       <ComboBox Width="40" />
       <ComboBox Width="50" />
-      <Button>
+      <ToggleButton x:Name="cmdBoldFont" Click="cmdBoldFont_Click">
         <Image Source="/Winkhaus.RtfEdit;component/Resources/Icons/Text-Bold.png"/>
-      </Button>
-      <Button>
+      </ToggleButton>
+      <ToggleButton x:Name="cmdItalicFont" Click="cmdItalicFont_Click">
         <Image Source="/Winkhaus.RtfEdit;component/Resources/Icons/Text Italic.png"/>
-      </Button>
-      <Button>
+      </ToggleButton>
+      <ToggleButton x:Name="cmdUnderline" Click="cmdUnderline_Click">
         <Image Source="/Winkhaus.RtfEdit;component/Resources/Icons/UnderLine.png"/>
-      </Button>
-      <Button>
+      </ToggleButton>
+      <ToggleButton x:Name="cmdStrikethrough" Click="cmdStrikethrough_Click">
         <Image Source="/Winkhaus.RtfEdit;component/Resources/Icons/StrikeOut.png"/>
-      </Button>
+      </ToggleButton>
 
       <Separator/>
 
@@ -74,6 +74,7 @@
 
     <RichTextBox x:Name="rtfTextBox" 
                  Grid.Row="1"
+                 SelectionChanged="rtfTextBox_SelectionChanged"
                  />
   </Grid>
 </UserControl>

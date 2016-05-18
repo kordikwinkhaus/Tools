@@ -67,6 +67,7 @@
     <Compile Include="RtfEditControl.xaml.cs">
       <DependentUpon>RtfEditControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TextSelectionExtensions.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
