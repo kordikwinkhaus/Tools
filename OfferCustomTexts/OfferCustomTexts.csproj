@@ -16,18 +16,22 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>$(Objdir)\$(SolutionName)\$(MSBuildProjectName)\bin\$(Configuration)\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <BaseIntermediateOutputPath>$(Objdir)\$(SolutionName)\$(MSBuildProjectName)\obj\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)$(Configuration)\</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>$(Objdir)\$(SolutionName)\$(MSBuildProjectName)\bin\$(Configuration)\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <BaseIntermediateOutputPath>$(Objdir)\$(SolutionName)\$(MSBuildProjectName)\obj\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)$(Configuration)\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationCore" />
@@ -155,11 +159,12 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>COPY /Y $(TargetPath) "$(SolutionDir)Tools\bin\$(ConfigurationName)\ToolsPlugins\"
-COPY /Y $(TargetDir)cs\OfferCustomTexts.resources.dll "$(SolutionDir)Tools\bin\$(ConfigurationName)\ToolsPlugins\cs\"
-COPY /Y $(TargetDir)\WinkhausCR.Data.dll "$(SolutionDir)Tools\bin\$(ConfigurationName)\ToolsPlugins\"
-COPY /Y $(TargetDir)\Winkhaus.RtfEditor.dll "$(SolutionDir)Tools\bin\$(ConfigurationName)\ToolsPlugins\"
-COPY /Y $(TargetDir)\cs\Winkhaus.RtfEditor.resources.dll "$(SolutionDir)Tools\bin\$(ConfigurationName)\ToolsPlugins\cs\"</PostBuildEvent>
+    <PostBuildEvent>IF NOT EXIST "$(OutDir)..\..\..\Tools\bin\$(ConfigurationName)\ToolsPlugins\cs\" MKDIR "$(OutDir)..\..\..\Tools\bin\$(ConfigurationName)\ToolsPlugins\cs\"
+COPY /Y $(TargetPath) "$(OutDir)..\..\..\Tools\bin\$(ConfigurationName)\ToolsPlugins\"
+COPY /Y $(TargetDir)cs\OfferCustomTexts.resources.dll "$(OutDir)..\..\..\Tools\bin\$(ConfigurationName)\ToolsPlugins\cs\"
+COPY /Y $(TargetDir)\WinkhausCR.Data.dll "$(OutDir)..\..\..\Tools\bin\$(ConfigurationName)\ToolsPlugins\"
+COPY /Y $(TargetDir)\Winkhaus.RtfEdit.dll "$(OutDir)..\..\..\Tools\bin\$(ConfigurationName)\ToolsPlugins\"
+</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
