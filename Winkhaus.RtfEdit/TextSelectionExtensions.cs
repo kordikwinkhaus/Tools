@@ -35,6 +35,24 @@ namespace Winkhaus.RtfEdit
             }
         }
 
+        public static double GetFontSize(this TextSelection selection)
+        {
+            object fsObj = selection.GetPropertyValue(TextElement.FontSizeProperty);
+            if (fsObj == DependencyProperty.UnsetValue)
+            {
+                return double.NaN;
+            }
+            else
+            {
+                return (double)fsObj;
+            }
+        }
+
+        public static void SetFontSize(this TextSelection selection, double fontSize)
+        {
+            selection.ApplyPropertyValue(TextElement.FontSizeProperty, fontSize);
+        }
+
         #region Underline, Strikethrough
 
         public static bool IsUnderline(this RichTextBox rtf)

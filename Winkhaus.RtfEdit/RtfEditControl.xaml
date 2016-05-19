@@ -35,7 +35,12 @@
       <Separator/>
       
       <ComboBox Width="140" />
-      <ComboBox Width="40" />
+      <ComboBox MinWidth="40"
+                ItemsSource="{Binding FontSizes}"
+                SelectedItem="{Binding SelectedFontSize}"
+                DisplayMemberPath="DisplaySize"
+                SelectionChanged="cmbFontSize_SelectionChanged"
+                />
       <ComboBox Width="50" />
       <ToggleButton x:Name="cmdBoldFont" 
                     Command="EditingCommands.ToggleBold" 

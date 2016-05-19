@@ -8,9 +8,12 @@ namespace Winkhaus.RtfEdit
 {
     public partial class RtfEditControl : UserControl
     {
+        private readonly RtfEditViewModel _viewmodel;
+
         public RtfEditControl()
         {
             InitializeComponent();
+            this.DataContext = _viewmodel = new RtfEditViewModel();
         }
 
         public string Rtf
@@ -52,6 +55,14 @@ namespace Winkhaus.RtfEdit
             SetToolbarBySelection();
         }
 
+        private void cmbFontSize_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+            if (_viewmodel.SelectedFontSize != null)
+            {
+                rtfTextBox.Selection.SetFontSize(_viewmodel.SelectedFontSize.Size);
+            }
+        }
+
         private void rtfTextBox_SelectionChanged(object sender, RoutedEventArgs e)
         {
             SetToolbarBySelection();
@@ -66,13 +77,14 @@ namespace Winkhaus.RtfEdit
                 cmdItalicFont.IsChecked = selection.IsItalic();
                 cmdUnderline.IsChecked = rtfTextBox.IsUnderline();
                 cmdStrikethrough.IsChecked = rtfTextBox.IsStrikethrough();
-                
+
+                _viewmodel.TrySelectSize(selection.GetFontSize());
                 //_sizeSelector.TrySelectSize(Convert.ToInt32(selection.Size));
                 //_fontSelector.TrySelectFontFamily(rtfBox.SelectionFont.FontFamily);
             }
             else
             {
-                //_sizeSelector.TrySelectSize(-1);
+                _viewmodel.TrySelectSize(double.NaN);
                 //_fontSelector.TrySelectFontFamily((string)null);
             }
 
