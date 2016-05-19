@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
+using System.Windows.Media;
 
 namespace Winkhaus.RtfEdit
 {
@@ -51,6 +52,24 @@ namespace Winkhaus.RtfEdit
         public static void SetFontSize(this TextSelection selection, double fontSize)
         {
             selection.ApplyPropertyValue(TextElement.FontSizeProperty, fontSize);
+        }
+
+        public static Brush GetForeground(this TextSelection selection)
+        {
+            object brushObj = selection.GetPropertyValue(TextElement.ForegroundProperty);
+            if (brushObj == DependencyProperty.UnsetValue)
+            {
+                return null;
+            }
+            else
+            {
+                return (Brush)brushObj;
+            }
+        }
+
+        public static void SetForeground(this TextSelection selection, Brush brush)
+        {
+            selection.ApplyPropertyValue(TextElement.ForegroundProperty, brush);
         }
 
         #region Underline, Strikethrough

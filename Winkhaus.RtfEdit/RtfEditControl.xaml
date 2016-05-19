@@ -34,14 +34,35 @@
       
       <Separator/>
       
-      <ComboBox Width="140" />
+      <ComboBox Width="140"
+                Height="20"
+                Focusable="False"
+                />
       <ComboBox MinWidth="40"
+                Height="20"
                 ItemsSource="{Binding FontSizes}"
                 SelectedItem="{Binding SelectedFontSize}"
                 DisplayMemberPath="DisplaySize"
                 SelectionChanged="cmbFontSize_SelectionChanged"
+                Focusable="False"
                 />
-      <ComboBox Width="50" />
+      <ComboBox Width="45" 
+                Height="20"
+                ItemsSource="{Binding Colors}"
+                SelectedItem="{Binding SelectedColor}"
+                SelectionChanged="cmbFontColor_SelectionChanged"
+                Focusable="False"
+                >
+        <ComboBox.ItemTemplate>
+          <DataTemplate DataType="{x:Type local:ColorViewModel}">
+            <Rectangle Margin="2" 
+                       Fill="{Binding Brush}"
+                       Height="12"
+                       Width="30"
+                       />
+          </DataTemplate>
+        </ComboBox.ItemTemplate>
+      </ComboBox>
       <ToggleButton x:Name="cmdBoldFont" 
                     Command="EditingCommands.ToggleBold" 
                     CommandTarget="{Binding ElementName=rtfTextBox}">

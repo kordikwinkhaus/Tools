@@ -63,6 +63,14 @@ namespace Winkhaus.RtfEdit
             }
         }
 
+        private void cmbFontColor_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (_viewmodel.SelectedColor != null)
+            {
+                rtfTextBox.Selection.SetForeground(_viewmodel.SelectedColor.Brush);
+            }
+        }
+
         private void rtfTextBox_SelectionChanged(object sender, RoutedEventArgs e)
         {
             SetToolbarBySelection();
@@ -79,16 +87,15 @@ namespace Winkhaus.RtfEdit
                 cmdStrikethrough.IsChecked = rtfTextBox.IsStrikethrough();
 
                 _viewmodel.TrySelectSize(selection.GetFontSize());
-                //_sizeSelector.TrySelectSize(Convert.ToInt32(selection.Size));
+                _viewmodel.TrySelectColor(selection.GetForeground());
                 //_fontSelector.TrySelectFontFamily(rtfBox.SelectionFont.FontFamily);
             }
             else
             {
                 _viewmodel.TrySelectSize(double.NaN);
+                _viewmodel.TrySelectColor(null);
                 //_fontSelector.TrySelectFontFamily((string)null);
             }
-
-            //_colorSelector.TrySelectColor(rtfBox.SelectionColor);
         }
     }
 }
