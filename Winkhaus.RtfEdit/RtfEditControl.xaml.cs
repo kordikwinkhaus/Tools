@@ -29,12 +29,22 @@ namespace Winkhaus.RtfEdit
             }
             set
             {
-                using (MemoryStream stream = new MemoryStream(ASCIIEncoding.Default.GetBytes(value)))
+                if (!string.IsNullOrEmpty(value))
                 {
-                    rtfTextBox.Selection.Load(stream, DataFormats.Rtf);
-                    var pos = rtfTextBox.Document.ContentStart;
-                    rtfTextBox.Selection.Select(pos, pos);
+                    using (MemoryStream stream = new MemoryStream(ASCIIEncoding.Default.GetBytes(value)))
+                    {
+                        rtfTextBox.Selection.Load(stream, DataFormats.Rtf);
+                        var pos = rtfTextBox.Document.ContentStart;
+                        rtfTextBox.Selection.Select(pos, pos);
+                    }
                 }
+                else
+                {
+                    rtfTextBox.FontFamily = _viewmodel.FontFamilies[0].FontFamily;
+                    rtfTextBox.FontSize = _viewmodel.FontSizes[2].Size;
+                    rtfTextBox.Foreground = _viewmodel.Colors[0].Brush;
+                }
+                SetToolbarBySelection();
             }
         }
 
@@ -63,6 +73,14 @@ namespace Winkhaus.RtfEdit
             }
         }
 
+        private void cmbFontFamily_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (_viewmodel.SelectedFontFamily != null)
+            {
+                rtfTextBox.Selection.SetFontFamily(_viewmodel.SelectedFontFamily.FontFamily);
+            }
+        }
+
         private void cmbFontColor_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (_viewmodel.SelectedColor != null)
@@ -88,13 +106,13 @@ namespace Winkhaus.RtfEdit
 
                 _viewmodel.TrySelectSize(selection.GetFontSize());
                 _viewmodel.TrySelectColor(selection.GetForeground());
-                //_fontSelector.TrySelectFontFamily(rtfBox.SelectionFont.FontFamily);
+                _viewmodel.TrySelectFontFamily(selection.GetFontFamily());
             }
             else
             {
                 _viewmodel.TrySelectSize(double.NaN);
                 _viewmodel.TrySelectColor(null);
-                //_fontSelector.TrySelectFontFamily((string)null);
+                _viewmodel.TrySelectFontFamily(null);
             }
         }
     }

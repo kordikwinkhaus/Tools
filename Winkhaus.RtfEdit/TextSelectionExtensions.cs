@@ -72,6 +72,24 @@ namespace Winkhaus.RtfEdit
             selection.ApplyPropertyValue(TextElement.ForegroundProperty, brush);
         }
 
+        public static FontFamily GetFontFamily(this TextSelection selection)
+        {
+            object ffObj = selection.GetPropertyValue(TextElement.FontFamilyProperty);
+            if (ffObj == DependencyProperty.UnsetValue)
+            {
+                return null;
+            }
+            else
+            {
+                return (FontFamily)ffObj;
+            }
+        }
+
+        public static void SetFontFamily(this TextSelection selection, FontFamily fontFamily)
+        {
+            selection.ApplyPropertyValue(TextElement.FontFamilyProperty, fontFamily);
+        }
+
         #region Underline, Strikethrough
 
         public static bool IsUnderline(this RichTextBox rtf)

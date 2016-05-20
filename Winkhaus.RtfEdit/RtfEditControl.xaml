@@ -39,11 +39,22 @@
       </Button>
       
       <Separator/>
-      
+
       <ComboBox Width="140"
                 Height="20"
+                ItemsSource="{Binding FontFamilies}"
+                SelectedItem="{Binding SelectedFontFamily}"
+                SelectionChanged="cmbFontFamily_SelectionChanged"
                 Focusable="False"
-                />
+                >
+        <ComboBox.ItemTemplate>
+          <DataTemplate DataType="{x:Type local:FontFamilyViewModel}">
+            <TextBlock Text="{Binding FontName}"
+                       FontFamily="{Binding FontName}"
+                       />
+          </DataTemplate>
+        </ComboBox.ItemTemplate>
+      </ComboBox>
       <ComboBox MinWidth="40"
                 Height="20"
                 ItemsSource="{Binding FontSizes}"

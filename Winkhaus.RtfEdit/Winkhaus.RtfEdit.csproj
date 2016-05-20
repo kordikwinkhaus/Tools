@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ColorViewModel.cs" />
+    <Compile Include="FontFamilyViewModel.cs" />
     <Compile Include="FontSizeViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

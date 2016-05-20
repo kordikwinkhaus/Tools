@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Windows;
 using System.Windows.Media;
 
 namespace Winkhaus.RtfEdit
@@ -10,13 +11,63 @@ namespace Winkhaus.RtfEdit
     {
         public RtfEditViewModel()
         {
+            InitFontSizes();
+            InitFontFamilies();
+            InitFontColors();
+        }
+
+        private void InitFontSizes()
+        {
             int[] sizes = new int[] { 8, 9, 10, 11, 12, 14, 16, 18, 20, 24, 28, 36, 48, 72 };
             this.FontSizes = new List<FontSizeViewModel>();
             for (int i = 0; i < sizes.Length; i++)
             {
                 this.FontSizes.Add(new FontSizeViewModel(sizes[i]));
             }
+        }
 
+        private void InitFontFamilies()
+        {
+            this.FontFamilies = new List<FontFamilyViewModel>();
+
+            string[] standardFonts = new string[]
+            {
+                "arial",
+                "arial black",
+                "calibri",
+                "cambria",
+                "century gothic",
+                "courier",
+                "courier new",
+                "consolas",
+                "fixedsys",
+                "helvetica",
+                "garamond",
+                "impact",
+                "sans serif",
+                "terminal",
+                "tahoma",
+                "times new roman",
+                "trebuchet ms",
+                "verdana"
+            };
+
+            foreach (var ff in Fonts.SystemFontFamilies
+                                    .Where(ff => IsStandardFont(ff, standardFonts))
+                                    .OrderBy(ff => ff.ToString()))
+            {
+                this.FontFamilies.Add(new FontFamilyViewModel(ff));
+            }
+        }
+
+        private static bool IsStandardFont(FontFamily fontFamily, string[] standardFonts)
+        {
+            var fn = fontFamily.ToString().ToLower();
+            return standardFonts.Contains(fontFamily.ToString().ToLower());
+        }
+
+        private void InitFontColors()
+        {
             this.Colors = new List<ColorViewModel>();
             this.Colors.Add(new ColorViewModel(Brushes.Black));
             this.Colors.Add(new ColorViewModel(Brushes.DimGray));
@@ -57,6 +108,22 @@ namespace Winkhaus.RtfEdit
             }
         }
 
+        public IList<FontFamilyViewModel> FontFamilies { get; private set; }
+
+        private FontFamilyViewModel _selectedFontFamily;
+        public FontFamilyViewModel SelectedFontFamily
+        {
+            get { return _selectedFontFamily; }
+            set
+            {
+                if (_selectedFontFamily != value)
+                {
+                    _selectedFontFamily = value;
+                    OnPropertyChanged(nameof(SelectedFontFamily));
+                }
+            }
+        }
+
         public IList<ColorViewModel> Colors { get; private set; }
 
         private ColorViewModel _selectedColor;
@@ -89,6 +156,19 @@ namespace Winkhaus.RtfEdit
             else
             {
                 this.SelectedFontSize = this.FontSizes.SingleOrDefault(s => Math.Abs(s.Size - size) < 0.1);
+            }
+        }
+
+        internal void TrySelectFontFamily(FontFamily fontFamily)
+        {
+            if (fontFamily != null)
+            {
+                string fontName = fontFamily.ToString();
+                this.SelectedFontFamily = this.FontFamilies.SingleOrDefault(f => f.FontName == fontName);
+            }
+            else
+            {
+                this.SelectedFontFamily = null;
             }
         }
 
