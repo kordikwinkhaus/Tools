@@ -22,13 +22,19 @@
       
       <Separator/>
       
-      <Button>
+      <Button Command="ApplicationCommands.Cut"
+              CommandTarget="{Binding ElementName=rtfTextBox}"
+              >
         <Image Source="/Winkhaus.RtfEdit;component/Resources/Icons/Scissors.png"/>
       </Button>
-      <Button>
+      <Button Command="ApplicationCommands.Copy"
+              CommandTarget="{Binding ElementName=rtfTextBox}"
+              >
         <Image Source="/Winkhaus.RtfEdit;component/Resources/Icons/Copy.png"/>
       </Button>
-      <Button>
+      <Button Command="ApplicationCommands.Paste"
+              CommandTarget="{Binding ElementName=rtfTextBox}"
+              >
         <Image Source="/Winkhaus.RtfEdit;component/Resources/Icons/Paste.png"/>
       </Button>
       
