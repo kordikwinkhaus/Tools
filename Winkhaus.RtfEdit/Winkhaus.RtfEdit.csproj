@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ColorViewModel.cs" />
+    <Compile Include="DialogFactory.cs" />
     <Compile Include="FontFamilyViewModel.cs" />
     <Compile Include="FontSizeViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -71,6 +72,7 @@
       <DependentUpon>RtfEditControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="RtfEditViewModel.cs" />
+    <Compile Include="RtfHelper.cs" />
     <Compile Include="TextSelectionExtensions.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

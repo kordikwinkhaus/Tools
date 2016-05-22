@@ -13,10 +13,10 @@
     </Grid.RowDefinitions>
 
     <ToolBar ToolBarTray.IsLocked="True">
-      <Button>
+      <Button x:Name="cmdImportRtf" Click="cmdImportRtf_Click">
         <Image Source="/Winkhaus.RtfEdit;component/Resources/Icons/Import.png"/>
       </Button>
-      <Button>
+      <Button x:Name="cmdExportRtf" Click="cmdExportRtf_Click">
         <Image Source="/Winkhaus.RtfEdit;component/Resources/Icons/Export.png"/>
       </Button>
       
@@ -130,6 +130,7 @@
     <RichTextBox x:Name="rtfTextBox" 
                  Grid.Row="1"
                  SelectionChanged="rtfTextBox_SelectionChanged"
+                 ScrollViewer.VerticalScrollBarVisibility="Auto"
                  />
   </Grid>
 </UserControl>

@@ -1,8 +1,10 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
+using Microsoft.Win32;
 
 namespace Winkhaus.RtfEdit
 {
@@ -24,7 +26,8 @@ namespace Winkhaus.RtfEdit
                 using (MemoryStream ms = new MemoryStream())
                 {
                     tr.Save(ms, DataFormats.Rtf);
-                    return ASCIIEncoding.Default.GetString(ms.ToArray());
+                    string rtf = ASCIIEncoding.Default.GetString(ms.ToArray());
+                    return RtfHelper.Sanitize(rtf);
                 }
             }
             set
@@ -114,6 +117,54 @@ namespace Winkhaus.RtfEdit
                 _viewmodel.TrySelectColor(null);
                 _viewmodel.TrySelectFontFamily(null);
             }
+        }
+
+        private void cmdImportRtf_Click(object sender, RoutedEventArgs e)
+        {
+            OpenRtfText();
+        }
+
+        private void cmdExportRtf_Click(object sender, RoutedEventArgs e)
+        {
+            SaveRtfText();
+        }
+
+        private void SaveRtfText()
+        {
+            SaveFileDialog dialog = DialogFactory.GetSaveRtfDialog();
+            if (dialog.ShowDialog() == true)
+            {
+                try
+                {
+                    File.WriteAllText(dialog.FileName, this.Rtf);
+                }
+                catch (Exception ex)
+                {
+                    ShowError(ex);
+                }
+            }
+        }
+
+        private void OpenRtfText()
+        {
+            OpenFileDialog dialog = DialogFactory.GetOpenRtfDialog();
+            if (dialog.ShowDialog() == true)
+            {
+                try
+                {
+                    var rtf = File.ReadAllText(dialog.FileName);
+                    this.Rtf = rtf;
+                }
+                catch (Exception ex)
+                {
+                    ShowError(ex);
+                }
+            }
+        }
+
+        private void ShowError(Exception ex)
+        {
+            MessageBox.Show(ex.Message, ex.GetType().ToString(), MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }
 }
