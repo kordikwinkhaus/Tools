@@ -5,7 +5,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="400"
-             Background="{StaticResource {x:Static SystemColors.ControlBrushKey}}"
+             Background="{StaticResource {x:Static SystemColors.ControlLightLightBrushKey}}"
+             TextOptions.TextFormattingMode="Display"
+             SnapsToDevicePixels="True"
+             xml:lang="cs"
              >
   <Grid>
     <Grid.ColumnDefinitions>
@@ -13,14 +16,30 @@
       <ColumnDefinition />
     </Grid.ColumnDefinitions>
     <Grid.Resources>
-      <Style TargetType="{x:Type ItemsControl}">
+      <Style x:Key="Groups" TargetType="{x:Type ItemsControl}">
         <Setter Property="ItemTemplate">
           <Setter.Value>
             <DataTemplate>
-              <CheckBox Content="{Binding Desc}"
+              <StackPanel Margin="0,3">
+                <StackPanel Orientation="Horizontal" 
+                            Margin="3"
+                            TextElement.FontWeight="Bold"
+                            >
+                  <TextBlock Text="{Binding GroupName}"/>
+                  <TextBlock Text=":"/>
+                </StackPanel>
+
+                <ItemsControl ItemsSource="{Binding Texts}">
+                  <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                      <CheckBox Content="{Binding Desc}"
                         IsChecked="{Binding IsSelected}"
-                        Margin="3"
+                        Margin="15,3,3,3"
                         />
+                    </DataTemplate>
+                  </ItemsControl.ItemTemplate>
+                </ItemsControl>
+              </StackPanel>
             </DataTemplate>
           </Setter.Value>
         </Setter>
@@ -37,7 +56,9 @@
     
     <GroupBox Header="Volitelné úvodní texty">
       <ScrollViewer>
-        <ItemsControl ItemsSource="{Binding HeaderTexts}"/>
+        <ItemsControl ItemsSource="{Binding HeaderTextGroups}"
+                      Style="{StaticResource Groups}"
+                      />
       </ScrollViewer>
     </GroupBox>
 
@@ -45,7 +66,9 @@
               Grid.Column="1"
               >
       <ScrollViewer>
-        <ItemsControl ItemsSource="{Binding FooterTexts}"/>
+        <ItemsControl ItemsSource="{Binding FooterTextGroups}"
+                      Style="{StaticResource Groups}"
+                      />
       </ScrollViewer>
     </GroupBox>
   </Grid>

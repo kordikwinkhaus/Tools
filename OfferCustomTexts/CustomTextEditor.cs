@@ -10,7 +10,8 @@ namespace OfferCustomTexts
     public partial class CustomTextEditor : Form
     {
         private readonly Repository _repository;
-        private static string DEFAULT = Resources.ForAllProfiles;
+        private static string ALL_PROFILES = Resources.ForAllProfiles;
+        private static string ALL_REPORTS = Resources.ForAllReports;
         private readonly IList<Language> _languages;
         private readonly RtfEditControl _rtfCustomText;
 
@@ -20,10 +21,16 @@ namespace OfferCustomTexts
 
             _repository = repository;
 
-            cmbTypProfilu.Items.Add(DEFAULT);
+            cmbTypProfilu.Items.Add(ALL_PROFILES);
             foreach (var profil in _repository.GetProfileTypes())
             {
                 cmbTypProfilu.Items.Add(profil);
+            }
+
+            cmbReportKey.Items.Add(ALL_REPORTS);
+            foreach (var reportKey in _repository.GetReportKeys())
+            {
+                cmbReportKey.Items.Add(reportKey);
             }
 
             _languages = _repository.GetLanguages();
@@ -68,6 +75,15 @@ namespace OfferCustomTexts
                 }
             }
 
+            if (string.IsNullOrEmpty(customText.report_key))
+            {
+                cmbReportKey.Text = ALL_REPORTS;
+            }
+            else
+            {
+                cmbReportKey.Text = customText.report_key;
+            }
+
             _rtfCustomText.Rtf = customText.custom_text;
             nudPoradi.Value = customText.text_order;
             if (customText.is_header)
@@ -103,6 +119,15 @@ namespace OfferCustomTexts
 
             Language lang = (Language)cmbLanguages.SelectedItem;
             _customText.lang_ID = lang.LangID;
+
+            if (cmbReportKey.Text == ALL_REPORTS)
+            {
+                _customText.report_key = null;
+            }
+            else
+            {
+                _customText.report_key = cmbReportKey.Text;
+            }
 
             _customText.custom_text = _rtfCustomText.Rtf;
             _customText.text_order = Convert.ToInt32(nudPoradi.Value);

@@ -13,6 +13,7 @@ namespace OfferOptTexts
 
         public int ID { get; set; }
         public string Desc { get; set; }
+        public string Report { get; set; }
 
         private bool _isSelected;
         public bool IsSelected 

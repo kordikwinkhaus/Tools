@@ -53,6 +53,8 @@
             this.txtOnceKey = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.rtfEditorHost = new System.Windows.Forms.Integration.ElementHost();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbReportKey = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudPoradi)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -208,13 +210,27 @@
             // 
             resources.ApplyResources(this.rtfEditorHost, "rtfEditorHost");
             this.rtfEditorHost.Name = "rtfEditorHost";
+            this.rtfEditorHost.TabStop = false;
             this.rtfEditorHost.Child = null;
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // cmbReportKey
+            // 
+            this.cmbReportKey.FormattingEnabled = true;
+            resources.ApplyResources(this.cmbReportKey, "cmbReportKey");
+            this.cmbReportKey.Name = "cmbReportKey";
             // 
             // CustomTextEditor
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cmdStorno;
+            this.Controls.Add(this.cmbReportKey);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.rtfEditorHost);
             this.Controls.Add(this.txtOnceKey);
             this.Controls.Add(this.lblOnceKey);
@@ -267,5 +283,7 @@
         private System.Windows.Forms.CheckBox chkOptional;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Integration.ElementHost rtfEditorHost;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cmbReportKey;
     }
 }

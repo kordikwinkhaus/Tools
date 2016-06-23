@@ -131,6 +131,8 @@
                  Grid.Row="1"
                  SelectionChanged="rtfTextBox_SelectionChanged"
                  ScrollViewer.VerticalScrollBarVisibility="Auto"
+                 AcceptsTab="True"
+                 AcceptsReturn="True"
                  />
   </Grid>
 </UserControl>

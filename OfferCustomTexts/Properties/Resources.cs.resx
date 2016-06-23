@@ -147,4 +147,7 @@
   <data name="ParsingText" xml:space="preserve">
     <value>Probíhá zpracování textu...</value>
   </data>
+  <data name="ForAllReports" xml:space="preserve">
+    <value>(Pro všechny)</value>
+  </data>
 </root>

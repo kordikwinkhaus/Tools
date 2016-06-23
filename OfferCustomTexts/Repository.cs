@@ -20,13 +20,14 @@ namespace OfferCustomTexts
 
         private void CreateTablesIfNotExists()
         {
-            string sql = @"IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[OfferCustomTexts]') AND type in (N'U'))
+            string sql1 = @"IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[OfferCustomTexts]') AND type in (N'U'))
 CREATE TABLE dbo.OfferCustomTexts
 (
   ID INT NOT NULL PRIMARY KEY,
   typ_prof NVARCHAR(25) NULL,
   text_order INT NOT NULL,
   lang_ID INT NOT NULL,
+  report_key NVARCHAR(25) NULL,
   custom_text NVARCHAR(MAX) NOT NULL,
   once_key NVARCHAR(20) NULL,
   opt_desc NVARCHAR(25) NULL,
@@ -36,6 +37,8 @@ CREATE TABLE dbo.OfferCustomTexts
   last_footer BIT NOT NULL,
   optional BIT NOT NULL
 )";
+            string sql1ext = @"IF (SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA='dbo' AND TABLE_NAME='OfferCustomTexts' AND COLUMN_NAME='report_key')=0
+  ALTER TABLE dbo.OfferCustomTexts ADD report_key nvarchar(25) NULL";
 
             string sql2 = @"IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[UserCustomData]') AND type in (N'U'))
 CREATE TABLE dbo.UserCustomData
@@ -44,10 +47,12 @@ CREATE TABLE dbo.UserCustomData
   Jmeno NVARCHAR(100) NULL,
   Telefon NVARCHAR(50) NULL,
   Email NVARCHAR(50) NULL
-);";
+)";
 
-            using (SqlCommand cmd = GetCmd(sql))
+            using (SqlCommand cmd = GetCmd(sql1))
             {
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = sql1ext;
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = sql2;
                 cmd.ExecuteNonQuery();
@@ -75,6 +80,21 @@ CREATE TABLE dbo.UserCustomData
 FROM dbo.typyp
 ORDER BY typ_prof";
 
+            return GetStrings(sql);
+        }
+
+        internal IList<string> GetReportKeys()
+        {
+            string sql = @"SELECT DISTINCT report_key
+FROM dbo.OfferCustomTexts
+WHERE report_key IS NOT NULL
+ORDER BY report_key";
+
+            return GetStrings(sql);
+        }
+
+        private IList<string> GetStrings(string sql)
+        {
             List<string> result = new List<string>();
 
             using (SqlCommand cmd = GetCmd(sql))
@@ -109,8 +129,8 @@ ORDER BY typ_prof";
                 }
             }
 
-            string sql = @"INSERT INTO dbo.OfferCustomTexts (id, typ_prof, text_order, lang_ID, custom_text, is_header, keep_together, pg_break, last_footer, once_key, [optional], opt_desc) 
-VALUES (@id, @typ_prof, @text_order, @lang_ID, @custom_text, @is_header, @keep_together, @pg_break, @last_footer, @once_key, @optional, @opt_desc);";
+            string sql = @"INSERT INTO dbo.OfferCustomTexts (id, typ_prof, text_order, lang_ID, report_key, custom_text, is_header, keep_together, pg_break, last_footer, once_key, [optional], opt_desc) 
+VALUES (@id, @typ_prof, @text_order, @lang_ID, @report_key, @custom_text, @is_header, @keep_together, @pg_break, @last_footer, @once_key, @optional, @opt_desc);";
 
             using (SqlCommand cmd = GetCmd(sql))
             {
@@ -125,6 +145,7 @@ VALUES (@id, @typ_prof, @text_order, @lang_ID, @custom_text, @is_header, @keep_t
             cmd.AddParameterWithValue("@typ_prof", customText.typ_prof);
             cmd.AddParameterWithValue("@text_order", customText.text_order);
             cmd.AddParameterWithValue("@lang_ID", customText.lang_ID);
+            cmd.AddParameterWithValue("@report_key", customText.report_key);
             cmd.AddParameterWithValue("@custom_text", customText.custom_text);
             cmd.AddParameterWithValue("@is_header", customText.is_header);
             cmd.AddParameterWithValue("@keep_together", customText.keep_together);
@@ -138,7 +159,7 @@ VALUES (@id, @typ_prof, @text_order, @lang_ID, @custom_text, @is_header, @keep_t
         internal void UpdateCustomText(CustomText customText)
         {
             string sql = @"UPDATE dbo.OfferCustomTexts 
-SET typ_prof=@typ_prof, text_order=@text_order, lang_ID=@lang_ID, custom_text=@custom_text, is_header=@is_header, keep_together=@keep_together, pg_break=@pg_break, last_footer=@last_footer, once_key=@once_key, [optional]=@optional, opt_desc=@opt_desc
+SET typ_prof=@typ_prof, text_order=@text_order, lang_ID=@lang_ID, report_key=@report_key, custom_text=@custom_text, is_header=@is_header, keep_together=@keep_together, pg_break=@pg_break, last_footer=@last_footer, once_key=@once_key, [optional]=@optional, opt_desc=@opt_desc
 WHERE ID=@id";
 
             using (SqlCommand cmd = GetCmd(sql))

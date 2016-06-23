@@ -202,6 +202,16 @@
   <data name="label1.Text" xml:space="preserve">
     <value>Sekvence pro nahrazení hodnotami aktuálního uživatele: [!NazevPole]</value>
   </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 13</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Klíč reportu</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Editor uživatelských textů</value>
   </data>

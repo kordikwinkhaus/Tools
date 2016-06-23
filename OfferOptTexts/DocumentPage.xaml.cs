@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Data.OleDb;
+using System.Linq;
 using System.Windows.Controls;
 using System.Xml.Linq;
 using UserExtensions;
@@ -24,7 +25,7 @@ namespace OfferOptTexts
             using (OleDbConnection conn = new OleDbConnection(connString))
             {
                 conn.Open();
-                using (OleDbCommand cmd = new OleDbCommand("SELECT ID, opt_desc, is_header FROM dbo.OfferCustomTexts WHERE [optional]=1 ORDER BY text_order, opt_desc", conn))
+                using (OleDbCommand cmd = new OleDbCommand("SELECT ID, opt_desc, is_header, report_key FROM dbo.OfferCustomTexts WHERE [optional]=1 ORDER BY report_key, text_order, opt_desc", conn))
                 using (OleDbDataReader dr = cmd.ExecuteReader())
                 {
                     while (dr.Read())
@@ -32,7 +33,8 @@ namespace OfferOptTexts
                         var optText = new OptText(this)
                         {
                             ID = dr.GetInt32(0),
-                            Desc = dr.GetString(1)
+                            Desc = dr.GetString(1),
+                            Report = (dr.IsDBNull(3)) ? "Pro všechny reporty" : dr.GetString(3)
                         };
                         if (dr.GetBoolean(2))
                         {
@@ -45,10 +47,35 @@ namespace OfferOptTexts
                     }
                 }
             }
+
+            HeaderTextGroups = MakeGroups(HeaderTexts);
+            FooterTextGroups = MakeGroups(FooterTexts);
+        }
+
+        private IList<OptTextGroup> MakeGroups(IList<OptText> texts)
+        {
+            Dictionary<string, OptTextGroup> groups = new Dictionary<string, OptTextGroup>();
+
+            OptTextGroup group;
+            foreach (var optText in texts)
+            {
+                if (!groups.TryGetValue(optText.Report, out group))
+                {
+                    group = new OptTextGroup(optText.Report);
+                    groups.Add(optText.Report, group);
+                }
+                group.Texts.Add(optText);
+
+            }
+
+            return groups.Values.ToList();
         }
 
         public IList<OptText> HeaderTexts { get; private set; }
         public IList<OptText> FooterTexts { get; private set; }
+
+        public IList<OptTextGroup> HeaderTextGroups { get; private set; }
+        public IList<OptTextGroup> FooterTextGroups { get; private set; }
 
         private XElement _objectData;
         public XElement ObjectData
@@ -80,7 +107,7 @@ namespace OfferOptTexts
 
         public object Title
         {
-            get { return "Texty nabídek"; }
+            get { return "Volitelné texty"; }
         }
 
         internal void SaveSelection()

@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmdNew = new System.Windows.Forms.Button();
             this.cmdEdit = new System.Windows.Forms.Button();
             this.cmdClose = new System.Windows.Forms.Button();
@@ -38,6 +38,8 @@
             this.dgvTexts = new System.Windows.Forms.DataGridView();
             this.bsTexts = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rbFooterTexts = new System.Windows.Forms.RadioButton();
             this.rbHeaderTexts = new System.Windows.Forms.RadioButton();
@@ -53,6 +55,7 @@
             this.colProfileType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTextOrder = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colLangID = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colReportKey = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colIsHeader = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.colKeepTogether = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.colPageBreak = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -106,6 +109,7 @@
             this.colProfileType,
             this.colTextOrder,
             this.colLangID,
+            this.colReportKey,
             this.colIsHeader,
             this.colKeepTogether,
             this.colPageBreak,
@@ -124,6 +128,8 @@
             // groupBox1
             // 
             resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.cmdClearFilter);
             this.groupBox1.Controls.Add(this.cmdApplyFilter);
@@ -133,6 +139,18 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // comboBox1
+            // 
+            resources.ApplyResources(this.comboBox1, "comboBox1");
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Name = "comboBox1";
             // 
             // groupBox2
             // 
@@ -225,8 +243,8 @@
             // colTextOrder
             // 
             this.colTextOrder.DataPropertyName = "TextOrder";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.colTextOrder.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.colTextOrder.DefaultCellStyle = dataGridViewCellStyle3;
             resources.ApplyResources(this.colTextOrder, "colTextOrder");
             this.colTextOrder.Name = "colTextOrder";
             this.colTextOrder.ReadOnly = true;
@@ -238,6 +256,14 @@
             this.colLangID.Name = "colLangID";
             this.colLangID.ReadOnly = true;
             this.colLangID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // colReportKey
+            // 
+            this.colReportKey.DataPropertyName = "ReportKey";
+            this.colReportKey.FillWeight = 70F;
+            resources.ApplyResources(this.colReportKey, "colReportKey");
+            this.colReportKey.Name = "colReportKey";
+            this.colReportKey.ReadOnly = true;
             // 
             // colIsHeader
             // 
@@ -347,9 +373,12 @@
         private System.Windows.Forms.BindingSource bsTexts;
         private System.Windows.Forms.Button cmdExport;
         private System.Windows.Forms.Button cmdImport;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colProfileType;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTextOrder;
         private System.Windows.Forms.DataGridViewComboBoxColumn colLangID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colReportKey;
         private System.Windows.Forms.DataGridViewCheckBoxColumn colIsHeader;
         private System.Windows.Forms.DataGridViewCheckBoxColumn colKeepTogether;
         private System.Windows.Forms.DataGridViewCheckBoxColumn colPageBreak;

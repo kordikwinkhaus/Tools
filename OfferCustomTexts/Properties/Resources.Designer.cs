@@ -88,6 +88,15 @@ namespace OfferCustomTexts.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to (For all).
+        /// </summary>
+        internal static string ForAllReports {
+            get {
+                return ResourceManager.GetString("ForAllReports", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Imported dataset contains one or more new columns. Do you want to create them?.
         /// </summary>
         internal static string HasNewColumns {

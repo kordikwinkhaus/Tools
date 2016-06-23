@@ -1,4 +1,6 @@
-﻿namespace OfferCustomTexts
+﻿using OfferCustomTexts.Properties;
+
+namespace OfferCustomTexts
 {
     public class CustomTextViewModel
     {
@@ -27,6 +29,21 @@
         public int LangID 
         {
             get { return _model.lang_ID; }
+        }
+
+        public string ReportKey
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(_model.report_key))
+                {
+                    return Resources.ForAllReports;
+                }
+                else
+                {
+                    return _model.report_key;
+                }
+            }
         }
 
         internal string CustomRtfText

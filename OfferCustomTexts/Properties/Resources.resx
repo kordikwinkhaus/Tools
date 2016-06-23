@@ -126,6 +126,9 @@
   <data name="ForAllProfiles" xml:space="preserve">
     <value>(For all)</value>
   </data>
+  <data name="ForAllReports" xml:space="preserve">
+    <value>(For all)</value>
+  </data>
   <data name="HasNewColumns" xml:space="preserve">
     <value>Imported dataset contains one or more new columns. Do you want to create them?</value>
   </data>

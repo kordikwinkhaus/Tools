@@ -60,6 +60,7 @@
     </Compile>
     <Compile Include="ExtensionsFactory.cs" />
     <Compile Include="OptText.cs" />
+    <Compile Include="OptTextGroup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

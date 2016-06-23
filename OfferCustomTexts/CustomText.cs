@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace OfferCustomTexts
+﻿namespace OfferCustomTexts
 {
     public class CustomText
     {
@@ -11,6 +9,8 @@ namespace OfferCustomTexts
         public int text_order { get; set; }
 
         public int lang_ID { get; set; }
+
+        public string report_key { get; set; }
 
         public string custom_text { get; set; }
 
