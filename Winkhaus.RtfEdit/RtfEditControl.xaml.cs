@@ -27,7 +27,7 @@ namespace Winkhaus.RtfEdit
                 {
                     tr.Save(ms, DataFormats.Rtf);
                     string rtf = ASCIIEncoding.Default.GetString(ms.ToArray());
-                    return rtf;
+                    return RtfHelper.Sanitize(rtf);
                 }
             }
             set
