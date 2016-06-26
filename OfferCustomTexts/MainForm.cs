@@ -38,6 +38,14 @@ namespace OfferCustomTexts
             colLangID.DisplayMember = "Name";
             colLangID.ValueMember = "LangID";
 
+            // inicializace klíčů reportů
+            var reportKeys = _repository.GetReportKeys();
+            cmbReportKeys.Items.Add(string.Empty);
+            foreach (var reportKey in reportKeys)
+            {
+                cmbReportKeys.Items.Add(reportKey);
+            }
+
             LoadData();
         }
 
@@ -131,10 +139,25 @@ namespace OfferCustomTexts
                 texts = texts.Where(t => t.LangID == lang.LangID);
             }
 
+            if (cmbReportKeys.SelectedIndex > 0)
+            {
+                string reportKey = (string)cmbReportKeys.SelectedItem;
+                texts = texts.Where(t => t.ReportKey == reportKey);
+            }
+
             if (!rbAllTexts.Checked)
             {
                 bool isHeader = rbHeaderTexts.Checked;
                 texts = texts.Where(t => t.IsHeader == isHeader);
+            }
+
+            if (chkAutoTexts.Checked)
+            {
+                texts = texts.Where(t => t.Optional == false);
+            }
+            if (chkOptTexts.Checked)
+            {
+                texts = texts.Where(t => t.Optional == true);
             }
 
             SimpleSortableBindingList<CustomTextViewModel> sortableList = new SimpleSortableBindingList<CustomTextViewModel>(texts);
@@ -181,6 +204,9 @@ namespace OfferCustomTexts
 
                 _repository.CreateCustomText(frm.CustomText);
                 var vm = new CustomTextViewModel(frm.CustomText);
+
+                CalculateCustomText(vm);
+
                 bsTexts.Add(vm);
                 bsTexts.ResetBindings(false);
 
@@ -300,6 +326,22 @@ namespace OfferCustomTexts
                 userData.CommitMerge(false);
                 userData.Update();
                 LoadData();
+            }
+        }
+
+        private void chkAutoTexts_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkAutoTexts.Checked)
+            {
+                chkOptTexts.Checked = false;
+            }
+        }
+
+        private void chkOptTexts_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkOptTexts.Checked)
+            {
+                chkAutoTexts.Checked = false;
             }
         }
     }

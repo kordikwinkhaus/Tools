@@ -30,28 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmdNew = new System.Windows.Forms.Button();
             this.cmdEdit = new System.Windows.Forms.Button();
             this.cmdClose = new System.Windows.Forms.Button();
             this.cmdDelete = new System.Windows.Forms.Button();
             this.dgvTexts = new System.Windows.Forms.DataGridView();
-            this.bsTexts = new System.Windows.Forms.BindingSource(this.components);
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rbFooterTexts = new System.Windows.Forms.RadioButton();
-            this.rbHeaderTexts = new System.Windows.Forms.RadioButton();
-            this.rbAllTexts = new System.Windows.Forms.RadioButton();
-            this.cmdClearFilter = new System.Windows.Forms.Button();
-            this.cmdApplyFilter = new System.Windows.Forms.Button();
-            this.cmbLanguage = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cmbProfileType = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmdExport = new System.Windows.Forms.Button();
-            this.cmdImport = new System.Windows.Forms.Button();
             this.colProfileType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTextOrder = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colLangID = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -64,6 +48,24 @@
             this.colOpt = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.colOptDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCustomText = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bsTexts = new System.Windows.Forms.BindingSource(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkOptTexts = new System.Windows.Forms.CheckBox();
+            this.chkAutoTexts = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbReportKeys = new System.Windows.Forms.ComboBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rbFooterTexts = new System.Windows.Forms.RadioButton();
+            this.rbHeaderTexts = new System.Windows.Forms.RadioButton();
+            this.rbAllTexts = new System.Windows.Forms.RadioButton();
+            this.cmdClearFilter = new System.Windows.Forms.Button();
+            this.cmdApplyFilter = new System.Windows.Forms.Button();
+            this.cmbLanguage = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbProfileType = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmdExport = new System.Windows.Forms.Button();
+            this.cmdImport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTexts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsTexts)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -100,9 +102,9 @@
             // 
             // dgvTexts
             // 
-            resources.ApplyResources(this.dgvTexts, "dgvTexts");
             this.dgvTexts.AllowUserToAddRows = false;
             this.dgvTexts.AllowUserToDeleteRows = false;
+            resources.ApplyResources(this.dgvTexts, "dgvTexts");
             this.dgvTexts.AutoGenerateColumns = false;
             this.dgvTexts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTexts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -125,114 +127,6 @@
             this.dgvTexts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTexts.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTexts_CellDoubleClick);
             // 
-            // groupBox1
-            // 
-            resources.ApplyResources(this.groupBox1, "groupBox1");
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.cmdClearFilter);
-            this.groupBox1.Controls.Add(this.cmdApplyFilter);
-            this.groupBox1.Controls.Add(this.cmbLanguage);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.cmbProfileType);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
-            // comboBox1
-            // 
-            resources.ApplyResources(this.comboBox1, "comboBox1");
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Name = "comboBox1";
-            // 
-            // groupBox2
-            // 
-            resources.ApplyResources(this.groupBox2, "groupBox2");
-            this.groupBox2.Controls.Add(this.rbFooterTexts);
-            this.groupBox2.Controls.Add(this.rbHeaderTexts);
-            this.groupBox2.Controls.Add(this.rbAllTexts);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.TabStop = false;
-            // 
-            // rbFooterTexts
-            // 
-            resources.ApplyResources(this.rbFooterTexts, "rbFooterTexts");
-            this.rbFooterTexts.Name = "rbFooterTexts";
-            this.rbFooterTexts.UseVisualStyleBackColor = true;
-            // 
-            // rbHeaderTexts
-            // 
-            resources.ApplyResources(this.rbHeaderTexts, "rbHeaderTexts");
-            this.rbHeaderTexts.Name = "rbHeaderTexts";
-            this.rbHeaderTexts.UseVisualStyleBackColor = true;
-            // 
-            // rbAllTexts
-            // 
-            resources.ApplyResources(this.rbAllTexts, "rbAllTexts");
-            this.rbAllTexts.Checked = true;
-            this.rbAllTexts.Name = "rbAllTexts";
-            this.rbAllTexts.TabStop = true;
-            this.rbAllTexts.UseVisualStyleBackColor = true;
-            // 
-            // cmdClearFilter
-            // 
-            resources.ApplyResources(this.cmdClearFilter, "cmdClearFilter");
-            this.cmdClearFilter.Name = "cmdClearFilter";
-            this.cmdClearFilter.UseVisualStyleBackColor = true;
-            this.cmdClearFilter.Click += new System.EventHandler(this.cmdClearFilter_Click);
-            // 
-            // cmdApplyFilter
-            // 
-            resources.ApplyResources(this.cmdApplyFilter, "cmdApplyFilter");
-            this.cmdApplyFilter.Name = "cmdApplyFilter";
-            this.cmdApplyFilter.UseVisualStyleBackColor = true;
-            this.cmdApplyFilter.Click += new System.EventHandler(this.cmdApplyFilter_Click);
-            // 
-            // cmbLanguage
-            // 
-            resources.ApplyResources(this.cmbLanguage, "cmbLanguage");
-            this.cmbLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbLanguage.FormattingEnabled = true;
-            this.cmbLanguage.Name = "cmbLanguage";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            // 
-            // cmbProfileType
-            // 
-            resources.ApplyResources(this.cmbProfileType, "cmbProfileType");
-            this.cmbProfileType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbProfileType.FormattingEnabled = true;
-            this.cmbProfileType.Name = "cmbProfileType";
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
-            // 
-            // cmdExport
-            // 
-            resources.ApplyResources(this.cmdExport, "cmdExport");
-            this.cmdExport.Name = "cmdExport";
-            this.cmdExport.UseVisualStyleBackColor = true;
-            this.cmdExport.Click += new System.EventHandler(this.cmdExport_Click);
-            // 
-            // cmdImport
-            // 
-            resources.ApplyResources(this.cmdImport, "cmdImport");
-            this.cmdImport.Name = "cmdImport";
-            this.cmdImport.UseVisualStyleBackColor = true;
-            this.cmdImport.Click += new System.EventHandler(this.cmdImport_Click);
-            // 
             // colProfileType
             // 
             this.colProfileType.DataPropertyName = "TypProf";
@@ -243,8 +137,8 @@
             // colTextOrder
             // 
             this.colTextOrder.DataPropertyName = "TextOrder";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.colTextOrder.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.colTextOrder.DefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(this.colTextOrder, "colTextOrder");
             this.colTextOrder.Name = "colTextOrder";
             this.colTextOrder.ReadOnly = true;
@@ -326,6 +220,130 @@
             this.colCustomText.Name = "colCustomText";
             this.colCustomText.ReadOnly = true;
             // 
+            // groupBox1
+            // 
+            resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Controls.Add(this.chkOptTexts);
+            this.groupBox1.Controls.Add(this.chkAutoTexts);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.cmbReportKeys);
+            this.groupBox1.Controls.Add(this.groupBox2);
+            this.groupBox1.Controls.Add(this.cmdClearFilter);
+            this.groupBox1.Controls.Add(this.cmdApplyFilter);
+            this.groupBox1.Controls.Add(this.cmbLanguage);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.cmbProfileType);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.TabStop = false;
+            // 
+            // chkOptTexts
+            // 
+            resources.ApplyResources(this.chkOptTexts, "chkOptTexts");
+            this.chkOptTexts.Name = "chkOptTexts";
+            this.chkOptTexts.UseVisualStyleBackColor = true;
+            this.chkOptTexts.CheckedChanged += new System.EventHandler(this.chkOptTexts_CheckedChanged);
+            // 
+            // chkAutoTexts
+            // 
+            resources.ApplyResources(this.chkAutoTexts, "chkAutoTexts");
+            this.chkAutoTexts.Name = "chkAutoTexts";
+            this.chkAutoTexts.UseVisualStyleBackColor = true;
+            this.chkAutoTexts.CheckedChanged += new System.EventHandler(this.chkAutoTexts_CheckedChanged);
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // cmbReportKeys
+            // 
+            this.cmbReportKeys.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbReportKeys.FormattingEnabled = true;
+            resources.ApplyResources(this.cmbReportKeys, "cmbReportKeys");
+            this.cmbReportKeys.Name = "cmbReportKeys";
+            // 
+            // groupBox2
+            // 
+            resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.Controls.Add(this.rbFooterTexts);
+            this.groupBox2.Controls.Add(this.rbHeaderTexts);
+            this.groupBox2.Controls.Add(this.rbAllTexts);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.TabStop = false;
+            // 
+            // rbFooterTexts
+            // 
+            resources.ApplyResources(this.rbFooterTexts, "rbFooterTexts");
+            this.rbFooterTexts.Name = "rbFooterTexts";
+            this.rbFooterTexts.UseVisualStyleBackColor = true;
+            // 
+            // rbHeaderTexts
+            // 
+            resources.ApplyResources(this.rbHeaderTexts, "rbHeaderTexts");
+            this.rbHeaderTexts.Name = "rbHeaderTexts";
+            this.rbHeaderTexts.UseVisualStyleBackColor = true;
+            // 
+            // rbAllTexts
+            // 
+            resources.ApplyResources(this.rbAllTexts, "rbAllTexts");
+            this.rbAllTexts.Checked = true;
+            this.rbAllTexts.Name = "rbAllTexts";
+            this.rbAllTexts.TabStop = true;
+            this.rbAllTexts.UseVisualStyleBackColor = true;
+            // 
+            // cmdClearFilter
+            // 
+            resources.ApplyResources(this.cmdClearFilter, "cmdClearFilter");
+            this.cmdClearFilter.Name = "cmdClearFilter";
+            this.cmdClearFilter.UseVisualStyleBackColor = true;
+            this.cmdClearFilter.Click += new System.EventHandler(this.cmdClearFilter_Click);
+            // 
+            // cmdApplyFilter
+            // 
+            resources.ApplyResources(this.cmdApplyFilter, "cmdApplyFilter");
+            this.cmdApplyFilter.Name = "cmdApplyFilter";
+            this.cmdApplyFilter.UseVisualStyleBackColor = true;
+            this.cmdApplyFilter.Click += new System.EventHandler(this.cmdApplyFilter_Click);
+            // 
+            // cmbLanguage
+            // 
+            this.cmbLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLanguage.FormattingEnabled = true;
+            resources.ApplyResources(this.cmbLanguage, "cmbLanguage");
+            this.cmbLanguage.Name = "cmbLanguage";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // cmbProfileType
+            // 
+            this.cmbProfileType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbProfileType.FormattingEnabled = true;
+            resources.ApplyResources(this.cmbProfileType, "cmbProfileType");
+            this.cmbProfileType.Name = "cmbProfileType";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // cmdExport
+            // 
+            resources.ApplyResources(this.cmdExport, "cmdExport");
+            this.cmdExport.Name = "cmdExport";
+            this.cmdExport.UseVisualStyleBackColor = true;
+            this.cmdExport.Click += new System.EventHandler(this.cmdExport_Click);
+            // 
+            // cmdImport
+            // 
+            resources.ApplyResources(this.cmdImport, "cmdImport");
+            this.cmdImport.Name = "cmdImport";
+            this.cmdImport.UseVisualStyleBackColor = true;
+            this.cmdImport.Click += new System.EventHandler(this.cmdImport_Click);
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -374,7 +392,7 @@
         private System.Windows.Forms.Button cmdExport;
         private System.Windows.Forms.Button cmdImport;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbReportKeys;
         private System.Windows.Forms.DataGridViewTextBoxColumn colProfileType;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTextOrder;
         private System.Windows.Forms.DataGridViewComboBoxColumn colLangID;
@@ -387,5 +405,7 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn colOpt;
         private System.Windows.Forms.DataGridViewTextBoxColumn colOptDesc;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCustomText;
+        private System.Windows.Forms.CheckBox chkOptTexts;
+        private System.Windows.Forms.CheckBox chkAutoTexts;
     }
 }

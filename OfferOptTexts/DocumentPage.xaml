@@ -33,9 +33,10 @@
                   <ItemsControl.ItemTemplate>
                     <DataTemplate>
                       <CheckBox Content="{Binding Desc}"
-                        IsChecked="{Binding IsSelected}"
-                        Margin="15,3,3,3"
-                        />
+                                IsChecked="{Binding IsSelected}"
+                                Margin="18,3,3,3"
+                                HorizontalAlignment="Left"
+                                />
                     </DataTemplate>
                   </ItemsControl.ItemTemplate>
                 </ItemsControl>

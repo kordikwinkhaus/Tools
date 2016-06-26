@@ -129,10 +129,55 @@
   <data name="cmdDelete.Text" xml:space="preserve">
     <value>Odstranit</value>
   </data>
+  <data name="colProfileType.HeaderText" xml:space="preserve">
+    <value>Typ profilu</value>
+  </data>
+  <data name="colTextOrder.HeaderText" xml:space="preserve">
+    <value>Pořadí</value>
+  </data>
+  <data name="colLangID.HeaderText" xml:space="preserve">
+    <value>Jazyk</value>
+  </data>
+  <data name="colReportKey.HeaderText" xml:space="preserve">
+    <value>Klíč reportu</value>
+  </data>
+  <data name="colIsHeader.HeaderText" xml:space="preserve">
+    <value>Úvodní</value>
+  </data>
+  <data name="colKeepTogether.HeaderText" xml:space="preserve">
+    <value>Zakázat rozdělení</value>
+  </data>
+  <data name="colPageBreak.HeaderText" xml:space="preserve">
+    <value>Stránkový zlom</value>
+  </data>
+  <data name="colLastFooter.HeaderText" xml:space="preserve">
+    <value>Poslední zápatí</value>
+  </data>
+  <data name="colOnceKey.HeaderText" xml:space="preserve">
+    <value>Klíč pro jediné zobrazení</value>
+  </data>
+  <data name="colOpt.HeaderText" xml:space="preserve">
+    <value>Volitelný</value>
+  </data>
+  <data name="colOptDesc.HeaderText" xml:space="preserve">
+    <value>Popis volitel. textu</value>
+  </data>
   <data name="groupBox1.Text" xml:space="preserve">
     <value>Filtr</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="chkOptTexts.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 17</value>
+  </data>
+  <data name="chkOptTexts.Text" xml:space="preserve">
+    <value>Volitelné texty</value>
+  </data>
+  <data name="chkAutoTexts.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 17</value>
+  </data>
+  <data name="chkAutoTexts.Text" xml:space="preserve">
+    <value>Základní texty</value>
+  </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 13</value>
   </data>
@@ -183,39 +228,6 @@
   </data>
   <data name="cmdImport.Text" xml:space="preserve">
     <value>Importovat...</value>
-  </data>
-  <data name="colProfileType.HeaderText" xml:space="preserve">
-    <value>Typ profilu</value>
-  </data>
-  <data name="colTextOrder.HeaderText" xml:space="preserve">
-    <value>Pořadí</value>
-  </data>
-  <data name="colLangID.HeaderText" xml:space="preserve">
-    <value>Jazyk</value>
-  </data>
-  <data name="colReportKey.HeaderText" xml:space="preserve">
-    <value>Klíč reportu</value>
-  </data>
-  <data name="colIsHeader.HeaderText" xml:space="preserve">
-    <value>Úvodní</value>
-  </data>
-  <data name="colKeepTogether.HeaderText" xml:space="preserve">
-    <value>Zakázat rozdělení</value>
-  </data>
-  <data name="colPageBreak.HeaderText" xml:space="preserve">
-    <value>Stránkový zlom</value>
-  </data>
-  <data name="colLastFooter.HeaderText" xml:space="preserve">
-    <value>Poslední zápatí</value>
-  </data>
-  <data name="colOnceKey.HeaderText" xml:space="preserve">
-    <value>Klíč pro jediné zobrazení</value>
-  </data>
-  <data name="colOpt.HeaderText" xml:space="preserve">
-    <value>Volitelný</value>
-  </data>
-  <data name="colOptDesc.HeaderText" xml:space="preserve">
-    <value>Popis volitel. textu</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
