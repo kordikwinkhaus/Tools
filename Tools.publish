@@ -1,7 +1,9 @@
-main:   Tools\bin\Release\Tools.exe
-depend: Tools\bin\Release\cs
-depend: Tools\bin\Release\ToolsPlugins
-depend: Tools\bin\Release\WinkhausCR.Winforms.dll
+main:   X:\build\Tools\Tools\bin\Release\Tools.exe
+depend: X:\build\Tools\Tools\bin\Release\Tools.exe.config
+depend: X:\build\Tools\Tools\bin\Release\cs
+depend: X:\build\Tools\Tools\bin\Release\ToolsPlugins
+depend: X:\build\Tools\Tools\bin\Release\WinkhausCR.Winforms.dll
+depend: X:\build\Tools\OfferOptTexts\bin\Release\OfferOptTexts.dll
 
 zipto: D:\publish\WHOknaTools\
 
