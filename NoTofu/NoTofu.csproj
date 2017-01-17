@@ -16,21 +16,29 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>$(Objdir)\$(SolutionName)\$(MSBuildProjectName)\bin\$(Configuration)\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <BaseIntermediateOutputPath>$(Objdir)\$(SolutionName)\$(MSBuildProjectName)\obj\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)$(Configuration)\</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>$(Objdir)\$(SolutionName)\$(MSBuildProjectName)\bin\$(Configuration)\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <BaseIntermediateOutputPath>$(Objdir)\$(SolutionName)\$(MSBuildProjectName)\obj\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>NoTofu.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,7 +48,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IProgress.cs" />
+    <Compile Include="NoTofuPlugin.cs" />
+    <Compile Include="NoTofuProgressDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoTofuProgressDialog.Designer.cs">
+      <DependentUpon>NoTofuProgressDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Progress.cs" />
+    <Compile Include="Properties\Resources.cs.Designer.cs">
+      <DependentUpon>Resources.cs.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TofuFixer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LocalizedText.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
@@ -49,7 +78,32 @@
       <Name>Tools</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NoTofuProgressDialog.cs.resx">
+      <DependentUpon>NoTofuProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoTofuProgressDialog.resx">
+      <DependentUpon>NoTofuProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.cs.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.cs.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NoTofu.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>IF NOT EXIST "$(OutDir)..\..\..\Tools\bin\$(ConfigurationName)\ToolsPlugins\cs\" MKDIR "$(OutDir)..\..\..\Tools\bin\$(ConfigurationName)\ToolsPlugins\cs\"
+COPY /Y $(TargetPath) "$(OutDir)..\..\..\Tools\bin\$(ConfigurationName)\ToolsPlugins\"
+COPY /Y $(TargetDir)cs\NoTofu.resources.dll "$(OutDir)..\..\..\Tools\bin\$(ConfigurationName)\ToolsPlugins\cs\"
+</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
