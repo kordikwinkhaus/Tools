@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="NoTofuPlugin" xml:space="preserve">
-    <value>No Tofu (removing tofu rectangles in multilanguage database)</value>
+    <value>Multilang database - remove rectangles</value>
   </data>
   <data name="SuccessfullyFinished" xml:space="preserve">
     <value>Successfully finished.</value>

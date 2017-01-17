@@ -61,7 +61,7 @@ namespace NoTofu.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No Tofu (removing tofu rectangles in multilanguage database).
+        ///   Looks up a localized string similar to Multilang database - remove rectangles.
         /// </summary>
         internal static string NoTofuPlugin {
             get {
