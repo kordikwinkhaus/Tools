@@ -155,12 +155,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>IF NOT EXIST "$(OutDir)..\..\..\Tools\bin\$(ConfigurationName)\ToolsPlugins\cs\" MKDIR "$(OutDir)..\..\..\Tools\bin\$(ConfigurationName)\ToolsPlugins\cs\"
-COPY /Y $(TargetPath) "$(OutDir)..\..\..\Tools\bin\$(ConfigurationName)\ToolsPlugins\"
-COPY /Y $(TargetDir)cs\OfferCustomTexts.resources.dll "$(OutDir)..\..\..\Tools\bin\$(ConfigurationName)\ToolsPlugins\cs\"
-COPY /Y $(TargetDir)\WinkhausCR.Data.dll "$(OutDir)..\..\..\Tools\bin\$(ConfigurationName)\ToolsPlugins\"
-COPY /Y $(TargetDir)\Winkhaus.RtfEdit.dll "$(OutDir)..\..\..\Tools\bin\$(ConfigurationName)\ToolsPlugins\"
-</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
