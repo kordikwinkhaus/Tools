@@ -38,23 +38,23 @@ pipeline
                     set /p AsmVerze=<\"%WORKSPACE%\\AsmVersion.txt\"
                     
                     REM TOOLS
-                    XCOPY %WORKSPACE%\\Tools\\bin\\Release\\Tools.exe D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ /Y
-                    XCOPY %WORKSPACE%\\Tools\\bin\\Release\\Tools.exe.config D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ /Y
-                    XCOPY %WORKSPACE%\\Tools\\bin\\Release\\WinkhausCR.Winforms.dll D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ /Y
+                    XCOPY \"%WORKSPACE%\\Tools\\bin\\Release\\Tools.exe\" D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ /Y
+                    XCOPY \"%WORKSPACE%\\Tools\\bin\\Release\\Tools.exe.config\" D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ /Y
+                    XCOPY \"%WORKSPACE%\\Tools\\bin\\Release\\WinkhausCR.Winforms.dll\" D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ /Y
 
                     REM TOOLS RESOURCES
-                    XCOPY %WORKSPACE%\\Tools\\bin\\Release\\cs\\Tools.resources.dll D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\cs\\ /Y
-                    XCOPY %WORKSPACE%\\Tools\\bin\\Release\\cs\\WinkhausCR.Winforms.resources.dll D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\cs\\ /Y
+                    XCOPY \"%WORKSPACE%\\Tools\\bin\\Release\\cs\\Tools.resources.dll\" D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\cs\\ /Y
+                    XCOPY \"%WORKSPACE%\\Tools\\bin\\Release\\cs\\WinkhausCR.Winforms.resources.dll\" D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\cs\\ /Y
 
                     REM TOOLS PLUGINS
-                    XCOPY %WORKSPACE%\\Tools\\bin\\Release\\ToolsPlugins\\OfferCustomTexts.dll D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ToolsPlugins\\ /Y
-                    XCOPY %WORKSPACE%\\Tools\\bin\\Release\\ToolsPlugins\\Winkhaus.RtfEdit.dll D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ToolsPlugins\\ /Y
-                    XCOPY %WORKSPACE%\\Tools\\bin\\Release\\ToolsPlugins\\WinkhausCR.Data.dll D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ToolsPlugins\\ /Y
-                    XCOPY %WORKSPACE%\\Tools\\bin\\Release\\ToolsPlugins\\NoTofu.dll D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ToolsPlugins\\ /Y
+                    XCOPY \"%WORKSPACE%\\Tools\\bin\\Release\\ToolsPlugins\\OfferCustomTexts.dll\" D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ToolsPlugins\\ /Y
+                    XCOPY \"%WORKSPACE%\\Tools\\bin\\Release\\ToolsPlugins\\Winkhaus.RtfEdit.dll\" D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ToolsPlugins\\ /Y
+                    XCOPY \"%WORKSPACE%\\Tools\\bin\\Release\\ToolsPlugins\\WinkhausCR.Data.dll\" D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ToolsPlugins\\ /Y
+                    XCOPY \"%WORKSPACE%\\Tools\\bin\\Release\\ToolsPlugins\\NoTofu.dll\" D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ToolsPlugins\\ /Y
 
                     REM TOOLS PLUGINS RESOURCES
-                    XCOPY %WORKSPACE%\\Tools\\bin\\Release\\ToolsPlugins\\cs\\OfferCustomTexts.resources.dll D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ToolsPlugins\\cs\\ /Y
-                    XCOPY %WORKSPACE%\\Tools\\bin\\Release\\ToolsPlugins\\cs\\NoTofu.resources.dll D:\\publish\\whokna-doplnky
+                    XCOPY \"%WORKSPACE%\\Tools\\bin\\Release\\ToolsPlugins\\cs\\OfferCustomTexts.resources.dll\" D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ToolsPlugins\\cs\\ /Y
+                    XCOPY \"%WORKSPACE%\\Tools\\bin\\Release\\ToolsPlugins\\cs\\NoTofu.resources.dll\" D:\\publish\\whokna-doplnky
                 """
             }
         }
