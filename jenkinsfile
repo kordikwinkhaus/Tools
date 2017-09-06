@@ -55,6 +55,9 @@ pipeline
                     REM TOOLS PLUGINS RESOURCES
                     XCOPY \"%WORKSPACE%\\OfferCustomTexts\\bin\\Release\\cs\\OfferCustomTexts.resources.dll\" D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ToolsPlugins\\cs\\ /Y
                     XCOPY \"%WORKSPACE%\\NoTofu\\bin\\Release\\cs\\NoTofu.resources.dll\" D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ToolsPlugins\\cs\\
+
+                    REM WHOKNA PLUGIN
+                    XCOPY \"%WORKSPACE%\\OfferOptTexts\\bin\\Release\\OfferOptTexts.dll\" D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ /Y
                 """
             }
         }
