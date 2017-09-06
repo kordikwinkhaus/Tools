@@ -1,0 +1,62 @@
+pipeline 
+{
+    agent any
+    
+    parameters {
+        string(defaultValue: '5.6.0.1', description: 'Verze WH Oken', name: 'WhoVerze')
+    }
+    
+    stages
+    {
+        stage('Prepare deps')
+        {
+            steps
+            {
+				bat "C:\\bin\\alize\\Alize.ApiDownloader.exe okna_v56 ${params.WhoVerze} UserExtContract.dll \"%WORKSPACE%\\Libs\""
+                bat "C:\\bin\\nuget\\NuGet.exe restore C:\\bin\\nuget\\NuGet.config \"%WORKSPACE%\\Tools.sln\""
+            }
+        }
+    
+        stage('Build') 
+        {
+            steps
+            {
+                bat "\"${tool 'MSBuild'}\" Tools.sln /p:Configuration=Release /t:Rebuild"
+                script 
+                {
+                    currentBuild.displayName += " " + params.WhoVerze
+                }
+            }
+        }
+    
+        stage('Publish')
+        {
+            steps
+            {
+                bat """
+                    python C:\\bin\\GetAssemblyVersion.py \"%WORKSPACE%\\Tools\\Properties\\AssemblyInfo.cs\" \"%WORKSPACE%\\AsmVersion.txt\" 3
+                    set /p AsmVerze=<\"%WORKSPACE%\\AsmVersion.txt\"
+                    
+                    REM TOOLS
+                    XCOPY %WORKSPACE%\\Tools\\bin\\Release\\Tools.exe D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ /Y
+                    XCOPY %WORKSPACE%\\Tools\\bin\\Release\\Tools.exe.config D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ /Y
+                    XCOPY %WORKSPACE%\\Tools\\bin\\Release\\WinkhausCR.Winforms.dll D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ /Y
+
+                    REM TOOLS RESOURCES
+                    XCOPY %WORKSPACE%\\Tools\\bin\\Release\\cs\\Tools.resources.dll D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\cs\\ /Y
+                    XCOPY %WORKSPACE%\\Tools\\bin\\Release\\cs\\WinkhausCR.Winforms.resources.dll D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\cs\\ /Y
+
+                    REM TOOLS PLUGINS
+                    XCOPY %WORKSPACE%\\Tools\\bin\\Release\\ToolsPlugins\\OfferCustomTexts.dll D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ToolsPlugins\\ /Y
+                    XCOPY %WORKSPACE%\\Tools\\bin\\Release\\ToolsPlugins\\Winkhaus.RtfEdit.dll D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ToolsPlugins\\ /Y
+                    XCOPY %WORKSPACE%\\Tools\\bin\\Release\\ToolsPlugins\\WinkhausCR.Data.dll D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ToolsPlugins\\ /Y
+                    XCOPY %WORKSPACE%\\Tools\\bin\\Release\\ToolsPlugins\\NoTofu.dll D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ToolsPlugins\\ /Y
+
+                    REM TOOLS PLUGINS RESOURCES
+                    XCOPY %WORKSPACE%\\Tools\\bin\\Release\\ToolsPlugins\\cs\\OfferCustomTexts.resources.dll D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ToolsPlugins\\cs\\ /Y
+                    XCOPY %WORKSPACE%\\Tools\\bin\\Release\\ToolsPlugins\\cs\\NoTofu.resources.dll D:\\publish\\whokna-doplnky
+                """
+            }
+        }
+    }
+}
