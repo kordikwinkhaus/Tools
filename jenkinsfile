@@ -12,7 +12,7 @@ pipeline
         {
             steps
             {
-				bat "C:\\bin\\alize\\Alize.ApiDownloader.exe okna_v56 ${params.WhoVerze} UserExtContract.dll \"%WORKSPACE%\\Lib\""
+				bat "C:\\bin\\alize\\Alize.ApiDownloader.exe okna_v56 ${params.WhoVerze} UserExtContract.dll \"%WORKSPACE%\\Libs\""
                 bat "C:\\bin\\nuget\\NuGet.exe restore C:\\bin\\nuget\\NuGet.config \"%WORKSPACE%\\Tools.sln\""
             }
         }

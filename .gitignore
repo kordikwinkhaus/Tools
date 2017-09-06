@@ -1,7 +1,6 @@
 .gitignore.swp
 *.dll
 *.pdb
-*.txt
 *.html
 *.exe
 *.vshost.exe
