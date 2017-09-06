@@ -47,14 +47,14 @@ pipeline
                     XCOPY \"%WORKSPACE%\\Tools\\bin\\Release\\cs\\WinkhausCR.Winforms.resources.dll\" D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\cs\\ /Y
 
                     REM TOOLS PLUGINS
-                    XCOPY \"%WORKSPACE%\\Tools\\bin\\Release\\ToolsPlugins\\OfferCustomTexts.dll\" D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ToolsPlugins\\ /Y
-                    XCOPY \"%WORKSPACE%\\Tools\\bin\\Release\\ToolsPlugins\\Winkhaus.RtfEdit.dll\" D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ToolsPlugins\\ /Y
-                    XCOPY \"%WORKSPACE%\\Tools\\bin\\Release\\ToolsPlugins\\WinkhausCR.Data.dll\" D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ToolsPlugins\\ /Y
-                    XCOPY \"%WORKSPACE%\\Tools\\bin\\Release\\ToolsPlugins\\NoTofu.dll\" D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ToolsPlugins\\ /Y
+                    XCOPY \"%WORKSPACE%\\OfferCustomTexts\\bin\\Release\\OfferCustomTexts.dll\" D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ToolsPlugins\\ /Y
+                    XCOPY \"%WORKSPACE%\\OfferCustomTexts\\bin\\Release\\Winkhaus.RtfEdit.dll\" D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ToolsPlugins\\ /Y
+                    XCOPY \"%WORKSPACE%\\OfferCustomTexts\\bin\\Release\\WinkhausCR.Data.dll\" D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ToolsPlugins\\ /Y
+                    XCOPY \"%WORKSPACE%\\NoTofu\\bin\\Release\\NoTofu.dll\" D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ToolsPlugins\\ /Y
 
                     REM TOOLS PLUGINS RESOURCES
-                    XCOPY \"%WORKSPACE%\\Tools\\bin\\Release\\ToolsPlugins\\cs\\OfferCustomTexts.resources.dll\" D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ToolsPlugins\\cs\\ /Y
-                    XCOPY \"%WORKSPACE%\\Tools\\bin\\Release\\ToolsPlugins\\cs\\NoTofu.resources.dll\" D:\\publish\\whokna-doplnky
+                    XCOPY \"%WORKSPACE%\\OfferCustomTexts\\bin\\Release\\cs\\OfferCustomTexts.resources.dll\" D:\\publish\\whokna-doplnky\\pro-%WhoVerze%\\Tools_%AsmVerze%\\ToolsPlugins\\cs\\ /Y
+                    XCOPY \"%WORKSPACE%\\NoTofu\\bin\\Release\\cs\\NoTofu.resources.dll\" D:\\publish\\whokna-doplnky
                 """
             }
         }
